@@ -1,0 +1,3 @@
+﻿Model,Rows,Exact_Match_Rate,Clean_Exact_Match_Rate,Average_Similarity,Wins
+Inference,645,0.0,0.0,0.038070870172587416,110
+Adapter,645,0.0,0.0,0.06440813316921869,171

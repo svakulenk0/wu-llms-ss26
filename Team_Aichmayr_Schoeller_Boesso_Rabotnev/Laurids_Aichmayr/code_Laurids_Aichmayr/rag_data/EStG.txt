@@ -1,0 +1,302 @@
+EStG § 1, 23, 27-28, 33
+EStG
+
+§ 1. (1) Einkommensteuerpflichtig sind nur natürliche Personen.
+(2) Unbeschränkt steuerpflichtig sind jene natürlichen Personen, die im Inland einen Wohnsitz oder ihren gewöhnlichen Aufenthalt haben. Die unbeschränkte Steuerpflicht erstreckt sich auf alle in- und ausländischen Einkünfte.
+(3) Beschränkt steuerpflichtig sind jene natürlichen Personen, die im Inland weder einen Wohnsitz noch ihren gewöhnlichen Aufenthalt haben. Die beschränkte Steuerpflicht erstreckt sich nur auf die im § 98 aufgezählten Einkünfte.
+(4) Auf Antrag werden auch Staatsangehörige von Mitgliedstaaten der Europäischen Union oder eines Staates, auf den das Abkommen über den Europäischen Wirtschaftsraum anzuwenden ist, als unbeschränkt steuerpflichtig behandelt, die im Inland weder einen Wohnsitz noch ihren gewöhnlichen Aufenthalt haben, soweit sie inländische Einkünfte im Sinne des § 98 haben. Dies gilt nur, wenn ihre Einkünfte im Kalenderjahr mindestens zu 90% der österreichischen Einkommensteuer unterliegen oder wenn die nicht der österreichischen Einkommensteuer unterliegenden Einkünfte nicht mehr als 13 539 Euro betragen. Inländische Einkünfte, die nach einem Abkommen zur Vermeidung der Doppelbesteuerung nur der Höhe nach beschränkt besteuert werden dürfen, gelten in diesem Zusammenhang als nicht der österreichischen Einkommensteuer unterliegend. Die Höhe der nicht der österreichischen Einkommensteuer unterliegenden Einkünfte ist durch eine Bescheinigung der zuständigen ausländischen Abgabenbehörde nachzuweisen.
+
+Gewerbebetrieb (§ 2 Abs. 3 Z 3)
+§ 23. Einkünfte aus Gewerbebetrieb sind:
+	1.	Einkünfte aus einer selbständigen, nachhaltigen Betätigung, die mit Gewinnabsicht unternommen wird und sich als Beteiligung am allgemeinen wirtschaftlichen Verkehr darstellt, wenn die Betätigung weder als Ausübung der Land- und Forstwirtschaft noch als selbständige Arbeit anzusehen ist.
+	2.	Gewinnanteile der Gesellschafter von Gesellschaften, bei denen die Gesellschafter als Mitunternehmer anzusehen sind (wie insbesondere offene Gesellschaften und Kommanditgesellschaften), sowie die Vergütungen, die die Gesellschafter von der Gesellschaft für ihre Tätigkeit im Dienste der Gesellschaft, für die Hingabe von Darlehen oder für die Überlassung von Wirtschaftsgütern bezogen haben.
+	3.	Veräußerungsgewinne im Sinne des § 24.
+Beachte für folgende Bestimmung
+Bezugszeitraum:
+ab 1.1.2016 vgl. § 124b Z 290
+
+Verluste bei kapitalistischen Mitunternehmern mit beschränkter Haftung
+§ 23a. (1) Bei natürlichen Personen sind Verluste eines kapitalistischen Mitunternehmers (Abs. 2) insoweit nicht ausgleichsfähig oder nach § 18 Abs. 6 vortragsfähig (Wartetastenverluste), als dadurch ein negatives steuerliches Kapitalkonto entsteht oder sich erhöht. Dies gilt nicht, soweit die Verluste aus einem Überhang von Sonderbetriebsausgaben entstehen.
+(2) Ein Gesellschafter ist als kapitalistischer Mitunternehmer anzusehen, wenn er Dritten gegenüber nicht oder eingeschränkt haftet und keine ausgeprägte Mitunternehmerinitiative entfaltet.
+(3) Für das steuerliche Kapitalkonto nicht zu berücksichtigen sind
+	1.	Wirtschaftsgüter, die einem Mitunternehmer oder mehreren Mitunternehmern anteilig zuzurechnen sind und der Mitunternehmerschaft zur Einkünfteerzielung überlassen werden (Sonderbetriebsvermögen) sowie damit in Zusammenhang stehende Aufwendungen und Erträge,
+	2.	sonstige Vergütungen iSd § 23 Z 2 (Sonderbetriebseinnahmen) und Sonderbetriebsausgaben,
+jeweils einschließlich deren Entnahme oder Einlage.
+(4) Wartetastenverluste
+	1.	sind zu verrechnen mit Gewinnen späterer Wirtschaftsjahre (einschließlich Übergangs- und Veräußerungsgewinnen) oder
+	2.	werden zu ausgleichs- und abzugsfähigen Verlusten in Höhe der in einem späteren Wirtschaftsjahr geleisteten Einlagen, soweit sie die Entnahmen übersteigen. Dabei sind Entnahmen und Einlagen im Sinne des Abs. 3 nicht zu berücksichtigen. Wird der kapitalistische Mitunternehmer zur Haftung herangezogen, gilt dies steuerlich als Einlage.
+Wird der kapitalistische Mitunternehmer zu einem unbeschränkten haftenden Gesellschafter gemäß § 128 des Unternehmensgesetzbuches, werden sämtliche Wartetastenverluste ab diesem Veranlagungsjahr zu ausgleichs- und vortragsfähigen Verlusten.
+(5) Die Abs. 1 bis 4 gelten bei der Gewinnermittlung nach § 4 Abs. 3 entsprechend.
+(6) In der Einkünftefeststellungserklärung (§ 188 BAO) ist für jeden kapitalistischen Mitunternehmer die Entwicklung des steuerlichen Kapitalkontos und der Wartetastenverluste für das betreffende Wirtschaftsjahr darzustellen. Bei Einkünften aus ausländischen Mitunternehmerschaften hat eine entsprechende Darstellung in einer Beilage zur Einkommensteuererklärung des Beteiligten zu erfolgen.
+
+Einkünfte aus Kapitalvermögen
+§ 27. (1) Einkünfte aus Kapitalvermögen sind Einkünfte aus der Überlassung von Kapital (Abs. 2), aus realisierten Wertsteigerungen von Kapitalvermögen (Abs. 3), aus Derivaten (Abs. 4) und aus Kryptowährungen (Abs. 4a), soweit sie nicht zu den Einkünften im Sinne des § 2 Abs. 3 Z 1 bis 4 gehören. Bei Tauschvorgängen ist § 6 Z 14 sinngemäß anzuwenden.
+(2) Zu den Einkünften aus der Überlassung von Kapital gehören:
+	1. a)	Gewinnanteile (Dividenden) und sonstige Bezüge aus Aktien, Anteilen an Gesellschaften mit beschränkter Haftung oder Flexiblen Kapitalgesellschaften;
+	b)	Gleichartige Bezüge und Rückvergütungen aus Anteilen an Erwerbs- und Wirtschaftsgenossenschaften;
+	c)	Gleichartige Bezüge aus Genussrechten und sonstigen Finanzierungsinstrumenten sowie Bezüge aus Partizipationskapital gemäß § 8 Abs. 3 Z 1 des Körperschaftsteuergesetzes 1988;
+	d)	Bezüge aus Anteilen an körperschaftlich organisierten Personengemeinschaften in den Angelegenheiten der Bodenreform (Agrargemeinschaften).
+	2.	Zinsen, und andere Erträgnisse aus Kapitalforderungen jeder Art, beispielsweise aus Darlehen, Anleihen, Hypotheken, Einlagen, Guthaben bei Kreditinstituten und aus Ergänzungskapital im Sinne des VAG 2016, ausgenommen Stückzinsen;
+	3.	Diskontbeträge von Wechseln und Anweisungen;
+	4.	Gewinnanteile aus der Beteiligung an einem Unternehmen als stiller Gesellschafter sowie aus der Beteiligung nach Art eines stillen Gesellschafters, soweit sie nicht zur Auffüllung einer durch Verluste herabgeminderten Einlage zu verwenden sind.
+(3) Zu den Einkünften aus realisierten Wertsteigerungen von Kapitalvermögen gehören Einkünfte aus der Veräußerung, Einlösung und sonstigen Abschichtung von Wirtschaftsgütern, deren Erträge Einkünfte aus der Überlassung von Kapital im Sinne von Abs. 2 sind (einschließlich Nullkuponanleihen).
+(4) Zu den Einkünften aus Derivaten gehören
+	1.	der Differenzausgleich,
+	2.	die Stillhalterprämie,
+	3.	Einkünfte aus der Veräußerung und
+	4.	Einkünfte aus der sonstigen Abwicklung
+bei Termingeschäften (beispielsweise Optionen, Futures und Swaps) sowie bei sonstigen derivativen Finanzinstrumenten (beispielsweise Indexzertifikaten).
+(4a) Zu den Einkünften aus Kryptowährungen gehören laufende Einkünfte aus Kryptowährungen sowie Einkünfte aus realisierten Wertsteigerungen von Kryptowährungen nach Maßgabe des § 27b.
+(5) Als Einkünfte aus der Überlassung von Kapital im Sinne von Abs. 2 gelten auch:
+	1.	Besondere Entgelte oder Vorteile, die neben den im Abs. 2 bezeichneten Einkünften oder an deren Stelle gewährt werden, beispielsweise Sachleistungen, Boni und nominelle Mehrbeträge auf Grund einer Wertsicherung.
+	2.	Vom Abzugsverpflichteten (§ 95 Abs. 2) oder Dritten übernommene Kapitalertragsteuerbeträge.
+	3.	Unterschiedsbeträge zwischen der eingezahlten Versicherungsprämie und der Versicherungsleistung, die
+	a)	im Falle des Erlebens oder des Rückkaufs einer auf den Er- oder Er- und Ablebensfall abgeschlossenen Kapitalversicherung einschließlich einer fondsgebundenen Lebensversicherung,
+	b)	im Falle der Kapitalabfindung oder des Rückkaufs einer Rentenversicherung, bei der der Beginn der Rentenzahlungen vor Ablauf von zehn beziehungsweise fünfzehn Jahren ab Vertragsabschluss vereinbart ist,
+ausgezahlt werden, wenn im Versicherungsvertrag nicht laufende, im Wesentlichen gleich bleibende Prämienzahlungen vereinbart sind und die Höchstlaufzeit des Versicherungsvertrages
+	–	weniger als zehn Jahre ab Vertragsabschluss beträgt, wenn der Versicherungsnehmer und die versicherten Personen im Zeitpunkt des Abschlusses des Versicherungsvertrages jeweils das 50. Lebensjahr vollendet haben;
+	–	in allen anderen Fällen weniger als fünfzehn Jahre ab Vertragsabschluss beträgt.
+Ist der Versicherungsnehmer keine natürliche Person, gilt das Erfordernis der Vollendung des 50. Lebensjahres nur für die versicherten Personen. Im Übrigen gilt jede Erhöhung einer Versicherungssumme im Rahmen eines bestehenden Vertrages auf insgesamt mehr als das Zweifache der ursprünglichen Versicherungssumme gegen eine nicht laufende, im Wesentlichen gleich bleibende Prämienzahlung als selbständiger Abschluss eines neuen Versicherungsvertrages.
+	4.	Ausgleichszahlungen und Leihgebühren, die der Verleiher eines Wertpapiers vom Entleiher oder der Pensionsgeber vom Pensionsnehmer erhält.
+(Anm.: Z 5 und 6 aufgehoben durch BGBl. I Nr. 76/2011)
+	7.	Zuwendungen jeder Art
+	–	von nicht unter § 5 Z 6 des Körperschaftsteuergesetzes 1988 fallenden Privatstiftungen,
+	–	von Belegschaftsbeteiligungsstiftungen im Sinne des § 4d Abs. 3 bis zu einem Betrag von 4 500 Euro jährlich, sowie
+	–	von ausländischen Stiftungen oder sonstigen Vermögensmassen, die jeweils mit einer nicht unter § 5 Z 6 des Körperschaftsteuergesetzes 1988 fallenden privatrechtlichen Stiftung vergleichbar sind.
+Als Zuwendungen gelten auch Einnahmen einschließlich sonstiger Vorteile, die anlässlich der unentgeltlichen Übertragung eines Wirtschaftsgutes an die Privatstiftung, ausländische Stiftung oder sonstige Vermögensmasse, die jeweils mit einer privatrechtlichen Stiftung vergleichbar sind, vom Empfänger der Zuwendung erzielt werden. Dies gilt nicht hinsichtlich der bei der Zuwendung von Grundstücken mitübertragenen Belastungen des Grundstückes, soweit sie mit dem Grundstück in unmittelbarem wirtschaftlichen Zusammenhang stehen.
+	8.	Nicht zu den Einkünften im Sinne der Z 7 gehören Zuwendungen, soweit sie nach Maßgabe der folgenden Bestimmungen eine Substanzauszahlung von gestiftetem Vermögen darstellen:
+	a)	Zuwendungen gelten insoweit als Substanzauszahlung, als sie den maßgeblichen Wert im Sinne der lit. b übersteigen und im Evidenzkonto im Sinne der lit. c Deckung finden.
+	b)	Als maßgeblicher Wert gilt der am Beginn des Geschäftsjahres vorhandene Bilanzgewinn zuzüglich der gebildeten Gewinnrücklagen gemäß § 224 Abs. 3 A III und IV des Unternehmensgesetzbuches und zuzüglich der steuerrechtlichen stillen Reserven des zugewendeten Vermögens. Der am Beginn des Geschäftsjahres vorhandene Bilanzgewinn ist um Beträge zu erhöhen, die zu einer Verminderung auf Grund des Ansatzes des beizulegenden Wertes gemäß § 202 Abs. 1 des Unternehmensgesetzbuches geführt haben. Zuwendungen im Bilanzerstellungszeitraum gelten nicht als Substanzauszahlung, solange der im Jahresabschluss ausgewiesene Bilanzgewinn nicht vom Abschlussprüfer bestätigt ist.
+	c)	Voraussetzung für die Behandlung einer Zuwendung als Substanzauszahlung ist die laufende ordnungsgemäße Führung eines Evidenzkontos. Es erhöht sich um sämtliche Stiftungseingangswerte und vermindert sich um Substanzauszahlungen.
+	d)	Stiftungseingangswert ist der Wert des gestifteten Vermögens zum Zeitpunkt der Zuwendung. Dabei sind § 6 Z 5, § 6 Z 9 und § 15 Abs. 3 Z 1 anzuwenden.
+	e)	Soweit Zuwendungen Substanzauszahlungen darstellen, vermindern sie das Evidenzkonto in Höhe der in § 15 Abs. 3 Z 2 lit. b genannten Werte.
+	f)	Zuwendungen einer Stiftung (Vermögensmasse) an eine von ihr errichtete Stiftung (Vermögensmasse) gelten abweichend von lit. a als Substanzauszahlung, soweit sie im Evidenzkonto (lit. c) Deckung finden. Die empfangende Stiftung (Vermögensmasse) hat die als Substanzauszahlungen geltenden Beträge als Stiftungseingangswert in gleicher Höhe anzusetzen; dieser Stiftungseingangswert ist um den bei der zuwendenden Stiftung (Vermögensmasse) vorhandenen maßgeblichen Wert im Sinne der lit. b zu vermindern.
+	g)	Abweichend von lit. f gelten Zuwendungen einer Stiftung (Vermögensmasse) an eine von ihr errichtete Stiftung (Vermögensmasse) als Substanzauszahlung, soweit sie Vermögen betreffen, das in einer unternehmensrechtlichen Vermögensaufstellung zum 31. Juli 2008 erfasst ist. Die empfangende Stiftung (Vermögensmasse) hat die steuerlich maßgebenden Werte fortzuführen. Diese Zuwendungen erhöhen nicht die Stiftungseingangswerte und fließen nicht in das Evidenzkonto bei der empfangenden Stiftung (Vermögensmasse) ein. Dies gilt nur insoweit, als die Zuwendung im Stiftungszweck der zuwendenden Stiftung (Vermögensmasse) Deckung findet.
+	h)	Soweit Zuwendungen als Substanzauszahlung gelten, sind sie in die Kapitalertragsteuer-Anmeldung aufzunehmen.
+	9.	Ist ein Stifter im Falle des Widerrufs einer nicht unter § 4 Abs. 11 Z 1 fallenden Privatstiftung Letztbegünstigter gemäß § 34 des Privatstiftungsgesetzes, sind die Einkünfte auf seinen Antrag um die steuerlich maßgebenden Werte seiner vor dem 1. August 2008 getätigten Zuwendungen an die Privatstiftung zu kürzen. Dies gilt nur dann, wenn der Stifter diese Werte nachweist. Für Zuwendungen nach dem 31. Juli 2008 erfolgt die Kürzung um den Letztstand des Evidenzkontos gemäß Z 8 lit. c. Die Kürzung gilt sinngemäß für den Widerruf einer ausländischen Stiftung oder sonstigen Vermögensmasse, die jeweils mit einer Privatstiftung vergleichbar sind, mit der Maßgabe, dass die nach österreichischem Steuerrecht ermittelten Werte anzusetzen sind. Voraussetzung für die Kürzung bei Widerruf einer ausländischen Stiftung (Vermögensmasse) ist, dass für die Zuwendung an die ausländische Stiftung (Vermögensmasse) Stiftungseingangssteuer oder Erbschafts- oder Schenkungssteuer entrichtet wurde.
+(6) Als Veräußerung im Sinne der Abs. 3 und 4 gelten auch:
+	1.	Umstände, die zu einer Einschränkung des Besteuerungsrechtes der Republik Österreich im Verhältnis zu anderen Staaten hinsichtlich eines Wirtschaftsgutes im Sinne des Abs. 3, eines Derivates im Sinne des Abs. 4 oder einer Kryptowährung im Sinne des Abs. 4a führen.
+	a)	Bei Wegzug einer natürlichen Person in einen EU/EWR-Staat ist auf Antrag über die dadurch entstandene Abgabenschuld im Abgabenbescheid nur abzusprechen, die Abgabenschuld jedoch bis zur tatsächlichen Veräußerung des Wirtschaftsgutes oder Derivates nicht festzusetzen. Dies gilt ebenso bei der unentgeltlichen Übertragung eines Wirtschaftsgutes oder Derivates an eine andere natürliche Person, die in einem EU/EWR-Staat ansässig ist.
+	b)	Als tatsächliche Veräußerung gilt auch ein späterer Wegzug oder die spätere Überführung des Wirtschaftsgutes oder Derivates in einen Staat, der von lit. a nicht erfasst ist.
+	c)	Die tatsächliche Veräußerung gilt als rückwirkendes Ereignis im Sinne des § 295a der Bundesabgabenordnung. § 205 der Bundesabgabenordnung ist nicht anzuwenden.
+	d)	In allen nicht in lit. a genannten Fällen sind die § 6 Z 6 lit. c und d sinngemäß anzuwenden.
+	e)	Im Falle der Entstehung des Besteuerungsrechts der Republik Österreich im Verhältnis zu anderen Staaten gilt der gemeine Wert als Anschaffungskosten. Erfolgt in den Fällen nicht festgesetzter Abgabenschuld ein Wiedereintritt in das Besteuerungsrecht der Republik Österreich, sind weiterhin die ursprünglichen Anschaffungskosten, höchstens aber die gemeinen Werte maßgeblich. Die spätere Veräußerung gilt nicht als rückwirkendes Ereignis im Sinne des § 295a der Bundesabgabenordnung. Weist der Steuerpflichtige nach, dass Wertsteigerungen im EU/EWR-Raum eingetreten sind, sind diese vom Veräußerungserlös abzuziehen.
+	2.	Die Entnahme und das sonstige Ausscheiden aus dem Depot. Sofern nicht Z 1 anzuwenden ist, liegt in folgenden Fällen keine Veräußerung vor:
+	–	Bei der Übertragung auf ein anderes Depot desselben Steuerpflichtigen bei derselben depotführenden Stelle.
+	–	Bei der Übertragung auf ein Depot desselben Steuerpflichtigen bei einer inländischen depotführenden Stelle, wenn der Steuerpflichtige die übertragende depotführende Stelle beauftragt, der übernehmenden depotführenden Stelle die Anschaffungskosten mitzuteilen.
+	–	Bei der Übertragung von einer inländischen depotführenden Stelle auf ein Depot desselben Steuerpflichtigen bei einer ausländischen depotführenden Stelle, wenn der Steuerpflichtige die übertragende depotführende Stelle beauftragt, dem zuständigen Finanzamt innerhalb eines Monats seinen Namen und seine Steuer- oder Sozialversicherungsnummer, die übertragenen Wirtschaftsgüter, deren Anschaffungskosten sowie jene Stelle mitzuteilen, auf die die Übertragung erfolgt.
+	–	Bei der Übertragung von einer ausländischen depotführenden Stelle auf ein Depot desselben Steuerpflichtigen bei einer anderen ausländischen depotführenden Stelle und bei der unentgeltlichen Übertragung von einer ausländischen depotführenden Stelle auf ein Depot eines anderen Steuerpflichtigen, wenn der Steuerpflichtige dem zuständigen Finanzamt innerhalb eines Monats die übertragenen Wirtschaftsgüter, deren Anschaffungskosten sowie jene Stelle und jenen Steuerpflichtigen mitteilt, auf die die Übertragung erfolgt.
+	–	Bei der unentgeltlichen Übertragung von einer inländischen depotführenden Stelle auf das Depot eines anderen Steuerpflichtigen, wenn
+	–	der depotführenden Stelle anhand geeigneter Unterlagen (insbesondere Notariatsakt, Einantwortungsbeschluss, Schenkungsmeldung) die unentgeltliche Übertragung nachgewiesen wird, oder
+	–	der Steuerpflichtige die depotführende Stelle beauftragt, dem zuständigen Finanzamt innerhalb eines Monats seinen Namen und seine Steuer- oder Sozialversicherungsnummer, die übertragenen Wirtschaftsgüter, deren Anschaffungskosten und gegebenenfalls jene Stelle mitzuteilen, auf die die Übertragung erfolgt.
+	–	Bei der Übertragung im Zuge einer Umgründung im Sinne des Umgründungssteuergesetzes, wenn der Steuerpflichtige die depotführende Stelle beauftragt, dem zuständigen Finanzamt innerhalb eines Monats seinen Namen, seine Steuer- oder Sozialversicherungsnummer, die übertragenen Wirtschaftsgüter, deren Anschaffungskosten und gegebenenfalls jene Stelle mitzuteilen, auf die die Übertragung erfolgt. Bei der Übertragung von einer ausländischen depotführenden Stelle auf ein anderes Depot hat die Mitteilung an das Finanzamt durch den Steuerpflichtigen selbst zu erfolgen.
+	3.	Der Untergang von Anteilen auf Grund der Auflösung (Liquidation) oder Beendigung einer Körperschaft für sämtliche Beteiligte unabhängig vom Ausmaß ihrer Beteiligung.
+	4.	Die Veräußerung von Dividendenscheinen, Zinsscheinen und sonstigen Ansprüchen, wenn die dazugehörigen Wirtschaftsgüter nicht mitveräußert werden.
+	5.	Der Zufluss anteiliger Einkünfte aus der Überlassung von Kapital gemäß Abs. 2 Z 2 anlässlich der Realisierung der dazugehörigen Wirtschaftsgüter (Stückzinsen).
+(7) Steuerfrei sind 75% der Ausschüttungen aus Anteilen und Genussrechten an natürliche Personen bis zu einer Höhe von 15 000 Euro pro Kalenderjahr, die von Mittelstandsfinanzierungsgesellschaften im Sinne des § 6b Abs. 1 des Körperschaftsteuergesetzes 1988 in der Fassung des Bundesgesetzes BGBl. I Nr. 106/2017 ausgegeben worden sind. Dabei gilt Folgendes:
+	1.	Die Befreiung erfolgt durch Anrechnung (Erstattung) der Kapitalertragsteuer im Rahmen der Veranlagung.
+	2.	Die Befreiung ist nur zu gewähren, wenn die Mittelstandsfinanzierungsgesellschaft im Zeitpunkt des Ausschüttungsbeschlusses auf der zuletzt veröffentlichten Liste der Mittelstandsfinanzierungsgesellschaften (§ 6b Abs. 5 des Körperschaftsteuergesetzes 1988 in der Fassung des Bundesgesetzes BGBl. I Nr. 106/2017) genannt ist.
+(8) Der Verlustausgleich ist nur nach Maßgabe der folgenden Vorschriften zulässig:
+	1.	Verluste aus Einkünften nach Abs. 3, 4 und 4a können nicht mit Zinserträgen aus Geldeinlagen und sonstigen Geldforderungen bei Kreditinstituten im Sinne des § 27a Abs. 1 Z 1 sowie mit Zuwendungen gemäß Abs. 5 Z 7 ausgeglichen werden.
+	2.	Verlustanteile aus der Beteiligung an einem Unternehmen als stiller Gesellschafter sowie aus der Beteiligung nach Art eines stillen Gesellschafters dürfen nicht mit anderen Einkünften ausgeglichen werden. Sie sind in Folgejahren mit Gewinnanteilen aus derselben Beteiligung zu verrechnen.
+	3.	Einkünfte aus Kapitalvermögen, auf die ein besonderer Steuersatz gemäß § 27a Abs. 1 anwendbar ist, können nicht mit Einkünften aus Kapitalvermögen ausgeglichen werden, für die diese besonderen Steuersätze gemäß § 27a Abs. 2 nicht gelten.
+	4.	Nicht ausgeglichene Verluste aus Kapitalvermögen dürfen nicht mit Einkünften aus anderen Einkunftsarten ausgeglichen werden.
+Die vorstehenden Regelungen über den Verlustausgleich gelten auch im Falle der Regelbesteuerung gemäß § 27a Abs. 5.
+Beachte für folgende Bestimmung
+zum Bezugszeitraum vgl. § 124b Z 384
+Besonderer Steuersatz und Bemessungsgrundlage für Einkünfte aus Kapitalvermögen
+§ 27a. (1) Einkünfte aus Kapitalvermögen unterliegen
+	1.	im Fall von Geldeinlagen und nicht verbrieften sonstigen Geldforderungen bei Kreditinstituten, ausgenommen Ausgleichzahlungen und Leihgebühren gemäß § 27 Abs. 5 Z 4, einem besonderen Steuersatz von 25%,
+	2.	in allen anderen Fällen einem besonderen Steuersatz von 27,5%
+und sind bei der Berechnung der Einkommensteuer des Steuerpflichtigen weder beim Gesamtbetrag der Einkünfte noch beim Einkommen (§ 2 Abs. 2) zu berücksichtigen, sofern nicht die Regelbesteuerung (Abs. 5) anzuwenden ist.
+Auf tatsächlich ausgeschüttete und als ausgeschüttet geltende Erträge aus Einkünften im Sinne des § 27 aus einem § 186 oder § 188 des Investmentfondsgesetzes 2011 oder einem § 40 oder § 42 des Immobilien-Investmentfondsgesetzes unterliegenden Gebilde ist Z 2 anzuwenden.
+(2) Abs. 1 gilt nicht für
+	1.	Einkünfte aus Darlehen und nicht verbrieften sonstigen Forderungen, denen kein Bankgeschäft zu Grunde liegt;
+	2.	Einkünfte aus
+	–	Wertpapieren, die ein Forderungsrecht verbriefen,
+	–	Anteilscheinen und Anteilen an einem § 40 oder § 42 des Immobilien-Investmentfondsgesetzes unterliegenden Gebilde einschließlich der als ausgeschüttet geltenden Erträge,
+	–	der Überlassung von Kryptowährungen im Sinne des § 27b Abs. 2 Z 1,
+wenn diese bei ihrer Begebung in rechtlicher oder tatsächlicher Hinsicht keinem unbestimmten Personenkreis angeboten werden;
+	3.	Einkünfte aus der Beteiligung an einem Unternehmen als stiller Gesellschafter sowie aus der Beteiligung nach Art eines stillen Gesellschafters;
+	4.	Diskontbeträge von Wechseln und Anweisungen;
+	5.	Ausgleichszahlungen und Leihgebühren, wenn es sich beim Entleiher (Pensionsnehmer) weder um ein Kreditinstitut noch um eine Zweigstelle im Sinne des § 95 Abs. 2 Z 1 lit. b handelt;
+	6.	Unterschiedsbeträge zwischen der eingezahlten Versicherungsprämie und der Versicherungsleistung im Sinne des § 27 Abs. 5 Z 3 oder die realisierte Wertsteigerung aus der Veräußerung des Anspruchs aus dem Versicherungsvertrag;
+	7.	Einkünfte aus nicht verbrieften Derivaten. Dies gilt nicht, wenn eine der in § 95 Abs. 2 Z 4 genannten Einrichtungen eine der Kapitalertragsteuer entsprechende Steuer freiwillig einbehält und abführt; diesfalls sind § 95 Abs. 1 und § 97 sinngemäß anzuwenden.
+(2a) Handelt es sich bei den Einkünften gemäß Abs. 2 um tatsächlich ausgeschüttete oder als ausgeschüttet geltende Erträge aus einem § 186 oder § 188 InvFG 2011 oder einem § 40 oder § 42 ImmoInvFG unterliegenden Gebilde, dessen Anteile oder Anteilscheine bei ihrer Begebung in rechtlicher und tatsächlicher Hinsicht einem unbestimmten Personenkreis angeboten worden sind, gelten die diesen Einkünften zugrunde liegenden Wirtschaftsgüter stets als an einen unbestimmten Personenkreis angeboten. Weiters gelten die solchen Einkünften zugrunde liegenden Wirtschaftsgüter als verbrieft, wenn die Anteile oder Anteilscheine an dem § 186 oder § 188 InvFG 2011 oder dem § 40 oder § 42 ImmoInvFG unterliegenden Gebilde verbrieft sind.
+(3) Als Einkünfte anzusetzen sind:
+	1.	Bei der Überlassung von Kapital (§ 27 Abs. 2) die bezogenen Kapitalerträge.
+	2.	Bei realisierten Wertsteigerungen von Kapitalvermögen (§ 27 Abs. 3)
+	a)	der Unterschiedsbetrag zwischen dem Veräußerungserlös, dem Einlösungs- oder Abschichtungsbetrag und den Anschaffungskosten, jeweils inklusive anteiliger Stückzinsen;
+	b)	im Falle der Einschränkung des Besteuerungsrechts (§ 27 Abs. 6 Z 1) sowie im Falle der Entnahme oder des sonstigen Ausscheidens aus dem Depot (§ 27 Abs. 6 Z 2) der Unterschiedsbetrag zwischen dem gemeinen Wert zum Zeitpunkt des Eintritts der Umstände, die zur Einschränkung des Besteuerungsrechts führen, bzw. der Entnahme oder des sonstigen Ausscheidens, und den Anschaffungskosten. In den Fällen nicht festgesetzter Abgabenschuld (§ 27 Abs. 6 Z 1 lit. a) sind zwischen Wegzug bzw. Übertragung und Veräußerung eingetretene Wertminderungen höchstens im Umfang der Bemessungsgrundlage bei Wegzug bzw. Übertragung zu berücksichtigen, soweit diese nicht in einem anderen Staat berücksichtigt werden.
+	c)	im Falle der Liquidation (§ 27 Abs. 6 Z 3) der Unterschiedsbetrag zwischen dem Abwicklungsguthaben und den Anschaffungskosten.
+	3.	Bei Derivaten (§ 27 Abs. 4):
+	a)	im Falle des Differenzausgleichs
+	–	beim Empfänger des Differenzausgleichs der Unterschiedsbetrag zwischen diesem und den Anschaffungskosten des Derivats;
+	–	beim Empfänger der Stillhalterprämie oder der Einschüsse (Margins) der Unterschiedsbetrag zwischen der Stillhalterprämie bzw. den Einschüssen (Margins) und dem geleisteten Differenzausgleich;
+	b)	bei Verfall der Option die Stillhalterprämie;
+	c)	im Falle der Veräußerung oder sonstigen Abschichtung der Unterschiedsbetrag gemäß Abs. 3 Z 2; bei sonstiger Abwicklung (Glattstellen) gilt die Stillhalterprämie als Veräußerungserlös.
+	4.	Bei Kryptowährungen (§ 27 Abs. 4a):
+	a)	Bei den laufenden Einkünften aus Kryptowährungen (§ 27b Abs. 2) die bezogenen Kryptowährungen bzw. sonstigen Entgelte.
+	b)	Bei den Einkünften aus realisierten Wertsteigerungen von Kryptowährungen (§ 27b Abs. 3)
+	–	der Unterschiedsbetrag zwischen dem Veräußerungserlös und den Anschaffungskosten;
+	–	im Falle der Einschränkung des Besteuerungsrechts gilt Z 2 lit. b sinngemäß.
+(4) Für die Anschaffungskosten gilt Folgendes:
+	1.	Bei unentgeltlichem Erwerb sind die Anschaffungskosten des Rechtsvorgängers maßgeblich.
+	2.	Bei Wirtschaftsgütern und Derivaten im Sinne des § 27 Abs. 3 und 4, auf deren Erträge ein besonderer Steuersatz gemäß Abs. 1 anwendbar ist, sind die Anschaffungskosten ohne Anschaffungsnebenkosten anzusetzen. Dies gilt nicht für in einem Betriebsvermögen gehaltene Wirtschaftsgüter und Derivate.
+	3.	Bei allen in einem Depot befindlichen Wirtschaftsgütern und Derivaten im Sinne des § 27 Abs. 3 und 4 mit derselben Wertpapierkennnummer ist bei Erwerb in zeitlicher Aufeinanderfolge der gleitende Durchschnittspreis in Euro anzusetzen. Nach § 93 Abs. 4 angesetzte Anschaffungskosten fließen nicht in den gleitenden Durchschnittspreis ein. Der Bundesminister für Finanzen wird ermächtigt, die Ermittlung der steuerlichen Anschaffungskosten bei Kapitalmaßnahmen durch Verordnung festzulegen.
+	3a.	Bei allen auf einer Kryptowährungsadresse bzw. Kryptowährungswallet befindlichen Einheiten derselben Kryptowährung im Sinne des § 27 Abs. 4a ist bei Erwerb in zeitlicher Aufeinanderfolge der gleitende Durchschnittspreis in Euro als Anschaffungskosten anzusetzen. Nach § 93 Abs. 4a Z 2 angesetzte Anschaffungskosten fließen nicht in den gleitenden Durchschnittspreis ein. Der Bundesminister für Finanzen wird ermächtigt, die Ermittlung der steuerlichen Anschaffungskosten, insbesondere die Auswahl der Bezugsgröße, hinsichtlich derer der gleitende Durchschnittspreis zu ermitteln ist, sowie Vorgaben zu Veräußerungsreihenfolgen durch Verordnung festzulegen.
+	4.	Bei einer Kapitalerhöhung aus Gesellschaftsmitteln (§ 3 Abs. 1 Z 29) sind für die Anteilsrechte und Freianteile jene Beträge anzusetzen, die sich bei Verteilung der bisherigen Anschaffungskosten entsprechend dem Verhältnis der Nennwerte der Anteilsrechte und Freianteile ergeben.
+	5.	Besteht die Leistung zur Transaktionsverarbeitung vorwiegend im Einsatz von vorhandenen Kryptowährungen (Staking), werden Kryptowährungen unentgeltlich (Airdrops) oder für lediglich unwesentliche sonstige Leistungen (Bounties) übertragen oder gehen Kryptowährungen im Rahmen einer Abspaltung von der ursprünglichen Blockchain zu (Hardfork), ist für die erhaltenen Kryptowährungen von Anschaffungskosten von Null auszugehen.
+(5) Anstelle der besonderen Steuersätze gemäß Abs. 1 kann auf Antrag der allgemeine Steuertarif angewendet werden (Regelbesteuerungsoption). Die Anrechnung ist betraglich insoweit ausgeschlossen, als der Steuerpflichtige den Anspruch auf einen Alleinverdienerabsetzbetrag oder einen Kinderabsetzbetrag vermittelt. Die Regelbesteuerungsoption kann nur für sämtliche Einkünfte, die einem besonderen Steuersatz gemäß Abs. 1 unterliegen, ausgeübt werden.
+(6) Die Abs. 1 bis 5 gelten auch für Einkünfte im Sinne des § 27 von natürlichen Personen, soweit diese zu den Einkünften im Sinne des § 2 Abs. 3 Z 1 bis 3 gehören. Abs. 1 gilt nicht für Einkünfte aus realisierten Wertsteigerungen von Kapitalvermögen, aus Derivaten und Kryptowährungen, wenn die Erzielung solcher Einkünfte einen Schwerpunkt der betrieblichen Tätigkeit darstellt.
+Beachte für folgende Bestimmung
+zum Bezugszeitraum vgl. § 124b Z 384
+Einkünfte aus Kryptowährungen
+§ 27b. (1) Einkünfte aus Kryptowährungen (Abs. 4) sind laufende Einkünfte (Abs. 2) und Einkünfte aus realisierten Wertsteigerungen (Abs. 3).
+(2) Zu den laufenden Einkünften aus Kryptowährungen gehören
+	1.	Entgelte für die Überlassung von Kryptowährungen und
+	2.	der Erwerb von Kryptowährungen durch einen technischen Prozess, bei dem Leistungen zur Transaktionsverarbeitung zur Verfügung gestellt werden.
+Keine laufenden Einkünfte stellen die erworbenen Kryptowährungen dar, wenn
+	–	die Leistung zur Transaktionsverarbeitung vorwiegend im Einsatz von vorhandenen Kryptowährungen besteht (Staking) oder
+	–	die Kryptowährungen unentgeltlich (Airdrops) oder für lediglich unwesentliche sonstige Leistungen (Bounties) übertragen werden, oder
+	–	dem Steuerpflichtigen Kryptowährungen im Rahmen einer Abspaltung von der ursprünglichen Blockchain zugehen (Hardfork).
+Die in diesen Fällen erworbenen Kryptowährungen sind nach Maßgabe des Abs. 3 zu besteuern.
+(3) Zu den Einkünften aus realisierten Wertsteigerungen von Kryptowährungen gehören Einkünfte aus
+	1.	der Veräußerung sowie
+	2.	dem Tausch gegen andere Wirtschaftsgüter und Leistungen, einschließlich gesetzlich anerkannter Zahlungsmittel. Der Tausch einer Kryptowährung gegen eine andere Kryptowährung stellt keine Realisierung dar; damit in Zusammenhang stehende Aufwendungen sind steuerlich unbeachtlich. Die Überlassung einer Kryptowährung im Sinne des Abs. 2 Z 1 stellt keinen Tausch dar.
+§ 27 Abs. 6 Z 1 gilt sinngemäß.
+(4) Eine Kryptowährung ist eine digitale Darstellung eines Werts, die von keiner Zentralbank oder öffentlichen Stelle emittiert wurde oder garantiert wird und nicht zwangsläufig an eine gesetzlich festgelegte Währung angebunden ist und die nicht den gesetzlichen Status einer Währung oder von Geld besitzt, aber von natürlichen oder juristischen Personen als Tauschmittel akzeptiert wird und die auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann.“ Als Kryptowährung gelten auch Forderungen auf Rückzahlungen, die aus der Überlassung von Kryptowährungen im Sinne des Abs. 2 Z 1 entstehen.
+
+Vermietung und Verpachtung
+§ 28. (1) Folgende Einkünfte sind, soweit sie nicht zu den Einkünften im Sinne des § 2 Abs. 3 Z 1 bis 5 gehören, Einkünfte aus Vermietung und Verpachtung:
+	1.	Einkünfte aus der Vermietung und Verpachtung von unbeweglichem Vermögen und von Rechten, die den Vorschriften des bürgerlichen Rechts über Grundstücke unterliegen.
+	2.	Einkünfte aus der Vermietung und Verpachtung von Sachinbegriffen, insbesondere von beweglichem Betriebsvermögen.
+	3.	Einkünfte aus der Überlassung von Rechten auf bestimmte oder unbestimmte Zeit oder aus der Gestattung der Verwertung von Rechten, insbesondere aus
+	–	der Einräumung der Werknutzung (Werknutzungsbewilligung, Werknutzungsrecht) im Sinne des Urheberrechtsgesetzes
+	–	der Überlassung von gewerblichen Schutzrechten, von gewerblichen Erfahrungen und von Berechtigungen.
+	4.	Einkünfte aus der Veräußerung von Miet- und Pachtzinsforderungen, und zwar auch dann, wenn diese Forderungen im Veräußerungserlös des Grundstückes mit abgegolten werden.
+(2) Aufwendungen für
+	–	nicht regelmäßig jährlich anfallende Instandhaltungsarbeiten,
+	–	Absetzungen für außergewöhnliche technische oder wirtschaftliche Abnutzung und damit zusammenhängende Aufwendungen sowie
+	–	außergewöhnliche Aufwendungen, die keine Instandhaltungs-, Instandsetzungs- oder Herstellungsaufwendungen sind,
+sind über Antrag gleichmäßig auf fünfzehn Jahre zu verteilen. Bei Gebäuden, die Wohnzwecken dienen, gilt hinsichtlich der Instandsetzungsaufwendungen folgendes:
+	–	Instandsetzungsaufwendungen, die unter Verwendung von entsprechend gewidmeten steuerfreien Subventionen aus öffentlichen Mitteln getätigt werden, scheiden insoweit aus der Ermittlung der Einkünfte aus.
+	–	Soweit Instandsetzungsaufwendungen nicht durch steuerfreie Subventionen gedeckt sind, sind sie gleichmäßig auf fünfzehn Jahre verteilt abzusetzen.
+Instandsetzungsaufwendungen sind jene Aufwendungen, die nicht zu den Anschaffungs- oder Herstellungskosten gehören und allein oder zusammen mit Herstellungsaufwand den Nutzungswert des Gebäudes wesentlich erhöhen oder seine Nutzungsdauer wesentlich verlängern. Bei Übertragung des Gebäudes auf eine andere Person gilt Folgendes:
+	–	Bei entgeltlicher Übertragung können ab dem der Übertragung folgenden Kalenderjahr restliche Fünfzehntelbeträge nicht mehr abgezogen werden.
+	–	Bei unentgeltlicher Übertragung können ab dem der Übertragung folgenden Kalenderjahr restliche Fünfzehntelbeträge vom Rechtsnachfolger fortgesetzt werden.
+(3) Folgende Aufwendungen, soweit sie Herstellungsaufwand darstellen, sind über Antrag gleichmäßig auf fünfzehn Jahre verteilt abzusetzen:
+	1.	Aufwendungen im Sinne der §§ 3 bis 5 des Mietrechtsgesetzes in Gebäuden, die den Bestimmungen des Mietrechtsgesetzes über die Verwendung der Hauptmietzinse unterliegen.
+	2.	Aufwendungen für Sanierungsmaßnahmen, für die
+	–	eine Zusage für eine Förderung nach dem Wohnhaussanierungsgesetz, dem Startwohnungsgesetz oder den landesgesetzlichen Vorschriften über die Förderung der Wohnhaussanierung vorliegt oder für die
+	–	eine Förderung des Bundes gemäß dem 3. Abschnitt des UFG ausbezahlt wird oder plausibilisiert wird, dass die inhaltlichen Voraussetzungen für die Zuerkennung einer Förderung vorliegen. Der Bundesminister für Finanzen wird im Einvernehmen mit der Bundesministerin für Klimaschutz, Umwelt, Energie, Mobilität, Innovation und Technologie ermächtigt, die Kriterien für diese Plausibilisierung im Wege einer Verordnung näher festzulegen.
+	3.	Aufwendungen auf Grund des Denkmalschutzgesetzes. § 8 Abs. 2 dritter und vierter Satz gilt entsprechend.
+Werden zur Finanzierung dieses Herstellungsaufwandes erhöhte Zwangsmieten oder erhöhte Mieten, die auf ausdrücklich gesetzlich vorgesehenen Vereinbarungen beruhen, eingehoben, dann kann der Herstellungsaufwand gleichmäßig auch auf die Laufzeit der erhöhten Mieten, mindestens aber gleichmäßig auf zehn Jahre verteilt werden. Bei Übertragung des Gebäudes auf eine andere Person können restliche Teilbeträge ab dem der Übertragung folgenden Kalenderjahr vom Rechtsnachfolger nur fortgesetzt werden, wenn das Gebäude unentgeltlich erworben wurde.
+(4) Der Ersatz von Aufwendungen gemäß § 10 des Mietrechtsgesetzes kann über Antrag gleichmäßig auf zehn Jahre verteilt werden. Die beiden letzten Sätze des Abs. 2 gelten auch für diese Zehntelabsetzungen.
+(Anm.: Abs. 5 aufgehoben durch BGBl. Nr. 201/1996)
+(6) Nicht zu den Einnahmen aus Vermietung und Verpachtung zählen Zuwendungen aus öffentlichen Mitteln, die § 3 Abs. 1 Z 6 entsprechen. Diese Zuwendungen kürzen die damit in unmittelbarem wirtschaftlichen Zusammenhang stehenden Anschaffungs- oder Herstellungskosten sowie Instandhaltungs- oder Instandsetzungsaufwendungen.
+(7) § 4 Abs. 2 Z 2 gilt in Bezug auf die Fehlerberichtigung durch Ansatz von Zu- und Abschlägen sinngemäß.
+
+Steuersätze und Steuerabsetzbeträge
+§ 33. (1) Die Einkommensteuer beträgt jährlich
+für die ersten 13 539 Euro	0%
+für Einkommensteile über 13 539 Euro bis 21 992 Euro	20%
+für Einkommensteile über 21 992 Euro bis 36 458 Euro	30%
+für Einkommensteile über 36 458 Euro bis 70 365 Euro	40%
+für Einkommensteile über 70 365 Euro bis 104 859 Euro	48%
+für Einkommensteile über 104 859 Euro	50%
+Für Einkommensteile über eine Million Euro beträgt der Steuersatz in den Kalenderjahren 2016 bis 2029 55%.
+(1a) Die für die Anwendung der Steuersätze für Einkommensteile bis eine Million Euro festgesetzten Grenzbeträge sowie die für die Anwendung des Abs. 4, des Abs. 5 Z 1 bis 3, des Abs. 6 und des Abs. 8 festgesetzten Beträge unterliegen einer Inflationsanpassung nach Maßgabe des § 33a. Gleiches gilt für die in § 1 Abs. 4, § 34 Abs. 4 zweiter Teilstrich, § 35 Abs. 1 dritter Teilstrich, § 42 Abs. 1 Z 3 und Abs. 2, § 99 Abs. 2 Z 2 und § 102 Abs. 3 festgesetzten Beträge, die Einkunftsgrenzen des § 4 Abs. 4 Z 8 lit. b, die Freigrenze für das Jahressechstel gemäß § 67 Abs. 1 zweiter und dritter Satz, § 41 Abs. 4 zweiter Satz und § 77 Abs. 4 erster Satz sowie die Grenze für die Anwendung der 30% gemäß § 41 Abs. 4 vierter Satz und § 77 Abs. 4 letzter Satz..
+(2) Von dem sich nach Abs. 1 ergebenden Betrag sind Absetzbeträge in folgender Reihenfolge abzuziehen:
+	1.	Der Familienbonus Plus gemäß Abs. 3a; der Familienbonus Plus ist insoweit nicht abzuziehen, als er jene Steuer übersteigt, die auf das gemäß Abs. 1 zu versteuernde Einkommen entfällt.
+	2.	Die Absetzbeträge nach Abs. 4 bis 6.
+(3)
+	1.	Steuerpflichtigen, denen auf Grund des Familienlastenausgleichsgesetzes 1967 Familienbeihilfe gewährt wird, steht im Wege der gemeinsamen Auszahlung mit der Familienbeihilfe ein Kinderabsetzbetrag von monatlich 67,80 Euro (Anm. 1) für jedes Kind zu. Für Kinder, die sich ständig außerhalb eines Mitgliedstaates der Europäischen Union, eines Staates des Europäischen Wirtschaftsraumes oder der Schweiz aufhalten, steht kein Kinderabsetzbetrag zu. Wurden Kinderabsetzbeträge zu Unrecht bezogen, ist § 26 des Familienlastenausgleichsgesetzes 1967 anzuwenden.
+	2.	Der Kinderabsetzbetrag ist mit Wirksamkeit ab 1. Jänner eines jeden Kalenderjahres mit dem Anpassungsfaktor des § 108f ASVG zu vervielfachen. Der Vervielfachung ist der im vorangegangenen Kalenderjahr geltende Betrag zugrunde zu legen. Der vervielfachte Betrag ist kaufmännisch auf eine Dezimalstelle zu runden. Der Bundesminister für Finanzen hat den für das folgende Kalenderjahr geltenden Betrag bis spätestens 15. November jeden Jahres zu ermitteln und mit Verordnung kundzumachen.
+(3a) Für ein Kind, für das Familienbeihilfe nach dem Familienlastenausgleichsgesetz 1967 gewährt wird und das sich ständig in einem Mitgliedstaat der EU oder Hoheitsgebiet einer anderen Vertragspartei des Abkommens über den Europäischen Wirtschaftsraum oder der Schweiz aufhält, steht auf Antrag ein Familienbonus Plus nach Maßgabe der folgenden Bestimmungen zu:
+	1.	Der Familienbonus Plus beträgt
+	a)	bis zum Ablauf des Monats, in dem das Kind das 18. Lebensjahr vollendet, für jeden Kalendermonat 166,68 Euro,
+	b)	nach Ablauf des Monats, in dem das Kind das 18. Lebensjahr vollendet, für jeden Kalendermonat 58,34 Euro.
+(Anm.: Z 2 aufgehoben durch Art. 2 Z 4, BGBl. I Nr. 135/2022)
+	3.	Der Familienbonus Plus ist in der Veranlagung entsprechend der Antragstellung durch den Steuerpflichtigen wie folgt zu berücksichtigen:
+	a)	Für ein Kind, für das im jeweiligen Monat kein Unterhaltsabsetzbetrag nach Abs. 4 Z 3 zusteht:
+	–	Beim Familienbeihilfenberechtigten oder dessen (Ehe-)Partner der nach Z 1 oder Z 2 zustehende Betrag oder
+	–	beim Familienbeihilfenberechtigten und dessen (Ehe-)Partner jeweils die Hälfte des nach Z 1 oder Z 2 zustehenden Betrages.
+	b)	Für ein Kind, für das im jeweiligen Monat ein Unterhaltsabsetzbetrag nach Abs. 4 Z 3 zusteht:
+	–	Beim Familienbeihilfenberechtigten oder vom Steuerpflichtigen, dem für das Kind der Unterhaltsabsetzbetrag zusteht, der nach Z 1 oder Z 2 zustehende Betrag oder
+	–	beim Familienbeihilfenberechtigten und dem Steuerpflichtigen, dem für das Kind der Unterhaltsabsetzbetrag zusteht, jeweils die Hälfte des nach Z 1 oder Z 2 zustehenden Betrages.
+Für einen Monat, für den kein Unterhaltsabsetzbetrag zusteht, steht dem Unterhaltsverpflichteten kein Familienbonus Plus zu.
+	c)	Die Aufteilung des Familienbonus Plus gemäß lit. a und b ist bei gleichbleibenden Verhältnissen für das gesamte Kalenderjahr einheitlich zu beantragen. Wird von den Anspruchsberechtigten die Berücksichtigung in einer Höhe beantragt, die insgesamt über das nach Z 1 oder Z 2 zustehende Ausmaß hinausgeht, ist jeweils die Hälfte des monatlich zustehenden Betrages zu berücksichtigen.
+	d)	Stellt sich für das Finanzamt nach Eintritt der Rechtskraft heraus, dass kein oder ein niedrigerer Anspruch auf den Familienbonus Plus besteht, gilt dies als rückwirkendes Ereignis im Sinne des § 295a der Bundesabgabenordnung.
+	e)	Der Antrag kann zurückgezogen werden. Ein Zurückziehen ist bis fünf Jahre nach Eintritt der Rechtskraft des Bescheides möglich und gilt nach Eintritt der Rechtskraft als rückwirkendes Ereignis im Sinne des § 295a der Bundesabgabenordnung sowohl für den Zurückziehenden als auch für den anderen Antragsberechtigten gemäß lit. a oder b. Wird der Antrag zurückgezogen, kann der gemäß lit. a oder b andere Antragsberechtigte den ganzen nach Z 1 oder Z 2 zustehenden Betrag beantragen.
+	4.	(Ehe-) Partner im Sinne der Z 3 ist eine Person, mit der der Familienbeihilfenberechtigte verheiratet ist, eine eingetragene Partnerschaft nach dem Eingetragene Partnerschaft-Gesetz – EPG begründet hat oder für mehr als sechs Monate im Kalenderjahr in einer Lebensgemeinschaft lebt. Die Frist von sechs Monaten im Kalenderjahr gilt nicht, wenn dem nicht die Familienbeihilfe beziehenden Partner in den restlichen Monaten des Kalenderjahres, in denen die Lebensgemeinschaft nicht besteht, der Unterhaltsabsetzbetrag für dieses Kind zusteht.
+(Anm.: Z 5 aufgehoben durch Art. 2 Z 4, BGBl. I Nr. 135/2022)
+	6.	In der Steuererklärung ist die Sozialversicherungsnummer oder die persönliche Kennnummer der Europäischen Krankenversicherungskarte (§ 31a ASVG) jedes Kindes, für das ein Familienbonus Plus beantragt wird, anzugeben.
+	7.	Der Bundesminister für Finanzen hat die technischen Voraussetzungen für die Berücksichtigung des Familienbonus Plus im Rahmen der Veranlagung zur Verfügung zu stellen.
+(4) Darüber hinaus stehen folgende Absetzbeträge zu, wenn sich das Kind ständig in einem Mitgliedstaat der EU oder Hoheitsgebiet einer anderen Vertragspartei des Abkommens über den Europäischen Wirtschaftsraum oder der Schweiz aufhält:
+	1.	Alleinverdienenden steht ein Alleinverdienerabsetzbetrag zu. Dieser beträgt jährlich
+	–	bei einem Kind (§ 106 Abs. 1) 612 Euro,
+	–	bei zwei Kindern (§ 106 Abs. 1) 828 Euro.
+Dieser Betrag erhöht sich für das dritte und jedes weitere Kind (§ 106 Abs. 1) um jeweils 273 Euro jährlich.
+Alleinverdienende sind Steuerpflichtige mit mindestens einem Kind (§ 106 Abs. 1), die mehr als sechs Monate im Kalenderjahr verheiratet oder eingetragene Partner sind und von ihren unbeschränkt steuerpflichtigen Ehegatten oder eingetragenen Partnern nicht dauernd getrennt leben oder die mehr als sechs Monate mit einer unbeschränkt steuerpflichtigen Person in einer Lebensgemeinschaft leben. Für Steuerpflichtige im Sinne des § 1 Abs. 4 ist die unbeschränkte Steuerpflicht des Ehegatten oder eingetragenen Partners nicht erforderlich. Voraussetzung ist, dass der (Ehe )Partner (§ 106 Abs. 3) Einkünfte von höchstens 7 411 Euro jährlich erzielt. Die nach § 3 Abs. 1 Z 4 lit. a, weiters nach § 3 Abs. 1 Z 10, 11 und 32 und auf Grund zwischenstaatlicher oder anderer völkerrechtlicher Vereinbarungen steuerfreien Einkünfte sind in diese Grenzen mit einzubeziehen. Andere steuerfreie Einkünfte sind nicht zu berücksichtigen. Der Alleinverdienerabsetzbetrag steht nur einem der (Ehe )Partner zu. Erfüllen beide (Ehe )Partner die Voraussetzungen im Sinne der vorstehenden Sätze, hat jener (Ehe )Partner Anspruch auf den Alleinverdienerabsetzbetrag, der die höheren Einkünfte im Sinne der Z 1 erzielt. Haben beide (Ehe )Partner keine oder gleich hohe Einkünfte im Sinne der Z 1, steht der Absetzbetrag dem haushaltsführenden (Ehe )Partner zu.
+	2.	Alleinerziehenden steht ein Alleinerzieherabsetzbetrag zu. Dieser beträgt jährlich
+	–	bei einem Kind (§ 106 Abs. 1) 612 Euro,
+	–	bei zwei Kindern (§ 106 Abs. 1) 828 Euro.
+Dieser Betrag erhöht sich für das dritte und jedes weitere Kind (§ 106 Abs. 1) um jeweils 273 Euro jährlich. Alleinerziehende sind Steuerpflichtige, die mit mindestens einem Kind (§ 106 Abs. 1) mehr als sechs Monate im Kalenderjahr nicht in einer Gemeinschaft mit einem (Ehe)Partner leben.
+	3.	Steuerpflichtigen, die für ein Kind den gesetzlichen Unterhalt leisten, steht ein Unterhaltsabsetzbetrag von 38 Euro monatlich zu. Dabei gilt:
+	a)	Der Unterhaltsabsetzbetrag steht zu, wenn das Kind nicht dem Haushalt des Steuerpflichtigen zugehört (§ 2 Abs. 5 Familienlastenausgleichsgesetz 1967) und weder ihm noch seinem von ihm nicht dauernd getrennt lebenden (Ehe-)Partner Familienbeihilfe für das Kind gewährt wird.
+	b)	Leistet ein Steuerpflichtiger für mehr als ein nicht haushaltszugehöriges Kind den gesetzlichen Unterhalt, steht für das zweite Kind ein Absetzbetrag von 56 Euro und für jedes weitere Kind ein Absetzbetrag von jeweils 75 Euro monatlich zu.
+	c)	Erfüllen mehrere Personen in Bezug auf ein Kind die Voraussetzungen für den Unterhaltsabsetzbetrag, steht der Absetzbetrag nur einmal zu.
+	d)	Wird die Unterhaltsverpflichtung im Kalenderjahr nicht zur Gänze erfüllt, steht der Unterhaltsabsetzbetrag nur für jene Monate zu, für die rechnerisch die volle Unterhaltsleistung erfüllt wurde, wobei vorrangig die zeitlich am weitesten zurückliegende Unterhaltsverpflichtung getilgt wird.
+	e)	Nachzahlungen von gesetzlichen Unterhaltsleistungen sind ausschließlich im Kalenderjahr der Zahlung zu berücksichtigen.
+(Anm.: Z 4 und 5 aufgehoben durch Art. 2 Z 5, BGBl. I Nr. 135/2022)
+(5) Bei Einkünften aus einem bestehenden Dienstverhältnis stehen folgende Absetzbeträge zu:
+	1.	Ein Verkehrsabsetzbetrag von 496 Euro jährlich.
+	2.	Bei Anspruch auf ein Pendlerpauschale gemäß § 16 Abs. 1 Z 6 erhöht sich der Verkehrsabsetzbetrag auf 853 Euro, wenn das Einkommen des Steuerpflichtigen 15 069 Euro im Kalenderjahr nicht übersteigt. Der erhöhte Verkehrsabsetzbetrag vermindert sich zwischen Einkommen von 15 069 Euro und 16 056 Euro gleichmäßig einschleifend auf 496 Euro.
+	3.	Der Verkehrsabsetzbetrag gemäß Z 1 oder 2 erhöht sich um 804 Euro (Zuschlag), wenn das Einkommen des Steuerpflichtigen 19 761 Euro im Kalenderjahr nicht übersteigt. Der Zuschlag vermindert sich zwischen Einkommen von 19 761 Euro und 30 259 Euro gleichmäßig einschleifend auf null.
+	4.	Ein Pendlereuro in Höhe von jährlich sechs Euro pro Kilometer der einfachen Fahrtstrecke zwischen Wohnung und Arbeitsstätte, wenn der Arbeitnehmer Anspruch auf ein Pendlerpauschale gemäß § 16 Abs. 1 Z 6 hat. Für die Berücksichtigung des Pendlereuros gelten die Bestimmungen des § 16 Abs. 1 Z 6 lit. b und lit. e bis j entsprechend.
+(Anm.: Z 5 aufgehoben durch BGBl. I Nr. 118/2015)
+(6) Stehen einem Steuerpflichtigen die Absetzbeträge nach Abs. 5 nicht zu und erhält er Bezüge oder Vorteile im Sinne des § 25 Abs. 1 Z 1 oder 2 für frühere Dienstverhältnisse, Pensionen und gleichartige Bezüge im Sinne des § 25 Abs. 1 Z 3 oder Abs. 1 Z 4 bis 5, steht ein Pensionistenabsetzbetrag gemäß Z 1 und Z 2 oder gemäß Z 3 zu. Bei Einkünften, die den Anspruch auf einen Pensionistenabsetzbetrag begründen, steht der Werbungskostenpauschbetrag nach § 16 Abs. 3 nicht zu. Für die Berücksichtigung des Pensionistenabsetzbetrages gilt:
+	1.	Ein erhöhter Pensionistenabsetzbetrag steht zu, wenn
+	–	der Steuerpflichtige mehr als sechs Monate im Kalenderjahr verheiratet oder eingetragener Partner ist und vom (Ehe-)Partner nicht dauernd getrennt lebt,
+	–	der (Ehe-)Partner (§ 106 Abs. 3) Einkünfte im Sinne des Abs. 4 Z 1 von höchstens 2 720 Euro jährlich erzielt und
+	–	der Steuerpflichtige keinen Anspruch auf den Alleinverdienerabsetzbetrag hat.
+	2.	Der erhöhte Pensionistenabsetzbetrag beträgt 1 502 Euro, wenn die laufenden Pensionseinkünfte des Steuerpflichtigen 24 616 Euro im Kalenderjahr nicht übersteigen. Dieser Absetzbetrag vermindert sich gleichmäßig einschleifend zwischen zu versteuernden laufenden Pensionseinkünften von 24 616 Euro und 31 494 Euro auf null.
+	3.	Liegen die Voraussetzungen für einen erhöhten Pensionistenabsetzbetrag nach der Z 1 nicht vor, beträgt der Pensionistenabsetzbetrag 1 020 Euro. Dieser Absetzbetrag vermindert sich gleichmäßig einschleifend zwischen zu versteuernden laufenden Pensionseinkünften von 21 614 Euro und 31 494 Euro auf null.
+(7) Ergibt sich bei Steuerpflichtigen, die
+	–	zumindest an 30 Tagen im Kalenderjahr steuerpflichtige Einkünfte gemäß § 2 Abs. 3 Z 1 bis 4 erzielen, oder
+	–	im gesamten Kalenderjahr nur Leistungen nach dem Kinderbetreuungsgeldgesetz (KBGG), BGBl. I Nr. 103/2001, Wochengeld oder Pflegekarenzgeld bezogen haben,
+nach Abs. 1 eine Einkommensteuer unter 700 Euro, gilt bei Vorhandensein eines Kindes (§ 106 Abs. 1) Folgendes:
+Die Differenz zwischen 700 Euro und der Einkommensteuer nach Abs. 1 ist als Kindermehrbetrag zu erstatten, wenn
+	a)	der Alleinverdiener- oder Alleinerzieherabsetzbetrag zusteht oder
+	b)	sich auch beim (Ehe)Partner gemäß § 106 Abs. 3, der Einkünfte gemäß § 2 Abs. 3 Z 1 bis 4 erzielt, eine Einkommensteuer nach Abs. 1 unter 700 Euro ergibt; in diesem Fall hat nur der Familienbeihilfeberechtigte Anspruch auf den Kindermehrbetrag.
+Dieser Betrag erhöht sich für jedes weitere Kind (§ 106 Abs. 1) um den Betrag von 700 Euro. Auf Grund zwischenstaatlicher oder anderer völkerrechtlicher Vereinbarungen steuerfreie Einkünfte sind für Zwecke der Berechnung der Einkommensteuer wie steuerpflichtige Einkünfte zu behandeln.
+	(8) 1.	Ergibt sich nach Abs. 1 und 2 eine Einkommensteuer unter null, ist insoweit der Alleinverdienerabsetzbetrag oder der Alleinerzieherabsetzbetrag zu erstatten.
+	2.	Ergibt sich bei Steuerpflichtigen, die Anspruch auf den Verkehrsabsetzbetrag haben, nach Abs. 1 und 2 eine Einkommensteuer unter null, sind 55% der Werbungskosten im Sinne des § 16 Abs. 1 Z 3 lit. a (ausgenommen Betriebsratsumlagen) und des § 16 Abs. 1 Z 4 und 5, höchstens aber 496 Euro jährlich rückzuerstatten (SV-Rückerstattung). Bei Steuerpflichtigen, die Anspruch auf ein Pendlerpauschale gemäß § 16 Abs. 1 Z 6 haben, sind höchstens 750 Euro rückzuerstatten. Bei Steuerpflichtigen, die Anspruch auf den Zuschlag gemäß Abs. 5 Z 3 haben, ist der maximale Betrag der SV-Rückerstattung um 804 Euro zu erhöhen (SV-Bonus).
+	3.	Ergibt sich bei Steuerpflichtigen, die Anspruch auf den (erhöhten) Pensionistenabsetzbetrag haben, nach Abs. 1 und 2 eine Einkommensteuer unter null, sind 80% der Werbungskosten im Sinne des § 16 Abs. 1 Z 4, höchstens aber 723 Euro jährlich, rückzuerstatten (SV-Rückerstattung). Die Rückerstattung vermindert sich um steuerfreie Zulagen gemäß § 3 Abs. 1 Z 4 lit. f.
+	4.	Auf Grund zwischenstaatlicher oder anderer völkerrechtlicher Vereinbarungen steuerfreie Einkünfte sind für Zwecke der Berechnung der Einkommensteuer gemäß Z 1 bis 3 wie steuerpflichtige Einkünfte zu behandeln. Der Kinderabsetzbetrag gemäß Abs. 3 bleibt bei der Berechnung außer Ansatz.
+	5.	Die Erstattung erfolgt im Wege der Veranlagung gemäß § 41 und ist mit der nach Abs. 1 und 2 berechneten Einkommensteuer unter null begrenzt.
+(Anm.: Abs. 9 und 9a aufgehoben durch BGBl. I Nr. 118/2015)
+(10) Ist bei der Berechnung der Steuer ein Durchschnittssteuersatz bzw. Progressionsvorbehalt zu berücksichtigen, gilt Folgendes: Der Durchschnittssteuersatz ist zunächst ohne Berücksichtigung der Abzüge gemäß Abs. 3a bis 6 zu ermitteln. Von der unter Anwendung dieses Durchschnittssteuersatzes ermittelten Steuer sind die Abzüge gemäß Abs. 3a bis 6 abzuziehen.
+(Anm.: Abs. 11 aufgehoben durch Art. 1 Z 8 lit. c, BGBl. I Nr. 113/2024)
+
+(________________
+Anm. 1: gemäß BGBl. II Nr. 314/2024 für 2025: 70,9 €)
+Beachte für folgende Bestimmung
+zum Bezugszeitraum vgl. § 124b Z 413 und 477
+Inflationsanpassung
+§ 33a. (1) Die steuerliche Mehrbelastung durch die kalte Progression (Abs. 2) ist nach Maßgabe der folgenden Bestimmungen abzugelten.
+(2) Als kalte Progression ist das inflationsbedingte Mehraufkommen an Einkommensteuer zu verstehen, das sich für das jeweilige Folgejahr als Differenz aus dem Steueraufkommen auf Grundlage von noch nicht nach § 33 Abs. 1a inflationsangepassten Beträgen und dem Steueraufkommen bei einer Inflationsanpassung nach Maßgabe des § 33 Abs. 1a unter Zugrundelegung einer gemäß Abs. 3 ermittelten positiven Inflationsrate ergibt.
+(3) Für die Ermittlung der Inflationsrate ist das arithmetische Mittel der für die Monate Juli des vorangegangenen Jahres bis Mai des laufenden Jahres sowie des vorläufigen Wertes für Juni des laufenden Jahres der von der Bundesanstalt Statistik Österreich veröffentlichten Jahresinflationsraten des Verbraucherpreisindexes heranzuziehen. Das arithmetische Mittel ist auf das Zehntel eines Prozentpunktes zu runden.
+(4) Für jedes Kalenderjahr erfolgt eine Anpassung der Beträge gemäß § 33 Abs. 1a im Ausmaß von zwei Dritteln der positiven Inflationsrate (Abs. 3). Die so ermittelten Beträge sind auf volle Euro aufzurunden. Der Bundesminister für Finanzen hat die für das Folgejahr angepassten Beträge jeweils bis zum 31. August des laufenden Kalenderjahres im Wege einer Verordnung kundzumachen. (Anm. 1)
+(5) Zur Abgeltung der noch nicht gemäß Abs. 4 berücksichtigten Inflationswirkungen hat die Bundesregierung bis 15. September jeden Jahres einen Ministerratsbeschluss zu fassen, der im Umfang des noch nicht erfassten Volumens der kalten Progression Entlastungsmaßnahmen für Bezieher von Einkünften, vor allem im Bereich der Einkommensteuer, zum Gegenstand hat. Grundlage dafür bildet ein bis 31. Juli vorzulegender Progressionsbericht (Abs. 6), der auch dem Nationalrat vorzulegen ist. Die zuständigen Bundesminister haben Gesetzesvorschläge für die Entlastungsmaßnahmen auszuarbeiten, die eine Wirksamkeit mit 1. Jänner des folgenden Kalenderjahres vorsehen.
+(6) Für den Progressionsbericht gilt:
+	1.	Für das jeweilige Folgejahr sind darzustellen:
+	a)	Die Höhe der Inflationsrate gemäß Abs. 3,
+	b)	das prognostizierte Einkommensteueraufkommen auf Grundlage noch nicht nach § 33 Abs. 1a inflationsangepassten Beträgen,
+	c)	das prognostizierte Einkommensteueraufkommen bei einer Inflationsanpassung nach Maßgabe des § 33 Abs. 1a sowie bei Inflationsanpassung des für die Anwendung des Höchststeuersatzes maßgebenden Grenzbetrages unter Zugrundelegung einer positiven Inflationsrate gemäß Abs. 3 sowie
+	d)	das prognostizierte Einkommensteueraufkommen unter Berücksichtigung der Inflationsanpassung gemäß Abs. 4.
+Für das prognostizierte Einkommensteueraufkommen ist die für das Folgejahr maßgebende Rechtslage heranzuziehen.
+	2.	Der Ermittlung des prognostizierten Einkommensteueraufkommens gemäß Z 1 lit. b bis d ist eine wissenschaftlich fundierte geschätzte und simulierte Verteilung von Einkommen und relevanter sozioökonomischer Charakteristika zu Grunde zu legen.
+	3.	Der Bundesminister für Finanzen hat zwei wirtschaftswissenschaftliche Forschungsinstitute mit der Erstellung des Progressionsberichtes zu betrauen und in einer Verordnung nähere Regelungen für die Erstellung des Berichtes sowie eine durchzuführende Evaluierung vorzusehen.
+

@@ -1,0 +1,51 @@
+id,prompt,answer
+1,Wann ist eine GmbH in Österreich unbeschränkt steuerpflichtig?,"Eine GmbH ist unbeschränkt steuerpflichtig, wenn sie ihren Sitz oder ihre Geschäftsleitung im Inland hat (§ 1 Abs. 2 KStG)."
+2,Was umfasst die unbeschränkte Steuerpflicht bei Körperschaften?,"Sie erstreckt sich auf alle in- und ausländischen Einkünfte (Welteinkommensprinzip, § 1 Abs. 2 KStG)."
+3,Sind ausländische juristische Personen in Österreich steuerpflichtig?,"Ja, wenn sie weder Sitz noch Geschäftsleitung im Inland haben, sind sie mit ihren inländischen Einkünften beschränkt steuerpflichtig (§ 1 Abs. 3 KStG)."
+4,Welche Körperschaften sind von der Körperschaftsteuer persönlich befreit?,"Unter anderem gemeinnützige, mildtätige oder kirchliche Institutionen gemäß § 5 Z 6 KStG in Verbindung mit der BAO."
+5,Wie hoch ist der aktuelle Körperschaftsteuersatz in Österreich?,Der Steuersatz beträgt seit dem Kalenderjahr 2024 einheitlich 23 % (§ 22 Abs. 1 KStG).
+6,Was ist die Basis für die Einkommensermittlung bei einer GmbH?,Das Einkommen wird nach den Vorschriften des EStG und des KStG ermittelt (§ 7 Abs. 2 KStG).
+7,Was versteht man unter einer verdeckten Ausschüttung?,"Vorteile, die eine Körperschaft ihren Gesellschaftern nur aufgrund ihrer Stellung als Anteilsinhaber gewährt und die sie einem Fremden nicht gewährt hätte (§ 8 Abs. 2 KStG)."
+8,Sind Aufsichtsratsvergütungen bei der Körperschaft voll abzugsfähig?,"Nein, Vergütungen für Mitglieder des Aufsichtsrats sind nur zu 50 % als Betriebsausgabe abzugsfähig (§ 12 Abs. 1 Z 7 KStG)."
+9,Wie werden Beteiligungserträge aus einer inländischen Tochtergesellschaft bei der Mutter-GmbH behandelt?,Inländische Beteiligungserträge sind gemäß § 10 Abs. 1 Z 1 KStG unabhängig von einer Mindestbeteiligung steuerfrei.
+10,Welche Voraussetzungen gelten für die Bildung einer steuerlichen Unternehmensgruppe?,Eine finanzielle Verbindung (Beteiligung über 50 %) seit Beginn des Wirtschaftsjahres und ein schriftlicher Gruppenantrag beim Finanzamt (§ 9 KStG).
+11,Wie lange ist die Mindestdauer einer steuerlichen Unternehmensgruppe?,Die Gruppe muss für mindestens drei volle Jahre bestehen bleiben. Bei vorzeitigem Ausscheiden erfolgt eine Rückabwicklung (§ 9 Abs. 10 KStG).
+12,Was ist die Mindestkörperschaftsteuer für eine nach dem 1.1.2024 gegründete GmbH?,Für Neugründungen beträgt sie in den ersten fünf Jahren 125 Euro pro Quartal (500 Euro pro Jahr) gemäß § 24 Abs. 4 KStG.
+13,Können Verluste einer Tochtergesellschaft dem Gruppenträger zugerechnet werden?,"Ja, im Rahmen einer Unternehmensgruppe werden die steuerlichen Ergebnisse (Gewinne und Verluste) der Gruppenmitglieder dem Gruppenträger zugerechnet (§ 9 Abs. 1 KStG)."
+14,Gibt es eine Grenze für den Verlustabzug bei Körperschaften?,"Ja, Verluste können nur im Ausmaß von 75 % des Gesamtbetrages der Einkünfte verrechnet werden (75 %-Vortragsgrenze, § 8 Abs. 4 Z 2 lit. a KStG)."
+15,Sind Spenden an Universitäten steuerlich abzugsfähig?,"Ja, Spenden für Forschungs- und Lehraufgaben sind im Rahmen der Höchstgrenzen (10 % des Vorjahresgewinns) abzugsfähig (§ 12 Abs. 1 Z 4 KStG iVm § 4b EStG)."
+16,Was ist ein Mantelkauf im Sinne des KStG?,"Der Verlust der wirtschaftlichen Identität durch wesentliche Änderung der Gesellschafterstruktur, der organisatorischen und der wirtschaftlichen Struktur (§ 8 Abs. 4 Z 2 lit. c KStG)."
+17,Was passiert mit den Verlustvorträgen bei einem Mantelkauf?,Das Recht auf Verlustabzug erlischt mit dem Zeitpunkt der wesentlichen Änderung der Struktur (§ 8 Abs. 4 Z 2 lit. c KStG).
+18,Wie werden Zinsen für Fremdkapital zum Erwerb einer Beteiligung behandelt?,Zinsen für Fremdkapital zur Finanzierung des Erwerbs von Beteiligungen sind grundsätzlich abzugsfähig (§ 11 Abs. 1 KStG).
+19,Wann liegt eine internationale Schachtelbeteiligung vor?,Wenn eine inländische Körperschaft für mindestens ein Jahr mit mindestens 10 % an einer ausländischen Gesellschaft (vergleichbar einer GmbH/AG) beteiligt ist (§ 10 Abs. 2 KStG).
+20,Wie werden Gewinne aus der Veräußerung einer internationalen Schachtelbeteiligung behandelt?,"Sie sind grundsätzlich steuerfrei, es sei denn, es wurde für die Option zur Steuerpflicht optiert (§ 10 Abs. 3 KStG)."
+21,Was ist das Ziel der Zinsschranke (§ 12a KStG)?,Die Beschränkung des Abzugs von Zinsüberhängen zur Verhinderung von Gewinnverschiebungen in Niedrigsteuerländer.
+22,Wie hoch ist der Freibetrag bei der Zinsschranke?,Zinsüberhänge sind bis zu einem Betrag von 3 Millionen Euro pro Veranlagungszeitraum jedenfalls abzugsfähig (§ 12a Abs. 2 KStG).
+23,Was passiert bei einer Liquidation einer GmbH steuerlich?,Der Liquidationsgewinn (Differenz zwischen Abwicklungs-Endvermögen und Betriebsvermögen zu Beginn) unterliegt der KöSt (§ 19 KStG).
+24,Wie werden verdeckte Einlagen behandelt?,Verdeckte Einlagen erhöhen das steuerliche Eigenkapital und führen nicht zu einer Erhöhung des steuerpflichtigen Einkommens (§ 8 Abs. 1 KStG).
+25,Dürfen Gehälter an wesentlich beteiligte Gesellschafter-Geschäftsführer abgezogen werden?,"Ja, sofern sie fremdüblich sind. Der Teil, der über das fremdübliche Maß hinausgeht, ist eine verdeckte Ausschüttung (§ 8 Abs. 2 KStG)."
+26,Sind Strafen (z.B. Bußgelder) als Betriebsausgabe abzugsfähig?,"Nein, Strafen und Geldbußen, die von Gerichten oder Behörden verhängt werden, sind nicht abzugsfähig (§ 12 Abs. 1 Z 4 KStG)."
+27,Sind Steuern vom Einkommen (wie die KöSt selbst) abzugsfähig?,"Nein, die Körperschaftsteuer ist steuerlich nicht als Betriebsausgabe abzugsfähig (§ 12 Abs. 1 Z 1 KStG)."
+28,Was bedeutet die 'Einlagenrückzahlung' gemäß § 4 Abs. 12 EStG bei einer Körperschaft?,"Ausschüttungen aus dem steuerlichen Einlagenkonto gelten nicht als Dividende, sondern als steuerneutrale Rückzahlung von Kapital."
+29,Wann beginnt die Steuerpflicht bei einer neu gegründeten GmbH?,"Mit dem Abschluss des Gesellschaftsvertrags (Vorgesellschaft), sofern sie später tatsächlich eingetragen wird."
+30,Wie werden Sanierungsgewinne behandelt?,Gewinne aus einem Schuldenerlass zum Zwecke der Sanierung können teilweise steuerbegünstigt behandelt werden (§ 23a KStG).
+31,Welche Wirkung hat die Gruppenbesteuerung auf ausländische Verluste?,"Ausländische Verluste (aus Nicht-EU-Ländern nur eingeschränkt) können dem inländischen Gruppenträger zugerechnet werden, müssen aber später nachversteuert werden (§ 9 Abs. 6 Z 6 KStG)."
+32,Sind Repräsentationsaufwendungen abzugsfähig?,"Nein, Aufwendungen für Repräsentation sind gemäß § 12 Abs. 1 Z 3 KStG nicht abzugsfähig."
+33,Gilt die 75 %-Verlustvortragsgrenze auch bei Liquidationsgewinnen?,"Nein, im Jahr der Abwicklung (Liquidation) können Verluste unbegrenzt mit dem Liquidationsgewinn verrechnet werden."
+34,Wie werden Erträge aus der Veräußerung von Immobilien bei einer GmbH besteuert?,"Sie unterliegen dem regulären KöSt-Satz von 23 %, sofern keine besonderen Befreiungen vorliegen (§ 7 Abs. 3 KStG)."
+35,Was ist die Mindestbeteiligungsquote für die nationale Beteiligungsbefreiung?,Für die nationale Befreiung (§ 10 Abs. 1 Z 1 KStG) gibt es keine Mindestquote; auch 1 % Beteiligung reicht aus.
+36,Kann eine Stiftung körperschaftsteuerpflichtig sein?,"Ja, Privatstiftungen unterliegen einer besonderen Besteuerung (Zwischensteuer) auf bestimmte Erträge (§ 13 KStG)."
+37,Was ist die Zwischensteuer?,Eine Steuer von 23 % (bis 2023 25 %) auf bestimmte Kapitalerträge und Immobilienveräußerungsgewinne bei Privatstiftungen (§ 13 Abs. 3 KStG).
+38,Sind Gehälter über 500.000 Euro voll abzugsfähig?,"Nein, Entgelte über 500.000 Euro pro Person und Jahr sind für den übersteigenden Teil nicht abzugsfähig (§ 12 Abs. 1 Z 8 KStG)."
+39,Wann liegt ein 'abweichendes Wirtschaftsjahr' vor?,Wenn der Bilanzstichtag nicht der 31.12. ist. Dies muss dem Finanzamt gemeldet werden (§ 7 Abs. 5 KStG).
+40,Wie werden Gründungskosten einer GmbH steuerlich behandelt?,"Sie sind als Betriebsausgaben abzugsfähig, sofern sie die Gesellschaft vertraglich übernommen hat."
+41,Wann endet die unbeschränkte KöSt-Pflicht?,Mit dem Aufhören der Existenz der Körperschaft (Vollbeendigung nach Liquidation).
+42,Was sind 'andere Körperschaften des öffentlichen Rechts'?,Z.B. Kammern oder Kirchen; sie sind nur mit ihren Betrieben gewerblicher Art steuerpflichtig (§ 2 KStG).
+43,Was ist ein Betrieb gewerblicher Art (BgA)?,"Eine Einrichtung von Körperschaften des öffentlichen Rechts, die wirtschaftlich selbständig ist und eine private Wettbewerbstätigkeit ausübt (§ 2 Abs. 1 KStG)."
+44,Wie wird ein Verlust aus einer ausländischen Betriebsstätte behandelt?,"Wenn ein Doppelbesteuerungsabkommen die Befreiungsmethode vorsieht, können Verluste im Inland oft nicht direkt verwertet werden (außer bei Gruppenbesteuerung)."
+45,Was ist die Hinzurechnungsbesteuerung (§ 10a KStG)?,Passiv-Einkünfte einer niedrigbesteuerten ausländischen Tochtergesellschaft werden direkt der inländischen Muttergesellschaft zugerechnet.
+46,Wann ist eine ausländische Tochtergesellschaft 'niedrigbesteuert' für die Hinzurechnungsbesteuerung?,"Wenn die effektive Steuerbelastung im Ausland nicht mehr als 12,5 % beträgt (§ 10a Abs. 1 KStG)."
+47,Was sind 'Beiträge und Umlagen' im Sinne des § 11 Abs. 2 KStG?,"Mitgliedsbeiträge an Berufsverbände sind abzugsfähig, sofern deren Tätigkeit den Mitgliedern zugutekommt."
+48,Kann eine Gruppe auch aus nur zwei GmbHs bestehen?,"Ja, ein Gruppenträger und ein Gruppenmitglied reichen aus (§ 9 Abs. 2 KStG)."
+49,"Muss die Mindest-KöSt auch gezahlt werden, wenn die GmbH einen Verlust macht?","Ja, die Mindest-KöSt ist eine Vorauszahlung und muss auch in Verlustjahren entrichtet werden."
+50,Wird die bezahlte Mindest-KöSt später angerechnet?,"Ja, die gezahlte Mindest-KöSt kann in späteren Jahren, in denen die reguläre KöSt höher ist, unbegrenzt angerechnet werden (§ 24 Abs. 4 Z 4 KStG)."

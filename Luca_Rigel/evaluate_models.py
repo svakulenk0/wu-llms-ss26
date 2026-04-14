@@ -1,16 +1,4 @@
-"""
-================================================================================
- EVALUATION SCRIPT: Austrian Tax Law LLM
-================================================================================
- Autor:    Luca Rigel
- Kurs:     Data Science — WU Wien SS 2026
- Aufgabe:  Evaluation der 3 Modelle mittels Automatisierter Metriken
- 
- Beschreibung:
-   Dieses Skript vergleicht Modell-Outputs mittels ROUGE-L, BLEU
-   und neu (wegen der Schwäche von n-gram Metriken bei RAG): BERTScore!
-================================================================================
-"""
+
 
 import os
 import pandas as pd

@@ -1,0 +1,16 @@
+===========================================================================
+ AUTOMATISIERTE EVALUATION (Austrian Tax Law)
+ Datensatz: 645 Ground-Truth Antworten
+===========================================================================
+Modell                    | BLEU Score   | ROUGE-L (F1) | BERTScore 
+---------------------------------------------------------------------------
+Berechne BERTScore für Model 1 (Zero-Shot)...
+Model 1 (Zero-Shot)       |         3.13 |       0.1492 |     0.6975
+Berechne BERTScore für Model 2 (Fine-Tuning)...
+Model 2 (Fine-Tuning)     |         1.31 |       0.0801 |     0.6537
+Berechne BERTScore für Model 3 (RAG)...
+Model 3 (RAG)             |         2.72 |       0.1264 |     0.6792
+---------------------------------------------------------------------------
+Hinweis: BLEU (0-100), ROUGE-L (0-1.0), BERTScore (0-1.0).
+BERTScore erfasst semantische Ähnlichkeit (besser für Generative LLMs).
+===========================================================================

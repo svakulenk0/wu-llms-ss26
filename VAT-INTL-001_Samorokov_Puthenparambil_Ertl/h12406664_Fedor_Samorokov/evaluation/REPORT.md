@@ -1,7 +1,6 @@
 # Project Report — Austrian Tax Law Q&A
 
 **Author:** Fedor Samorokov (h12406664)
-**Team:** VAT-INTL-001 (Samorokov, Puthenparambil, Ertl)
 
 ---
 
@@ -30,7 +29,6 @@ A pre-trained German GPT-2 model used without any fine-tuning or domain adaptati
 - `max_new_tokens`: 150
 - `min_new_tokens`: 30
 - `do_sample`: False (greedy decoding)
-- `num_beams`: 5 (beam search)
 - `no_repeat_ngram_size`: 3
 - `pad_token_id`: eos_token_id
 
@@ -55,8 +53,7 @@ The same `dbmdz/german-gpt2` model, fine-tuned on 152 Austrian tax law Q&A pairs
 **Inference hyper-parameters:**
 - `max_new_tokens`: 150
 - `do_sample`: False (greedy decoding)
-- `repetition_penalty`: 1.3
-- `no_repeat_ngram_size`: 3
+- `pad_token_id`: eos_token_id
 
 ### Model 3: RAG with GPT-4o-mini
 
@@ -87,7 +84,7 @@ Retrieval-Augmented Generation using the actual Austrian tax law PDFs as source 
 
 ## 3. Evaluation Methodology
 
-Model outputs are evaluated against **ground-truth answers** from the Austrian Tax Law Dataset (`Austrian Tax Law Dataset - Dataset.csv`), which contains expert-written `correct_answer` entries for each of the 643 test questions.
+Model outputs are evaluated against **ground-truth answers** from the Austrian Tax Law Dataset (`Austrian Tax Law Dataset - Dataset.csv`), which contains student-written `correct_answer` entries for each of the 643 test questions (dataset generated in our first assignment).
 
 **Metrics used:**
 
@@ -113,13 +110,13 @@ All metrics are computed against ground-truth answers from the Austrian Tax Law 
 
 | Model | Exact Match | BLEU-4 | ROUGE-1 | ROUGE-2 | ROUGE-L | BERTScore F1 |
 |---|---|---|---|---|---|---|
-| Model 1 (Baseline GPT-2) | — | — | — | — | — | — |
-| Model 2 (Fine-tuned GPT-2) | — | — | — | — | — | — |
-| **Model 3 (RAG + GPT-4o-mini)** | **—** | **—** | **—** | **—** | **—** | **—** |
+| Model 1 (Baseline GPT-2) | 0.0000 | 0.0046 | 0.1127 | 0.0164 | 0.0807 | 0.6294 |
+| Model 2 (Fine-tuned GPT-2) | 0.0000 | 0.0038 | 0.1280 | 0.0130 | 0.0666 | 0.6544 |
+| **Model 3 (RAG + GPT-4o-mini)** | **0.0000** | **0.0476** | **0.2935** | **0.1135** | **0.2026** | **0.7336** |
 
-*Exact numeric values are populated by running `model_evaluation.ipynb`. See `evaluation_results.csv` for the computed table.*
+Model 3 (RAG) outperforms both other models across all metrics, as expected — it has access to the actual law texts at query time and uses GPT-4o-mini for generation. Models 1 and 2 rely solely on what `dbmdz/german-gpt2` learned during pre-training / fine-tuning.
 
-**Model 3 (RAG) is expected to outperform** both other models, since it has access to the actual law texts at query time and uses GPT-4o-mini for generation. Models 1 and 2 rely solely on what `dbmdz/german-gpt2` learned during pre-training / fine-tuning.
+Notably, Model 2 scores slightly lower than Model 1 on BLEU-4 (0.0038 vs 0.0046) and ROUGE-L (0.0666 vs 0.0807), despite fine-tuning. Fine-tuning on 152 examples shifted the model's vocabulary toward tax-related terms, but also caused it to hallucinate confident-sounding legal text that diverges from the ground-truth wording — hurting precision-based metrics. Model 2 does improve on ROUGE-1 and BERTScore, suggesting it picks up some topical relevance from fine-tuning even though surface-level precision degrades.
 
 ---
 
@@ -127,14 +124,14 @@ All metrics are computed against ground-truth answers from the Austrian Tax Law 
 
 ### Model 1 (Baseline GPT-2)
 - **Main issue: Generic, off-topic responses.** The model was never trained on tax law, so it produces general German text that often has no relevance to the question.
-- Answers tend to be long (~106 words) but say very little of substance.
-- With beam search + `no_repeat_ngram_size`, the model avoids pure repetition but still produces vague, circular text.
+- Answers tend to be long (~106 words) but say very little of substance (min number of tokens was used because otherwise the model produced only 1 word – german articles Die, Der, Das...)
+- With greedy decoding + `no_repeat_ngram_size`, the model avoids pure repetition but still produces vague, circular text.
 
 ### Model 2 (Fine-tuned GPT-2)
-- **Main issue: Severe repetition loops.** Despite fine-tuning, the 124M parameter GPT-2 overfits on the small training set (152 examples). Answers often start with a somewhat relevant sentence but then repeat the same phrase endlessly.
-- Example: *"Die Körperschaftsteuer ist eine Steuer auf den Gewinn der Körperschaft. Sie wird auf den Gewinnanteil erhoben, der an die Körperschaft ausgeschüttet wird. Die Körperschaftsteuer ist eine Steuer auf den Gewinnanteil..."*
-- Many answers contain **hallucinated paragraph references** (e.g., citing `§ 18 Abs. 1 Z 4 EStG` which doesn't exist in that context).
-- Fine-tuning improved topical relevance (answers mention tax concepts) but not factual accuracy.
+- **Main issue: Confident hallucinations.** The model generates plausible-sounding legal text that is factually wrong — it invents paragraph references, cites non-existent laws, and mixes up German and Austrian legal systems.
+- Example (CORP-TAX-007, asked about "Mantelkauf"): *"Der Gegenstand des Vertrages muss sich auf die Lieferung von Gegenständen beziehen... Die Gegenstände sind nach § 6 UStG steuerfrei (§ 7 Abs. 1 Z 2 EStDV)..."* — the answer has nothing to do with the question, cites the German EStDV (not Austrian law), and fabricates paragraph references.
+- Many answers reference **non-existent laws** like "KstKG", "EStDV", "UStL-Vorschriften", or "KUBS", and sometimes place the context in Germany ("Wohnsitz in Deutschland", "Schleswig-Holstein") despite this being Austrian tax law.
+- Fine-tuning improved topical relevance over Model 1 (answers mention tax concepts, reflected in higher ROUGE-1 and BERTScore) but not factual accuracy.
 
 ### Model 3 (RAG + GPT-4o-mini)
 - **Best performing model.** Answers are concise (~51 words), cite actual law paragraphs, and are factually grounded in the retrieved text.
@@ -147,27 +144,3 @@ All metrics are computed against ground-truth answers from the Austrian Tax Law 
 - Models 1 and 2 share a failure mode: they generate **plausible-sounding German legal text** that is factually incorrect. This is a hallucination problem inherent to small language models without retrieval.
 - Model 3 avoids this by grounding answers in retrieved law text, but is limited by retrieval quality.
 - All models struggle with questions requiring reasoning across multiple law sections (e.g., interaction between KStG and EStG).
-
----
-
-## 6. File Structure
-
-```
-h12406664_Fedor_Samorokov/
-  code/
-    model1_inference.ipynb       # Baseline GPT-2 inference
-    model2_finetune.ipynb        # Fine-tuning on Colab
-    model3_rag.ipynb             # RAG with OpenAI API
-    training_data.csv            # 152 Q&A pairs for Model 2
-  results/
-    model1_results.csv           # 643 answers
-    model2_results.csv           # 643 answers
-    model3_results.csv           # 643 answers
-  evaluation/
-    model_evaluation.ipynb       # Evaluation script
-    REPORT.md                    # This report
-  Context/
-    Gesetze/                     # 3 law PDFs for Model 3
-  dataset_clean.csv              # 643 test questions
-  README.md                      # Setup instructions
-```

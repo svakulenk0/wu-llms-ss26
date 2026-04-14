@@ -14,7 +14,7 @@ Pure inference using `dbmdz/german-gpt2` — a GPT-2 model pre-trained on German
 
 ### Model 2: Fine-tuned Model (`model2_finetune.ipynb`)
 
-Fine-tunes `dbmdz/german-gpt2` on 152 Austrian tax law Q&A pairs, then runs inference on all 644 test questions. The training data (`training_data.csv`) was written manually from the actual law texts — KStG 1988, EStG 1988, and UStG 1994.
+Fine-tunes `dbmdz/german-gpt2` on 152 Austrian tax law Q&A pairs, then runs inference on all 643 test questions. The training data (`training_data.csv`) was written manually from the actual law texts — KStG 1988, EStG 1988, and UStG 1994.
 
 The fine-tuning uses HuggingFace `Trainer` with causal language modeling (next-token prediction on `"Frage: ...\nAntwort: ..."` formatted text). After training for 3 epochs, the model learns the Q&A format and some domain-specific patterns from the tax law content.
 
@@ -31,7 +31,7 @@ This is the **only model that uses the OpenAI API** (for embeddings and generati
 
 - **Run locally** (VS Code or Jupyter)
 - **Requires an OpenAI API key** — set `API_KEY` in the notebook before running
-- The 3 PDF files must be present in `../Context/Gesetze/`
+- The 3 PDF files must be present in `Context/Gesetze/` (accessed as `../Context/Gesetze/` from the notebook)
 - ~15-20 minutes, costs ~$0.50 in API calls
 
 ## API Usage
@@ -52,20 +52,5 @@ Per the course requirements, only **one model may use an external API**. In this
 2. For Model 3: get an OpenAI API key from https://platform.openai.com/api-keys and paste it into the notebook
 3. Run `model1_inference.ipynb` locally
 4. Upload `model2_finetune.ipynb` + `training_data.csv` to Google Colab, enable T4 GPU, run all cells, download `model2_results.csv`
-5. Run `model3_rag.ipynb` locally (ensure the 3 law PDFs are in `../Context/Gesetze/`)
+5. Run `model3_rag.ipynb` locally (ensure the 3 law PDFs are in `Context/Gesetze/`)
 6. All results are saved in `results/`
-
-## File Structure
-
-```
-VAT-INTL-001/
-  code/
-    model1_inference.ipynb   # Local inference (no API)
-    model2_finetune.ipynb    # Fine-tuning on Colab (no API)
-    model3_rag.ipynb         # RAG with OpenAI API
-    training_data.csv        # 152 Q&A pairs for Model 2
-  results/
-    model1_results.csv
-    model2_results.csv
-    model3_results.csv
-```

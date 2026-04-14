@@ -1,1 +1,38 @@
+# macOS
 .DS_Store
+
+# Virtual Environments
+.venv/
+venv/
+env/
+bin/
+lib/
+share/
+include/
+*.bak
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Project Data & Logs
+*.log
+*.sqlite3
+Luca_Rigel/results/old_backups/
+temp_data/
+
+# IDEs (Anonymous standard)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific exclusions
+test_prompt.py
+tmp/

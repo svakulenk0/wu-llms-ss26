@@ -122,6 +122,8 @@ Model 1 scores 1.0 by definition (it is the reference). The meaningful compariso
 
 *Note:* `§/answer` and `% with §` are the surface `§`-count (layer 1, §2.4). The stricter existence check is in §4.2.
 
+![Main results — ROUGE-1 / ROUGE-L / BLEU vs M1 silver reference](results/visualizations/fig_main_results.png)
+
 ### 3.2 Symmetric pairwise similarity (no reference privileged)
 
 | Model A | Model B | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU mean | BLEU A→B | BLEU B→A |
@@ -166,6 +168,8 @@ python3 citation_check.py
 
 **Regex note:** we parse `§ X … <lawname>` within 80 chars. A `§` without a law name is not counted — so the 68 % "answers with cite" here is stricter than the 94 % surface number in §3.1.
 
+![Citation validity — grounded / hallucinated / out-of-scope per model](results/visualizations/fig_citation_validity.png)
+
 ### 4.3 Citation hallucination — specific examples
 § numbers that exist but are attached to the wrong topic (misattribution):
 
@@ -183,7 +187,13 @@ Model 2 averages 1 257 chars vs. 883 for Model 1. The extra content is mostly ge
 ### 4.6 Shared mistake patterns
 Both small models struggle on: multi-paragraph legal reasoning, questions pointing at the wrong law surface-form, and out-of-corpus questions. Style differs: Model 2 hedges and pads; Model 3 confidently emits a `§` even when retrieval misfires.
 
-### 4.7 Honest caveats
+### 4.7 Diagnostic signal profile
+
+The figure below summarises four deterministic diagnostic signals per model as a share of all 643 answers. All values are computed directly from the Stage 1–2 CSV outputs (no hand-labelling).
+
+![Diagnostic signal profile per model](results/visualizations/fig_diagnostic_profile.png)
+
+### 4.8 Honest caveats
 - **No verified reference answers.** §3 numbers = similarity to M1, not legal correctness. A course-shared EStG-§23 file exists but contains LLM-generated answers — not used as a reference.
 - **Surface metrics.** ROUGE/BLEU are lexical; legally equivalent but differently phrased answers score badly.
 - **Citation check = existence only.** §4.2 checks that the § exists in the law, not that it is correct for the question.

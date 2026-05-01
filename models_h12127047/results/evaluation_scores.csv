@@ -1,0 +1,4 @@
+model_version,rouge_l,matched_records
+inference_only,0.1136,643
+submission_rag,0.0849,643
+submission_fine_tuned,0.09,643

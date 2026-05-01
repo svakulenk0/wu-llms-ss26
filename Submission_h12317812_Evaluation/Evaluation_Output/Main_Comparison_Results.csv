@@ -1,0 +1,4 @@
+Output_File,Avg_BERT_Score,Total_Answers
+Rag_Output.csv,0.5569,643
+inference_output.csv,0.6822,643
+fine_tune_output.csv,0.4761,643

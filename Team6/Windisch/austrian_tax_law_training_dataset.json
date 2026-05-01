@@ -1,0 +1,2202 @@
+{
+  "metadata": {
+    "title": "Austrian Tax Law Training Dataset",
+    "description": "Training-Dataset zu österreichischem Steuerrecht. Direkt aus dem Rechtsinformationssystem des Bundes (RIS – ris.bka.gv.at) gelesen. Abgedeckt: EStG §§ 1,22,23,25,26,27,28,33 | UStG §§ 1-10, 3a | KStG §§ 7-12 | GrEStG §§ 1-11",
+    "version": "1.0",
+    "total_entries": 253,
+    "laws_covered": [
+      "EStG 1988 (BGBl. Nr. 400/1988): §§ 1, 22, 23, 25, 26, 27, 28, 33",
+      "UStG 1994 (BGBl. Nr. 663/1994): §§ 1, 2, 3, 3a, 4, 6, 7, 9, 10, 11, 12",
+      "KStG 1988 (BGBl. Nr. 401/1988): §§ 7, 8, 9, 10, 12",
+      "GrEStG 1987 (BGBl. Nr. 309/1987): §§ 1-11"
+    ],
+    "format_description": "Jeder Eintrag enthält: id (eindeutige ID), prompt (Frage/Sachverhalt), correct_answer (rechtlich korrekte Antwort), sources (Rechtsquellen)",
+    "source_database": "Rechtsinformationssystem des Bundes (RIS) – www.ris.bka.gv.at",
+    "legal_basis_date": "Fassung 2025 (BGBl. I Nr. 144/2024 und aktueller)",
+    "categories": {
+      "ESTG-1": "EStG § 1 – Steuerpflicht",
+      "ESTG-22": "EStG § 22 – Selbständige Arbeit",
+      "ESTG-23": "EStG § 23 – Gewerbebetrieb",
+      "ESTG-25": "EStG § 25 – Nichtselbständige Arbeit",
+      "ESTG-26": "EStG § 26 – Nicht-Einkünfte aus nichtselbständiger Arbeit",
+      "ESTG-27": "EStG § 27 – Kapitalvermögen",
+      "ESTG-28": "EStG § 28 – Vermietung und Verpachtung",
+      "ESTG-33": "EStG § 33 – Steuertarif / Absetzbeträge",
+      "USTG-1": "UStG § 1 – Steuerbare Umsätze",
+      "USTG-2": "UStG § 2 – Unternehmer",
+      "USTG-3a": "UStG § 3a – Sonstige Leistung / Leistungsort",
+      "USTG-6": "UStG § 6 – Steuerbefreiungen",
+      "USTG-10": "UStG § 10 – Steuersätze",
+      "USTG-12": "UStG § 12 – Vorsteuerabzug",
+      "KSTG-7": "KStG § 7 – Einkommen / Steuerpflicht",
+      "KSTG-8": "KStG § 8 – Einlagen / verdeckte Ausschüttungen",
+      "KSTG-9": "KStG § 9 – Unternehmensgruppe",
+      "KSTG-10": "KStG § 10 – Beteiligungsertragsbefreiung",
+      "KSTG-12": "KStG § 12 – Nichtabzugsfähige Aufwendungen",
+      "GREST": "GrEStG – Grunderwerbsteuer",
+      "CROSS": "Übergreifende Sachverhalte"
+    }
+  },
+  "training_data": [
+    {
+      "id": "ESTG-1-001",
+      "prompt": "Wer unterliegt in Österreich der unbeschränkten Einkommensteuerpflicht?",
+      "correct_answer": "Der unbeschränkten Einkommensteuerpflicht unterliegen jene natürlichen Personen, die im Inland einen Wohnsitz oder ihren gewöhnlichen Aufenthalt haben. Die unbeschränkte Steuerpflicht erstreckt sich auf alle in- und ausländischen Einkünfte (Welteinkommensprinzip).",
+      "sources": [
+        "§ 1 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-1-002",
+      "prompt": "Was bedeutet beschränkte Einkommensteuerpflicht in Österreich und wer ist davon betroffen?",
+      "correct_answer": "Der beschränkten Einkommensteuerpflicht unterliegen natürliche Personen, die im Inland weder einen Wohnsitz noch ihren gewöhnlichen Aufenthalt haben. Sie sind nur mit ihren inländischen Einkünften im Sinne des § 98 EStG steuerpflichtig. Typische Fälle sind ausländische Arbeitnehmer ohne Inlandswohnsitz mit österreichischen Arbeitgebern oder ausländische Vermieter österreichischer Immobilien.",
+      "sources": [
+        "§ 1 Abs. 3 EStG 1988",
+        "§ 98 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-1-003",
+      "prompt": "Ein deutscher Staatsbürger verbringt 7 Monate im Jahr in Wien und 5 Monate in München. Wo liegt seine Einkommensteuerpflicht?",
+      "correct_answer": "Da die Person in Österreich einen gewöhnlichen Aufenthalt hat (mehr als 6 Monate pro Jahr), unterliegt sie in Österreich der unbeschränkten Einkommensteuerpflicht. Der gewöhnliche Aufenthalt liegt vor, wenn sich jemand unter Umständen aufhält, die erkennen lassen, dass er die Wohnung oder den Aufenthalt nicht nur vorübergehend beibehalten will. Zusätzlich können DBA-Regelungen die Steuerpflicht in Deutschland einschränken.",
+      "sources": [
+        "§ 1 Abs. 2 EStG 1988",
+        "§ 26 BAO"
+      ]
+    },
+    {
+      "id": "ESTG-1-004",
+      "prompt": "Welche Einkunftsarten kennt das österreichische EStG?",
+      "correct_answer": "Das EStG 1988 kennt sieben Einkunftsarten gemäß § 2 Abs. 3: (1) Einkünfte aus Land- und Forstwirtschaft (§ 21), (2) Einkünfte aus selbständiger Arbeit (§ 22), (3) Einkünfte aus Gewerbebetrieb (§ 23), (4) Einkünfte aus nichtselbständiger Arbeit (§ 25), (5) Einkünfte aus Kapitalvermögen (§ 27), (6) Einkünfte aus Vermietung und Verpachtung (§ 28), (7) Sonstige Einkünfte (§ 29). Dabei gelten die ersten drei als betriebliche Einkunftsarten (Gewinneinkunftsarten), die letzten vier als außerbetriebliche Einkunftsarten (Überschusseinkunftsarten).",
+      "sources": [
+        "§ 2 Abs. 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-1-005",
+      "prompt": "Was versteht man unter dem Welteinkommensprinzip im österreichischen Steuerrecht?",
+      "correct_answer": "Unbeschränkt steuerpflichtige Personen werden in Österreich mit ihrem gesamten weltweiten Einkommen besteuert, unabhängig davon, ob dieses Einkommen aus österreichischen oder ausländischen Quellen stammt. Dies folgt aus § 1 Abs. 2 EStG 1988. Zur Vermeidung von Doppelbesteuerung bestehen Doppelbesteuerungsabkommen (DBA), die das Besteuerungsrecht zwischen den Staaten aufteilen.",
+      "sources": [
+        "§ 1 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-001",
+      "prompt": "Ein Arzt betreibt eine Privatordination. Welcher Einkunftsart unterliegen seine Einkünfte?",
+      "correct_answer": "Die Einkünfte eines selbständig tätigen Arztes aus seiner Privatordination sind Einkünfte aus selbständiger Arbeit gemäß § 22 Z 1 lit. b EStG 1988, da Ärzte ausdrücklich als Angehörige freier Berufe aufgeführt sind. Voraussetzung ist, dass der Arzt selbst leitend und eigenverantwortlich auf Basis eigener Fachkenntnisse tätig wird.",
+      "sources": [
+        "§ 22 Z 1 lit. b EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-002",
+      "prompt": "Was sind die Merkmale eines freien Berufes im Sinne des § 22 EStG?",
+      "correct_answer": "Ein freier Beruf im Sinne des § 22 EStG liegt vor, wenn die Tätigkeit (1) überwiegend auf eigenen Fachkenntnissen basiert, (2) eigenverantwortlich und leitend ausgeübt wird, (3) der Unternehmer selbst – auch bei Mithilfe fachlich vorgebildeter Arbeitskräfte – persönlich tätig wird. Typische freie Berufe sind Ärzte, Rechtsanwälte, Notare, Steuerberater, Wirtschaftsprüfer, Ziviltechniker, Journalisten, Dolmetscher und Unternehmensberater.",
+      "sources": [
+        "§ 22 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-003",
+      "prompt": "Ein GmbH-Gesellschafter hält 40% der Anteile und ist gleichzeitig als Geschäftsführer tätig. Welcher Einkunftsart unterliegt sein Gehalt?",
+      "correct_answer": "Da der Gesellschafter mit 40% wesentlich beteiligt ist (Beteiligung von mehr als 25% am Grund- oder Stammkapital gemäß § 22 Z 2 EStG), unterliegen seine Geschäftsführerbezüge den Einkünften aus sonstiger selbständiger Arbeit nach § 22 Z 2 EStG 1988 – nicht den Einkünften aus nichtselbständiger Arbeit (§ 25). Diese Unterscheidung hat Auswirkungen auf die Sozialversicherungspflicht und die steuerliche Behandlung.",
+      "sources": [
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-004",
+      "prompt": "Was versteht man unter 'wesentlicher Beteiligung' im Sinne des § 22 Z 2 EStG?",
+      "correct_answer": "Eine Person ist wesentlich beteiligt, wenn ihr Anteil am Grund- oder Stammkapital der Kapitalgesellschaft mehr als 25% beträgt. Dabei steht die Beteiligung durch Vermittlung eines Treuhänders oder einer Gesellschaft einer unmittelbaren Beteiligung gleich. Wesentlich Beteiligte erzielen ihre Vergütungen als Einkünfte aus sonstiger selbständiger Arbeit (§ 22 Z 2 EStG), nicht als Arbeitslohn (§ 25 EStG).",
+      "sources": [
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-005",
+      "prompt": "Einkünfte aus Aufsichtsratstätigkeit – welcher Einkunftsart sind sie zuzuordnen?",
+      "correct_answer": "Einkünfte aus einer Aufsichtsratstätigkeit sind Einkünfte aus sonstiger selbständiger Arbeit gemäß § 22 Z 2 EStG 1988, da diese Tätigkeit als vermögensverwaltende Tätigkeit gilt. Die Aufsichtsratsvergütung ist beim Empfänger selbständige Einkünfte, beim auszahlenden Unternehmen ist die Abzugsfähigkeit gem. § 20 Abs. 1 Z 7 KStG beschränkt (nur 50% abzugsfähig).",
+      "sources": [
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-006",
+      "prompt": "Kann ein Rechtsanwalt seine freiberufliche Tätigkeit auch mit Mitarbeitern ausüben, ohne die Einstufung als freier Beruf zu verlieren?",
+      "correct_answer": "Ja. § 22 Z 1 EStG sieht ausdrücklich vor, dass eine freiberufliche Tätigkeit auch dann vorliegt, wenn sich der Freiberufler fachlich vorgebildeter Arbeitskräfte bedient. Voraussetzung ist jedoch, dass der Freiberufler selbst – abgesehen von vorübergehender Verhinderung – auf Basis eigener Fachkenntnisse leitend und eigenverantwortlich tätig wird. Bloß formale Aufsicht genügt nicht.",
+      "sources": [
+        "§ 22 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-007",
+      "prompt": "Was sind Einkünfte aus wissenschaftlicher Tätigkeit und welcher Einkunftsart unterliegen sie?",
+      "correct_answer": "Einkünfte aus einer wissenschaftlichen Tätigkeit sind Einkünfte aus selbständiger Arbeit gemäß § 22 Z 1 lit. a EStG 1988, sofern die Tätigkeit selbständig (auf eigene Rechnung und Gefahr) ausgeübt wird. Dazu zählen auch Einkünfte aus Stipendien für wissenschaftliche Tätigkeiten, wenn diese wirtschaftlich einen Einkommensersatz darstellen. Stipendien bis zur Höhe der Studienbeihilfe nach Selbsterhalt stellen keinen Einkommensersatz dar.",
+      "sources": [
+        "§ 22 Z 1 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-008",
+      "prompt": "Ein ehemaliger GmbH-Geschäftsführer, der während seiner Tätigkeit zu mehr als 25% beteiligt war, erhält nach seinem Ausscheiden eine Abfindung. Welcher Einkunftsart unterliegt diese?",
+      "correct_answer": "Einkünfte aus sonstiger selbständiger Arbeit gemäß § 22 Z 2 EStG 1988. Das Gesetz erstreckt diese Qualifikation ausdrücklich auch auf Vergütungen für eine ehemalige Tätigkeit, wenn die Person in einem Zeitraum von zehn Jahren vor Beendigung ihrer Tätigkeit durch mehr als die Hälfte des Zeitraumes wesentlich beteiligt war.",
+      "sources": [
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-001",
+      "prompt": "Was sind die Tatbestandsmerkmale eines Gewerbebetriebs im Sinne des § 23 Z 1 EStG?",
+      "correct_answer": "Ein Gewerbebetrieb gemäß § 23 Z 1 EStG liegt vor, wenn folgende Merkmale kumulativ erfüllt sind: (1) Selbständigkeit der Tätigkeit (auf eigene Rechnung und Gefahr), (2) Nachhaltigkeit (auf Wiederholung angelegte Tätigkeit), (3) Gewinnabsicht (subjektive Absicht, Gewinne zu erzielen), (4) Beteiligung am allgemeinen wirtschaftlichen Verkehr, (5) die Tätigkeit darf nicht als Land- und Forstwirtschaft oder selbständige Arbeit einzustufen sein.",
+      "sources": [
+        "§ 23 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-002",
+      "prompt": "Ein Händler kauft einmalig eine größere Menge Waren und verkauft sie mit Gewinn weiter. Liegt ein Gewerbebetrieb vor?",
+      "correct_answer": "Nicht zwingend. Für einen Gewerbebetrieb ist Nachhaltigkeit erforderlich, d.h. die Tätigkeit muss auf Wiederholung angelegt sein oder eine Vielzahl von Handlungen umfassen. Ein einmaliger Kauf und Weiterverkauf erfüllt das Merkmal der Nachhaltigkeit grundsätzlich nicht. Es könnte jedoch ein sonstiges Einkommen (§ 29 Z 2 EStG – Spekulationsgeschäft) vorliegen, wenn die Fristen dafür erfüllt sind.",
+      "sources": [
+        "§ 23 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-003",
+      "prompt": "Was sind Mitunternehmerschaften und wie werden ihre Gewinnanteile besteuert?",
+      "correct_answer": "Mitunternehmerschaften sind Personengesellschaften (insb. OG und KG), bei denen die Gesellschafter als Mitunternehmer anzusehen sind. Deren Gewinnanteile sowie Vergütungen für Tätigkeiten, Darlehen und Nutzungsüberlassungen an die Gesellschaft stellen gemäß § 23 Z 2 EStG Einkünfte aus Gewerbebetrieb dar und werden bei jedem Gesellschafter einzeln erfasst. Die Gesellschaft selbst ist nicht Steuersubjekt der ESt (Transparenzprinzip).",
+      "sources": [
+        "§ 23 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-004",
+      "prompt": "Abgrenzung Gewerbebetrieb (§ 23) vs. selbständige Arbeit (§ 22): Welche Kriterien sind maßgeblich?",
+      "correct_answer": "Beide Einkunftsarten setzen selbständige, nachhaltige Tätigkeit mit Gewinnabsicht voraus. Der Unterschied liegt in der Art der Tätigkeit: § 22 erfasst freiberufliche und sonstige selbständige Tätigkeiten (Katalogberufe wie Ärzte, Rechtsanwälte, wissenschaftliche Tätigkeit, vermögensverwaltende Tätigkeiten). § 23 erfasst alle sonstigen gewerblichen Tätigkeiten. Bei gemischten Tätigkeiten gilt das Überwiegen oder die Einheitlichkeit der Tätigkeit als Abgrenzungsmerkmal.",
+      "sources": [
+        "§ 22 EStG 1988",
+        "§ 23 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-005",
+      "prompt": "Veräußerungsgewinne einer Einzelunternehmerin: Welcher Einkunftsart unterliegen sie?",
+      "correct_answer": "Veräußerungsgewinne aus einem Gewerbebetrieb zählen gemäß § 23 Z 3 EStG ebenfalls zu den Einkünften aus Gewerbebetrieb. Die Berechnung des Veräußerungsgewinns richtet sich nach § 24 EStG. Unter bestimmten Voraussetzungen (z.B. Betriebsaufgabe, Tod, Übergabe gegen Rente) sind Begünstigungen (z.B. Hälftesteuersatz, Freibetrag bis EUR 7.300) anwendbar.",
+      "sources": [
+        "§ 23 Z 3 EStG 1988",
+        "§ 24 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-001",
+      "prompt": "Was sind Einkünfte aus nichtselbständiger Arbeit gemäß § 25 EStG?",
+      "correct_answer": "Einkünfte aus nichtselbständiger Arbeit (Arbeitslohn) gemäß § 25 EStG umfassen vor allem: (1) Bezüge und Vorteile aus einem bestehenden oder früheren Dienstverhältnis, (2) Pensionen aus der gesetzlichen Sozialversicherung, (3) Bezüge aus Pensionskassen und betrieblichen Kollektivversicherungen, (4) Bezüge nicht wesentlich beteiligter Gesellschafter-Geschäftsführer von Kapitalgesellschaften, (5) Insolvenz-Entgelt aus dem Insolvenz-Entgelt-Fonds.",
+      "sources": [
+        "§ 25 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-002",
+      "prompt": "Ein Arbeitnehmer erhält von seinem Arbeitgeber einen Firmenwagen, den er auch privat nutzen darf. Ist das steuerpflichtiger Arbeitslohn?",
+      "correct_answer": "Ja. Die Möglichkeit der Privatnutzung eines arbeitgebereigenen Kraftfahrzeuges stellt einen geldwerten Vorteil und damit steuerpflichtigen Arbeitslohn im Sinne des § 25 Abs. 1 Z 1 lit. a EStG dar. Der Sachbezugswert (Privatanteil) wird pauschal nach der Sachbezugswerteverordnung bemessen – derzeit 1,5% oder 2% des Fahrzeuganschaffungswertes pro Monat (abhängig von der CO2-Emission), maximal EUR 960 pro Monat.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 EStG 1988",
+        "Sachbezugswerteverordnung"
+      ]
+    },
+    {
+      "id": "ESTG-25-003",
+      "prompt": "Ein GmbH-Gesellschafter mit 10% Beteiligung ist als Geschäftsführer angestellt. Welcher Einkunftsart unterliegt sein Gehalt?",
+      "correct_answer": "Da die Beteiligung mit 10% unter der Wesentlichkeitsgrenze von 25% liegt, unterliegt das Gehalt des Gesellschafter-Geschäftsführers den Einkünften aus nichtselbständiger Arbeit gemäß § 25 Abs. 1 Z 1 lit. b EStG 1988 – vorausgesetzt, die Beschäftigung weist alle Merkmale eines Dienstverhältnisses auf (Weisungsgebundenheit, organisatorische Eingliederung). In diesem Fall wird Lohnsteuer einbehalten.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 lit. b EStG 1988",
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-004",
+      "prompt": "Sind Pensionen aus der österreichischen gesetzlichen Sozialversicherung steuerpflichtig?",
+      "correct_answer": "Ja, Pensionen aus der gesetzlichen Sozialversicherung zählen gemäß § 25 Abs. 1 Z 3 lit. a EStG 1988 zu den Einkünften aus nichtselbständiger Arbeit und sind grundsätzlich einkommensteuerpflichtig. Sonderregelungen gelten für besondere Steigerungsbeträge aus der Höherversicherung (nur 25% zu erfassen) und für Bezüge, für die eine Prämie nach § 108a EStG in Anspruch genommen wurde (steuerfrei).",
+      "sources": [
+        "§ 25 Abs. 1 Z 3 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-005",
+      "prompt": "Welche Bezüge aus einer Pensionskasse sind einkommensteuerpflichtig?",
+      "correct_answer": "Bezüge aus inländischen Pensionskassen und betrieblichen Kollektivversicherungen zählen gemäß § 25 Abs. 1 Z 2 lit. a EStG zu den Einkünften aus nichtselbständiger Arbeit. Jener Anteil der Bezüge, der auf eigene Einzahlungen des Arbeitnehmers entfällt, ist nur mit 25% zu erfassen. Bezüge, für die eine Bausparprämie (§ 108a) in Anspruch genommen wurde, oder Bezüge aufgrund einer BV-Kassen-Überweisung sind steuerfrei.",
+      "sources": [
+        "§ 25 Abs. 1 Z 2 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-006",
+      "prompt": "Was versteht man unter 'Bezügen aus einem früheren Dienstverhältnis' im Sinne des § 25 EStG?",
+      "correct_answer": "Darunter fallen alle Leistungen, die ihren Rechtsgrund in einem früher bestandenen Dienstverhältnis haben und nach dessen Beendigung zufließen. Typische Beispiele sind: Abfertigungen aus Dienstverhältnissen, betriebliche Pensionszahlungen (Firmenpensionen), Renten aus Betriebsunfällen und laufende Bezüge aus Pensionskassen oder betrieblichen Kollektivversicherungen auf Basis früherer Arbeitgeberbeiträge.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-007",
+      "prompt": "Insolvenz-Entgelt vom IEF (Insolvenz-Entgelt-Fonds): Welcher Einkunftsart unterliegt es?",
+      "correct_answer": "Das Insolvenz-Entgelt, das durch den Insolvenz-Entgelt-Fonds ausgezahlt wird, zählt gemäß § 25 Abs. 1 Z 2 lit. e EStG 1988 zu den Einkünften aus nichtselbständiger Arbeit und ist damit grundsätzlich lohnsteuerpflichtig.",
+      "sources": [
+        "§ 25 Abs. 1 Z 2 lit. e EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-008",
+      "prompt": "Gibt es steuerfreie Sachbezüge im Rahmen von Dienstverhältnissen?",
+      "correct_answer": "Ja. Bestimmte Sachbezüge sind steuerbefreit, etwa: Getränke (Kaffee, Tee, Wasser) am Arbeitsplatz, Betriebsveranstaltungen bis EUR 365 p.a. und Sachgeschenke bis EUR 186 p.a. (§ 3 Abs. 1 Z 14 EStG), Jobtickets/Klimatickets (§ 26 Z 5 lit. b EStG), Werkverkehr (§ 26 Z 5 lit. a EStG), Berufskleidung (§ 26 Z 1 EStG). Diese fallen entweder unter § 3 EStG (Steuerbefreiungen) oder § 26 EStG (nicht Einkünfte).",
+      "sources": [
+        "§ 3 Abs. 1 EStG 1988",
+        "§ 26 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-009",
+      "prompt": "Ein Arbeitnehmer erhält von seinem Arbeitgeber eine Gehaltserhöhung in Form von Gutscheinen. Ist das steuerpflichtiger Arbeitslohn?",
+      "correct_answer": "Ja, grundsätzlich. Gutscheine stellen Sachbezüge und damit steuerpflichtigen Arbeitslohn gemäß § 25 Abs. 1 Z 1 lit. a EStG dar. Eine Ausnahme besteht für steuerfreie Sachzuwendungen im Rahmen des § 3 Abs. 1 Z 14 EStG (z.B. Warengutscheine bis EUR 186 pro Jahr als Weihnachtsgeschenk). Übersteigt der Betrag diese Grenze, ist der übersteigende Teil steuerpflichtig.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 lit. a EStG 1988",
+        "§ 3 Abs. 1 Z 14 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-001",
+      "prompt": "Welche Leistungen des Arbeitgebers fallen nicht unter die Einkünfte aus nichtselbständiger Arbeit gemäß § 26 EStG?",
+      "correct_answer": "Gemäß § 26 EStG gehören folgende Leistungen NICHT zu den Einkünften aus nichtselbständiger Arbeit: (1) Typische Berufskleidung und deren Reinigung, (2) Durchlaufende Gelder und Auslagenersätze, (3) Aus- und Fortbildungskosten im betrieblichen Interesse des Arbeitgebers, (4) Reisekostenvergütungen (Fahrtkostenvergütungen, Tages- und Nächtigungsgelder) im Rahmen von Dienstreisen, (5) Werkverkehr und Jobtickets, (6) Umzugskostenvergütungen bei Versetzung, (7) Arbeitgeberbeiträge zu Pensionskassen und bestimmten Versicherungen.",
+      "sources": [
+        "§ 26 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-002",
+      "prompt": "Wie hoch ist das steuerfreie Tagegeld für Inlandsdienstreisen?",
+      "correct_answer": "Für Inlandsdienstreisen beträgt das steuerfreie Tagegeld bis zu EUR 30 pro Tag gemäß § 26 Z 4 lit. b EStG 1988. Bei Dienstreisen von mehr als drei Stunden kann für jede angefangene Stunde ein Zwölftel (EUR 2,50) angesetzt werden. Das volle Tagegeld steht für 24 Stunden zu. Zahlt der Arbeitgeber höhere Beträge, sind die die Grenze übersteigenden Beträge steuerpflichtiger Arbeitslohn.",
+      "sources": [
+        "§ 26 Z 4 lit. b EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-003",
+      "prompt": "Wann liegt eine steuerfreie Dienstreise im Sinne des § 26 Z 4 EStG vor?",
+      "correct_answer": "Eine Dienstreise liegt vor, wenn ein Arbeitnehmer über Auftrag des Arbeitgebers entweder (a) seinen Dienstort (Büro, Betriebsstätte, Werksgelände, Lager usw.) zur Durchführung von Dienstverrichtungen verlässt, oder (b) so weit weg von seinem ständigen Wohnort arbeitet, dass eine tägliche Rückkehr nicht zumutbar ist. Bei Arbeitnehmern, die die Dienstreise vom Wohnort aus antreten, tritt an die Stelle des Dienstortes der Wohnort.",
+      "sources": [
+        "§ 26 Z 4 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-004",
+      "prompt": "Wie hoch ist das steuerfreie Nächtigungsgeld bei Inlandsdienstreisen?",
+      "correct_answer": "Wenn bei einer Inlandsdienstreise keine höheren Kosten für die Nächtigung nachgewiesen werden, kann als Nächtigungsgeld einschließlich der Kosten des Frühstücks ein Betrag bis zu EUR 17 pro Nacht berücksichtigt werden (§ 26 Z 4 lit. c EStG 1988). Werden höhere Kosten nachgewiesen (z.B. Hotelrechnung), können diese in nachgewiesener Höhe steuerfrei ersetzt werden.",
+      "sources": [
+        "§ 26 Z 4 lit. c EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-005",
+      "prompt": "Der Arbeitgeber übernimmt für seinen Arbeitnehmer die Kosten einer beruflichen Weiterbildung. Ist das steuerpflichtiger Lohn?",
+      "correct_answer": "Nein. Beträge, die vom Arbeitgeber im betrieblichen Interesse für die Ausbildung oder Fortbildung des Arbeitnehmers aufgewendet werden, zählen gemäß § 26 Z 3 EStG 1988 nicht zu den Einkünften aus nichtselbständiger Arbeit. Voraussetzung ist das betriebliche Interesse des Arbeitgebers. Nicht dazu gehören Vergütungen für die Lehr- und Anlernausbildung.",
+      "sources": [
+        "§ 26 Z 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-006",
+      "prompt": "Ein Arbeitgeber zahlt seinem Arbeitnehmer ein Klimaticket (Österreichcard). Ist das steuerpflichtiger Lohn?",
+      "correct_answer": "Nein. Die Zurverfügungstellung einer Wochen-, Monats- oder Jahreskarte für ein Massenbeförderungsmittel durch den Arbeitgeber für seine Arbeitnehmer ist gemäß § 26 Z 5 lit. b EStG 1988 kein steuerpflichtiger Arbeitslohn, sofern die Karte zumindest am Wohn- oder Arbeitsort gültig ist. Dies gilt auch, wenn der Arbeitgeber die Kosten einer solchen Karte nur teilweise übernimmt.",
+      "sources": [
+        "§ 26 Z 5 lit. b EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-007",
+      "prompt": "Was ist ein 'durchlaufendes Geld' im Sinne des § 26 Z 2 EStG und warum ist es nicht steuerpflichtig?",
+      "correct_answer": "Durchlaufende Gelder sind Beträge, die der Arbeitnehmer vom Arbeitgeber erhält, um sie für ihn auszugeben. Der Arbeitnehmer wird dabei nur als Zahlstelle (Treuhänder) tätig und hat keinen eigenen wirtschaftlichen Vorteil. Deshalb gehören diese Beträge gemäß § 26 Z 2 EStG nicht zu den Einkünften aus nichtselbständiger Arbeit. Dasselbe gilt für Auslagenersätze, durch die Auslagen des Arbeitnehmers für den Arbeitgeber ersetzt werden.",
+      "sources": [
+        "§ 26 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-008",
+      "prompt": "Wie werden Arbeitgeberbeiträge zu Pensionskassen steuerlich behandelt?",
+      "correct_answer": "Beitragsleistungen des Arbeitgebers für seine Arbeitnehmer an Pensionskassen im Sinne des Pensionskassengesetzes zählen gemäß § 26 Z 7 lit. a EStG nicht zu den Einkünften aus nichtselbständiger Arbeit und sind damit für den Arbeitnehmer steuerfrei. Wichtig: Diese Steuerfreiheit gilt nicht, wenn die Beiträge ganz oder teilweise anstelle des bisher gezahlten Arbeitslohns oder zustehender Lohnerhöhungen geleistet werden (Umwandlungsverbot), es sei denn, eine lohngestaltende Vorschrift sieht dies vor.",
+      "sources": [
+        "§ 26 Z 7 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-009",
+      "prompt": "Ein Arbeitnehmer wird aus betrieblichen Gründen an einen anderen Dienstort versetzt. Der Arbeitgeber zahlt Umzugskosten. Wie werden diese steuerlich behandelt?",
+      "correct_answer": "Umzugskostenvergütungen, die Dienstnehmer anlässlich einer Versetzung aus betrieblichen Gründen an einen anderen Dienstort erhalten, gehören gemäß § 26 Z 6 EStG nicht zu den Einkünften aus nichtselbständiger Arbeit. Dazu gehören: Reisekosten, Frachtkosten für das Umzugsgut sowie sonstige Umzugsvergütungen (maximal 1/15 des Bruttojahresarbeitslohnes) und der Mietzins der bisherigen Wohnung bis zum nächsten Kündigungstermin.",
+      "sources": [
+        "§ 26 Z 6 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-010",
+      "prompt": "Wie hoch darf das steuerfreie Kilometergeld für Inlandsdienstreisen maximal sein?",
+      "correct_answer": "Als Kilometergelder sind höchstens die den Bundesbediensteten zustehenden Sätze zu berücksichtigen (§ 26 Z 4 lit. a EStG). Derzeit beträgt das amtliche Kilometergeld EUR 0,42 pro km für PKW. Zahlt der Arbeitgeber höhere Beträge, sind die die Grenze übersteigenden Beträge steuerpflichtiger Arbeitslohn.",
+      "sources": [
+        "§ 26 Z 4 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-001",
+      "prompt": "Was sind Einkünfte aus Kapitalvermögen gemäß § 27 EStG?",
+      "correct_answer": "Einkünfte aus Kapitalvermögen gemäß § 27 EStG umfassen Erträgnisse und Wertsteigerungen aus der Überlassung von Kapital und aus realisierten Wertsteigerungen sowie Derivaten. Dazu gehören: Dividenden, Zinsen aus Sparbüchern und Anleihen, Gewinnanteile aus Kapitalgesellschaftsbeteiligungen, Gewinne aus der Veräußerung von Aktien/GmbH-Anteilen, Erträge aus Investmentfonds und Gewinne aus Derivaten. Seit dem BBG 2011 gilt die einheitliche Kapitalertragsteuer (KESt) von 27,5% (bzw. 25% für Sparbuchzinsen).",
+      "sources": [
+        "§ 27 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-002",
+      "prompt": "Welcher Steuersatz gilt für Kapitalerträge in Österreich?",
+      "correct_answer": "Für die meisten Kapitalerträge gilt gemäß § 27a EStG 1988 ein besonderer Steuersatz von 27,5%. Der niedrigere Satz von 25% gilt für Zinserträge aus Geldeinlagen bei Kreditinstituten (z.B. Sparbücher, Girokonten) und aus sonstigen Forderungen gegenüber Kreditinstituten. Die Kapitalertragsteuer (KESt) wird an der Quelle abgezogen und hat Abgeltungswirkung – eine Pflichtveranlagung ist grundsätzlich nicht vorgesehen, eine freiwillige Veranlagung (Regelbesteuerungsoption) ist jedoch möglich.",
+      "sources": [
+        "§ 27a Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-003",
+      "prompt": "Sind Dividenden aus österreichischen Aktien einkommensteuerpflichtig?",
+      "correct_answer": "Ja. Dividenden (Gewinnanteile aus Kapitalgesellschaften) unterliegen gemäß § 27 Abs. 2 Z 1 EStG 1988 der Einkommensteuer. Bei inländischen Aktiengesellschaften wird die Kapitalertragsteuer von 27,5% durch die ausschüttende Gesellschaft automatisch einbehalten und ans Finanzamt abgeführt. Durch die Endbesteuerungswirkung (§ 97 Abs. 1 EStG) wird der Investor von der Einkommensteuer auf diese Erträge befreit, wenn KESt einbehalten wird.",
+      "sources": [
+        "§ 27 Abs. 2 Z 1 EStG 1988",
+        "§ 27a EStG 1988",
+        "§ 97 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-004",
+      "prompt": "Ein Privatanleger verkauft österreichische Aktien mit einem Gewinn von EUR 5.000. Wie werden diese Kursgewinne besteuert?",
+      "correct_answer": "Gewinne aus der Veräußerung von Aktien (realisierte Wertsteigerungen) unterliegen gemäß § 27 Abs. 3 EStG 1988 dem besonderen Steuersatz von 27,5%. Bei Verkauf über eine inländische Depotbank wird die KESt automatisch abgezogen und abgeführt (Abgeltungswirkung). Verluste aus realisierten Wertsteigerungen und Derivaten können mit entsprechenden Gewinnen aus demselben Depot ausgeglichen werden (verlustausgleich gemäß § 27 Abs. 8 EStG). Ein periodenübergreifender Verlustausgleich oder Verlustvortrag ist grundsätzlich nicht möglich.",
+      "sources": [
+        "§ 27 Abs. 3 EStG 1988",
+        "§ 27a Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-005",
+      "prompt": "Was ist die Regelbesteuerungsoption bei Kapitalerträgen?",
+      "correct_answer": "Gemäß § 27a Abs. 5 EStG 1988 kann der Steuerpflichtige auf Antrag alle Kapitalerträge, die dem besonderen Steuersatz von 27,5% unterliegen, statt mit dem Sondersteuersatz mit dem allgemeinen Einkommensteuertarif besteuern lassen (Regelbesteuerungsoption). Dies ist sinnvoll, wenn der persönliche Steuersatz unter 27,5% liegt (z.B. bei geringem Gesamteinkommen). Die Option gilt einheitlich für sämtliche Kapitalerträge des Veranlagungszeitraums.",
+      "sources": [
+        "§ 27a Abs. 5 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-006",
+      "prompt": "Wie werden Erträge aus ausländischen Kapitalanlagen (z.B. US-Aktien) in Österreich besteuert?",
+      "correct_answer": "Erträge aus ausländischen Kapitalanlagen (Dividenden, Zinsen, Kursgewinne) unterliegen ebenfalls der österreichischen Einkommensteuer, da unbeschränkt steuerpflichtige Personen mit ihrem Welteinkommen in Österreich steuerpflichtig sind. Wenn keine inländische Depotbank die KESt einbehält, sind diese Erträge verpflichtend in der Einkommensteuererklärung anzugeben und werden mit dem Sondersteuersatz von 27,5% besteuert. Im Ausland bereits bezahlte Quellensteuern können gemäß DBA angerechnet werden.",
+      "sources": [
+        "§ 27 EStG 1988",
+        "§ 27a EStG 1988",
+        "§ 1 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-007",
+      "prompt": "Können Verluste aus Aktienverkäufen mit anderen Einkünften ausgeglichen werden?",
+      "correct_answer": "Nein. Verluste aus der Veräußerung von Kapitalvermögen (realisierte Wertsteigerungen und Derivate) können gemäß § 27 Abs. 8 EStG 1988 nur mit entsprechenden Gewinnen aus derselben Kategorie (realisierte Wertsteigerungen und Einkünfte aus Derivaten) ausgeglichen werden. Ein Ausgleich mit anderen Einkunftsarten (z.B. Einkünften aus Gewerbebetrieb) ist ausgeschlossen. Außerdem ist kein Verlustvortrag in Folgejahre möglich.",
+      "sources": [
+        "§ 27 Abs. 8 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-001",
+      "prompt": "Was sind Einkünfte aus Vermietung und Verpachtung gemäß § 28 EStG?",
+      "correct_answer": "Einkünfte aus Vermietung und Verpachtung gemäß § 28 EStG umfassen: (1) Einkünfte aus der Vermietung und Verpachtung von unbeweglichem Vermögen (Grundstücke, Gebäude, Wohnungen), (2) Einkünfte aus der Vermietung beweglicher Gegenstände (soweit nicht Gewerbebetrieb oder selbständige Arbeit), (3) Einkünfte aus der Überlassung von Rechten (Lizenzen, Urheberrechte), (4) Einkünfte aus Jagd- und Fischereiverpachtung. Es gilt das Überschussprinzip: Einnahmen minus Werbungskosten.",
+      "sources": [
+        "§ 28 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-002",
+      "prompt": "Kann ein privater Vermieter Herstellungsaufwendungen auf das Gebäude als Werbungskosten geltend machen?",
+      "correct_answer": "Ja, jedoch nach speziellen Regelungen. Bei Einkünften aus Vermietung und Verpachtung können Herstellungsaufwendungen auf Antrag auf 15 Jahre gleichmäßig verteilt als Werbungskosten abgesetzt werden (§ 28 Abs. 2 EStG). Instandhaltungsaufwendungen können grundsätzlich sofort abgezogen werden, große Instandhaltungsaufwendungen auf Antrag ebenfalls auf 15 Jahre verteilt. Die normale AfA für das Gebäude beträgt 1,5% pro Jahr (§ 16 Abs. 1 Z 8 EStG).",
+      "sources": [
+        "§ 28 Abs. 2 EStG 1988",
+        "§ 16 Abs. 1 Z 8 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-003",
+      "prompt": "Wie wird die Abschreibung (AfA) für ein vermietetes Gebäude berechnet?",
+      "correct_answer": "Für vermietete Gebäude gilt eine Absetzung für Abnutzung (AfA) von 1,5% pro Jahr des Gebäudewertes gemäß § 16 Abs. 1 Z 8 lit. d EStG 1988 (pauschaler AfA-Satz). Grund und Boden sind nicht abschreibbar. Der Gebäudeanteil ist grundsätzlich mit 60% des Gesamtwertes anzusetzen (40% Grundanteil), sofern nicht ein anderes Verhältnis nachgewiesen wird. Eine erhöhte AfA ist bei Gebäuden in Sanierungsgebieten oder bei bestimmten Neubauten möglich.",
+      "sources": [
+        "§ 16 Abs. 1 Z 8 EStG 1988",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-004",
+      "prompt": "Wann liegt bei der Vermietung eine gewerbliche Tätigkeit (§ 23 EStG) und nicht bloße Vermietung (§ 28 EStG) vor?",
+      "correct_answer": "Grundsätzlich ist Vermietung und Verpachtung eine außerbetriebliche Einkunftsart (§ 28 EStG). Eine Zuordnung zu den Einkünften aus Gewerbebetrieb (§ 23 EStG) erfolgt, wenn die Tätigkeit über die bloße Nutzungsüberlassung hinausgeht, z.B. bei der gewerblichen Beherbergung (Hotelbetrieb, Airbnb mit erheblichen Zusatzleistungen wie Reinigung, Frühstück), bei der Vermietung von Parkplätzen als Parkplatzbetrieb oder bei der Einbeziehung in den Betrieb des Steuerpflichtigen.",
+      "sources": [
+        "§ 23 EStG 1988",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-005",
+      "prompt": "Welche Werbungskosten kann ein Vermieter bei Einkünften aus Vermietung und Verpachtung abziehen?",
+      "correct_answer": "Als Werbungskosten bei Vermietungseinkünften (§ 16 EStG) kommen in Betracht: (1) Absetzung für Abnutzung (AfA) des Gebäudes, (2) Zinsen für Finanzierungskredite, (3) Betriebskosten (soweit nicht vom Mieter getragen), (4) Reparaturaufwendungen und Instandhaltungskosten, (5) Verwaltungskosten (Hausverwalter, Steuerberater), (6) Versicherungsprämien, (7) öffentliche Abgaben (Grundsteuer), (8) Leerstandskosten (anteilig), (9) Kosten für Inserate und Maklerprovisionen.",
+      "sources": [
+        "§ 16 EStG 1988",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-006",
+      "prompt": "Was ist eine 'Liebhaberei' im Sinne der Liebhabereiverordnung bei Vermietungseinkünften?",
+      "correct_answer": "Liebhaberei liegt vor, wenn eine Tätigkeit auf Dauer keine positiven Gesamteinkünfte erzielen kann und privaten Motiven dient. Bei der Vermietung von Einfamilienhäusern oder Eigentumswohnungen ist gemäß der Liebhabereiverordnung (LVO) zu prüfen, ob innerhalb eines Planungszeitraums (20 Jahre für Neubauten, 25 Jahre bei Instandsetzung) ein Gesamtgewinn/Überschuss erzielbar ist. Bei Liebhaberei sind Verluste steuerlich nicht abziehbar und die Tätigkeit ist nicht umsatzsteuerbar.",
+      "sources": [
+        "§ 1 Abs. 2 LVO",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-001",
+      "prompt": "Wie ist der österreichische Einkommensteuertarif aufgebaut (§ 33 EStG)?",
+      "correct_answer": "Der österreichische Einkommensteuertarif (§ 33 Abs. 1 EStG) ist progressiv gestaffelt. Ab 2024 gelten folgende Stufen: bis EUR 12.816 – 0%, EUR 12.816–20.818 – 20%, EUR 20.818–34.513 – 30%, EUR 34.513–66.612 – 40%, EUR 66.612–99.266 – 48%, EUR 99.266–1.000.000 – 50%, über EUR 1.000.000 – 55% (befristet). Diese Grenzen werden regelmäßig inflationsangepasst (Steuerbremse ab 2022).",
+      "sources": [
+        "§ 33 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-002",
+      "prompt": "Was ist der Alleinverdienerabsetzbetrag und wie hoch ist er?",
+      "correct_answer": "Der Alleinverdienerabsetzbetrag (AVAB) gemäß § 33 Abs. 4 EStG steht Steuerpflichtigen zu, die mehr als sechs Monate im Kalenderjahr verheiratet/eingetragen sind, mit einem unbeschränkt steuerpflichtigen (Ehe)Partner zusammenleben und dieser Partner Einkünfte von maximal EUR 6.000 pro Jahr erzielt. Die Höhe beträgt EUR 520 bei einem Kind, EUR 704 bei zwei Kindern, EUR 929 ab drei Kindern (Werte 2024, jährlich valorisiert). Der AVAB kann auch negativsteuerwirksam sein.",
+      "sources": [
+        "§ 33 Abs. 4 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-003",
+      "prompt": "Was versteht man unter dem Kinderzuschlag und dem Familienbonus Plus?",
+      "correct_answer": "Der Familienbonus Plus (FBP) gemäß § 33 Abs. 3a EStG ist ein Steuerabsetzbetrag (direkte Steuerminderung) für Eltern mit Kindern, für die Familienbeihilfe bezogen wird. Er beträgt EUR 2.000 pro Kind und Jahr bis zum 18. Lebensjahr (EUR 166,68/Monat). Für Kinder ab 18, für die noch Familienbeihilfe bezogen wird, beträgt er EUR 650 pro Jahr (EUR 54,18/Monat). Der FBP kann zwischen den Eltern aufgeteilt werden. Er ist nicht rückerstattbar, jedoch auf die Steuerschuld begrenzt.",
+      "sources": [
+        "§ 33 Abs. 3a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-004",
+      "prompt": "Was ist der Verkehrsabsetzbetrag und wer hat Anspruch darauf?",
+      "correct_answer": "Der Verkehrsabsetzbetrag gemäß § 33 Abs. 5 Z 1 EStG steht aktiven Arbeitnehmern (nicht Pensionisten) zu und beträgt EUR 487 pro Jahr (2024). Er ist eine pauschale Absetzung für beruflich bedingte Fahrtkosten. Für Arbeitnehmer mit geringem Einkommen kann er bis auf EUR 900 erhöht werden (erhöhter Verkehrsabsetzbetrag). Zusätzlich gibt es das Pendlerpauschale (§ 16 Abs. 1 Z 6 EStG) für regelmäßige Wegstrecken zwischen Wohnung und Arbeitsstätte.",
+      "sources": [
+        "§ 33 Abs. 5 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-005",
+      "prompt": "Was ist die Negativsteuer (SV-Rückerstattung) und wer profitiert davon?",
+      "correct_answer": "Die Negativsteuer ist eine Rückerstattung von Sozialversicherungsbeiträgen für Personen mit sehr geringem Einkommen, die keine oder kaum Einkommensteuer zahlen. Gemäß § 33 Abs. 8 EStG werden 55% der Sozialversicherungsbeiträge bis maximal EUR 1.200 zurückerstattet (Arbeitnehmer). Für Pensionisten beträgt die SV-Rückerstattung bis zu EUR 600 pro Jahr. Voraussetzung ist, dass der Allgemeine Absetzbetrag (AAB) die Einkommensteuerschuld übersteigt.",
+      "sources": [
+        "§ 33 Abs. 8 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-006",
+      "prompt": "Was ist der Allgemeine Absetzbetrag (AAB) und wie wirkt er?",
+      "correct_answer": "Der Allgemeine Absetzbetrag (AAB) gemäß § 33 Abs. 2 EStG ist ein direkter Steuerabzugsbetrag, der die Steuerschuld mindert. Er beträgt EUR 1.674 jährlich (Stand 2024) für Steuerpflichtige mit bis zu EUR 21.043 Einkommen. Ab EUR 21.043 vermindert er sich gleichmäßig und beträgt bei EUR 40.235 Einkommen EUR 0. Da der AAB die Steuerschuld auf EUR 0 reduzieren kann, kann er in Verbindung mit der Negativsteuer zur SV-Beitragsrückerstattung führen.",
+      "sources": [
+        "§ 33 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-007",
+      "prompt": "Wie wird die Einkommensteuer bei einem zu versteuernden Einkommen von EUR 50.000 grob berechnet?",
+      "correct_answer": "Bei einem zvE von EUR 50.000 ergibt sich nach dem Tarif des § 33 Abs. 1 EStG (Stand 2024): Die ersten EUR 12.816 sind steuerfrei, EUR 12.816–20.818 = 20% von EUR 8.002 = EUR 1.600, EUR 20.818–34.513 = 30% von EUR 13.695 = EUR 4.109, EUR 34.513–50.000 = 40% von EUR 15.487 = EUR 6.195. Bruttosteuerschuld ca. EUR 11.904. Davon abzuziehen sind Absetzbeträge wie AAB, Verkehrsabsetzbetrag, FBP etc. Der Grenzsteuersatz beträgt 40%.",
+      "sources": [
+        "§ 33 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-1-001",
+      "prompt": "Was sind steuerbare Umsätze im Sinne des § 1 UStG 1994?",
+      "correct_answer": "Steuerbare Umsätze gemäß § 1 Abs. 1 UStG 1994 sind: (1) Lieferungen und sonstige Leistungen, die ein Unternehmer im Inland gegen Entgelt im Rahmen seines Unternehmens ausführt, (2) der Eigenverbrauch im Inland, (3) die Einfuhr von Gegenständen (Einfuhrumsatzsteuer). Die Steuerbarkeit wird nicht dadurch ausgeschlossen, dass der Umsatz aufgrund gesetzlicher oder behördlicher Anordnung bewirkt wird.",
+      "sources": [
+        "§ 1 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-1-002",
+      "prompt": "Wann liegt ein steuerbarer Eigenverbrauch im Sinne des UStG vor?",
+      "correct_answer": "Eigenverbrauch im Sinne des § 1 Abs. 1 Z 2 UStG liegt vor, wenn ein Unternehmer Gegenstände oder Leistungen, die dem Unternehmen dienen, für private Zwecke oder für Zwecke außerhalb des Unternehmens verwendet. Eine Besteuerung erfolgt nur, wenn der Gegenstand oder seine Bestandteile zum vollen oder teilweisen Vorsteuerabzug berechtigt haben. Typische Fälle: Privatnutzung eines Firmenfahrzeugs, Entnahme von Waren für den Privatbedarf.",
+      "sources": [
+        "§ 1 Abs. 1 Z 2 UStG 1994",
+        "§ 3 Abs. 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-1-003",
+      "prompt": "Ein österreichischer Handwerker erbringt eine Leistung für einen Privatkunden. Ist dieser Umsatz steuerbar?",
+      "correct_answer": "Ja. Der Handwerker ist Unternehmer (§ 2 UStG), erbringt eine sonstige Leistung gegen Entgelt im Inland im Rahmen seines Unternehmens. Alle Tatbestandsmerkmale des § 1 Abs. 1 Z 1 UStG sind erfüllt: Unternehmer, gegen Entgelt, im Inland, im Rahmen des Unternehmens. Der Umsatz ist daher steuerbar und – mangels Steuerbefreiung – auch steuerpflichtig.",
+      "sources": [
+        "§ 1 Abs. 1 Z 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-2-001",
+      "prompt": "Wer ist Unternehmer im Sinne des UStG 1994?",
+      "correct_answer": "Unternehmer gemäß § 2 Abs. 1 UStG ist, wer eine gewerbliche oder berufliche Tätigkeit selbständig ausübt. Das Unternehmen umfasst die gesamte gewerbliche oder berufliche Tätigkeit des Unternehmers. Gewerblich oder beruflich ist jede nachhaltige Tätigkeit zur Erzielung von Einnahmen, auch wenn die Absicht, Gewinn zu erzielen, fehlt oder eine Personenvereinigung nur gegenüber ihren Mitgliedern tätig wird. Der Begriff ist weiter als im EStG und umfasst z.B. auch Vermieter und Freiberufler.",
+      "sources": [
+        "§ 2 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-2-002",
+      "prompt": "Ist ein Verein umsatzsteuerlicher Unternehmer?",
+      "correct_answer": "Ein Verein kann umsatzsteuerlicher Unternehmer sein, wenn er eine nachhaltige Tätigkeit zur Erzielung von Einnahmen ausübt. Dies gilt auch dann, wenn keine Gewinnabsicht verfolgt wird (§ 2 Abs. 1 UStG). Leistungen, die der Verein gegen Entgelt erbringt (z.B. Eintrittsgelder, Mitgliedsbeiträge für konkrete Leistungen), sind steuerbar. Echter Mitgliedsbeitrag ohne Gegenleistung ist nicht steuerbar. Für gemeinnützige Vereine bestehen Steuerbefreiungen.",
+      "sources": [
+        "§ 2 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3-001",
+      "prompt": "Was ist eine Lieferung im Sinne des § 3 UStG?",
+      "correct_answer": "Eine Lieferung gemäß § 3 Abs. 1 UStG ist jede Leistung, durch die ein Unternehmer oder in seinem Auftrag ein Dritter dem Abnehmer oder in dessen Auftrag einem Dritten die Verfügungsmacht über einen körperlichen Gegenstand verschafft (wirtschaftliche Übertragung der Verfügungsmacht). Maßgeblich ist die wirtschaftliche Betrachtung, nicht das zivilrechtliche Eigentum. Typische Lieferungen: Verkauf von Waren, Übergabe von Gegenständen im Tausch.",
+      "sources": [
+        "§ 3 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-001",
+      "prompt": "Was ist eine sonstige Leistung im Sinne des § 3a UStG?",
+      "correct_answer": "Sonstige Leistungen gemäß § 3a Abs. 1 UStG sind Leistungen, die nicht in einer Lieferung bestehen. Sie können auch in einem Unterlassen oder im Dulden einer Handlung oder eines Zustandes bestehen. Typische sonstige Leistungen: Beratungsleistungen, Vermietung, Transport, Reparaturarbeiten, Lizenzvergaben, Werkleistungen. Die Abgrenzung zur Lieferung ist wichtig für die Bestimmung des Leistungsortes.",
+      "sources": [
+        "§ 3a Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-002",
+      "prompt": "Was ist die Grundregel für den Leistungsort bei sonstigen Leistungen an Unternehmer (B2B)?",
+      "correct_answer": "Bei B2B-Leistungen (Business-to-Business) richtet sich der Leistungsort nach § 3a Abs. 6 UStG: Die sonstige Leistung, die an einen Unternehmer ausgeführt wird, gilt als an dem Ort ausgeführt, von dem aus der Empfänger sein Unternehmen betreibt (Empfängerortprinzip). Wird die Leistung an die Betriebsstätte eines Unternehmers ausgeführt, ist der Ort der Betriebsstätte maßgebend. Der leistende Unternehmer schuldet somit keine österreichische USt, wenn die Leistung in einem anderen Staat genutzt wird.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-003",
+      "prompt": "Was ist die Grundregel für den Leistungsort bei sonstigen Leistungen an Nichtunternehmer (B2C)?",
+      "correct_answer": "Bei B2C-Leistungen (Business-to-Consumer) richtet sich der Leistungsort nach § 3a Abs. 7 UStG: Die sonstige Leistung gilt als an dem Ort ausgeführt, von dem aus der Unternehmer sein Unternehmen betreibt (Unternehmerortprinzip/Ursprungslandprinzip). Wird die Leistung von einer Betriebsstätte ausgeführt, gilt die Betriebsstätte als Leistungsort. Ausnahmen gelten z.B. für Grundstücksleistungen, Beförderungsleistungen und elektronische Dienstleistungen.",
+      "sources": [
+        "§ 3a Abs. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-004",
+      "prompt": "Eine schweizerische Gesellschaft kauft Beratungsleistungen von einem österreichischen Unternehmer. Wo liegt der Leistungsort?",
+      "correct_answer": "Da die schweizerische Gesellschaft als Unternehmerin gilt und die Schweiz nicht zum EU-Gemeinschaftsgebiet gehört, liegt der Leistungsort gemäß § 3a Abs. 6 UStG beim Empfänger, also in der Schweiz. Der österreichische Unternehmer muss auf seiner Rechnung keine österreichische USt ausweisen. Es greift das Reverse-Charge-System bzw. beim Empfänger die lokalen Schweizer Mehrwertsteuerregeln.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-005",
+      "prompt": "Eine österreichische GmbH kauft von einem deutschen Softwareentwickler eine Software-Lizenz. Wer schuldet die österreichische USt?",
+      "correct_answer": "Bei dieser B2B-Leistung gilt das Empfängerortprinzip (§ 3a Abs. 6 UStG). Der Leistungsort liegt in Österreich (Sitz der österreichischen GmbH). Der deutsche Unternehmer erbringt eine sonstige Leistung in Österreich, er ist aber in Deutschland ansässig. Daher schuldet der Leistungsempfänger (die österreichische GmbH) die österreichische USt im Wege des Reverse-Charge-Verfahrens (§ 19 Abs. 1 UStG i.V.m. Art. 196 MwStSystRL). Die GmbH verrechnet sich selbst USt und kann diese als Vorsteuer abziehen.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994",
+        "§ 19 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-006",
+      "prompt": "Was ist das Reverse-Charge-Verfahren im UStG?",
+      "correct_answer": "Das Reverse-Charge-Verfahren (Übergang der Steuerschuld) nach § 19 Abs. 1 UStG 1994 bedeutet, dass nicht der leistende Unternehmer, sondern der Leistungsempfänger die Umsatzsteuer schuldet. Dies gilt insbesondere, wenn ein ausländischer Unternehmer eine sonstige Leistung an einen inländischen Unternehmer erbringt, bei der der Leistungsort in Österreich liegt. Der inländische Empfänger versteuert den Umsatz (Ausgangsteuer) und kann gleichzeitig die Vorsteuer geltend machen (falls abzugsberechtigt).",
+      "sources": [
+        "§ 19 Abs. 1 UStG 1994",
+        "§ 3a Abs. 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-007",
+      "prompt": "Besorgt ein Unternehmer eine sonstige Leistung im Namen und für Rechnung eines anderen – welche Rechtsfolgen hat das?",
+      "correct_answer": "Besorgt ein Unternehmer eine sonstige Leistung (d.h. er beschafft sie im Namen und für Rechnung seines Auftraggebers), so gelten gemäß § 3a Abs. 4 UStG für die Besorgungsleistung dieselben Rechtsvorschriften wie für die besorgte Leistung selbst. Das bedeutet: Steuerbarkeit, Steuerort und Steuerbefreiungen der besorgten Leistung werden auf die Besorgungsleistung übertragen. Dies ist relevant für Vermittlungsleistungen, Agenturgeschäfte und ähnliche Konstellationen.",
+      "sources": [
+        "§ 3a Abs. 4 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-008",
+      "prompt": "Wo ist der Leistungsort bei Grundstücksleistungen (z.B. Hausverwaltung, Gutachten über Immobilien)?",
+      "correct_answer": "Grundstücksbezogene sonstige Leistungen werden gemäß § 3a Abs. 9 UStG 1994 dort ausgeführt, wo das Grundstück liegt (Belegenheitsprinzip). Dies gilt unabhängig davon, ob der Empfänger Unternehmer oder Nichtunternehmer ist. Beispiele: Hausverwaltung einer österreichischen Immobilie → Leistungsort Österreich, auch wenn der Hausverwalter in Deutschland sitzt. Immobiliengutachten, Architektenleistungen, Maklerleistungen für ein bestimmtes Grundstück unterliegen ebenfalls diesem Prinzip.",
+      "sources": [
+        "§ 3a Abs. 9 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-009",
+      "prompt": "Ein österreichischer Unternehmensberater berät einen deutschen Privatmann ohne Unternehmerstellung. Wo liegt der Leistungsort?",
+      "correct_answer": "Da der Leistungsempfänger kein Unternehmer ist (B2C-Konstellation), gilt gemäß § 3a Abs. 7 UStG das Unternehmerortprinzip: Die Leistung gilt als an dem Ort ausgeführt, von dem aus der österreichische Unternehmer sein Unternehmen betreibt – also in Österreich. Damit ist österreichische USt geschuldet, und der österreichische Unternehmer stellt eine Rechnung mit 20% österreichischer USt aus.",
+      "sources": [
+        "§ 3a Abs. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-010",
+      "prompt": "Was versteht man unter 'auf elektronischem Weg erbrachten Dienstleistungen' und wo liegt ihr Leistungsort?",
+      "correct_answer": "Elektronisch erbrachte Dienstleistungen (z.B. Software-Downloads, Streaming, Online-Kurse, App-Verkäufe) an Nichtunternehmer werden gemäß § 3a Abs. 13 UStG an dem Ort ausgeführt, an dem der Nichtunternehmer ansässig ist (Empfängerortprinzip auch für B2C). Das bedeutet: Ein österreichisches Unternehmen, das einem deutschen Privatkunden eine Software verkauft, schuldet deutsche Mehrwertsteuer. Die Abwicklung erfolgt über das OSS-System (One-Stop-Shop, § 25a UStG).",
+      "sources": [
+        "§ 3a Abs. 13 UStG 1994",
+        "§ 25a UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-4-001",
+      "prompt": "Was ist die Bemessungsgrundlage der Umsatzsteuer bei Lieferungen und sonstigen Leistungen?",
+      "correct_answer": "Die Bemessungsgrundlage gemäß § 4 Abs. 1 UStG ist das Entgelt, also alles, was der Leistungsempfänger aufwendet, um die Leistung zu erhalten. Nicht zur Bemessungsgrundlage gehören: die Umsatzsteuer selbst, durchlaufende Posten (Beträge, die im Namen und für Rechnung eines anderen vereinnahmt werden), echte Schadenersatzzahlungen sowie nachträgliche Preisnachlässe (§ 16 UStG). Beim Tausch gilt der gemeine Wert der erhaltenen Gegenleistung als Entgelt.",
+      "sources": [
+        "§ 4 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-6-001",
+      "prompt": "Welche Umsätze sind gemäß § 6 UStG von der österreichischen Umsatzsteuer befreit?",
+      "correct_answer": "§ 6 UStG enthält einen umfangreichen Katalog steuerbefreiter Umsätze, darunter: (1) echte Steuerbefreiungen (§ 6 Abs. 1 Z 1-10): Ausfuhrlieferungen, innergemeinschaftliche Lieferungen, bestimmte Bankleistungen (Kreditvergabe, Wertpapierhandel), Versicherungsleistungen, Heilbehandlungen, Sozialfürsorge; (2) unechte Steuerbefreiungen (mit Vorsteuerausschluss): Vermietung für Wohnzwecke, Kleinunternehmerregelung (§ 6 Abs. 1 Z 27 UStG – Jahresumsatz bis EUR 55.000).",
+      "sources": [
+        "§ 6 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-6-002",
+      "prompt": "Was ist die Kleinunternehmerregelung in der österreichischen Umsatzsteuer und welche Grenze gilt ab 2025?",
+      "correct_answer": "Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG sind Unternehmer mit Sitz oder Betriebsstätte in Österreich, deren Jahresumsatz die Kleinunternehmergrenze nicht übersteigt. Ab 2025 gilt eine Grenze von EUR 55.000 (netto). Kleinunternehmer können USt-frei fakturieren, haben aber auch kein Recht auf Vorsteuerabzug. Es handelt sich um eine unechte Steuerbefreiung. Auf die Steuerbefreiung kann verzichtet werden (Option zur Regelbesteuerung).",
+      "sources": [
+        "§ 6 Abs. 1 Z 27 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-6-003",
+      "prompt": "Was ist der Unterschied zwischen echter und unechter Steuerbefreiung im UStG?",
+      "correct_answer": "Bei einer echten Steuerbefreiung bleibt das Recht auf Vorsteuerabzug für mit der befreiten Leistung zusammenhängende Vorleistungen erhalten (z.B. Ausfuhrlieferung, innergemeinschaftliche Lieferung). Bei einer unechten Steuerbefreiung besteht kein Vorsteuerabzugsrecht für damit zusammenhängende Vorleistungen – der Unternehmer muss die Vorsteuer selbst tragen (z.B. Vermietung für Wohnzwecke, Kleinunternehmer, Bankdienstleistungen). Das ist der wirtschaftlich wichtige Unterschied.",
+      "sources": [
+        "§ 6 UStG 1994",
+        "§ 12 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-7-001",
+      "prompt": "Was ist eine Ausfuhrlieferung und warum ist sie steuerfrei?",
+      "correct_answer": "Eine Ausfuhrlieferung gemäß § 7 UStG ist die Lieferung von Gegenständen in das Drittlandsgebiet (außerhalb der EU). Sie ist steuerfrei, weil Österreich gemäß dem Bestimmungslandprinzip nur Umsätze besteuert, die im Inland konsumiert werden. Voraussetzung ist der Nachweis der tatsächlichen Ausfuhr (Ausfuhrnachweis und Buchnachweis). Die Steuerfreiheit ist eine echte Steuerbefreiung – der Vorsteuerabzug bleibt erhalten.",
+      "sources": [
+        "§ 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-10-001",
+      "prompt": "Welche Umsatzsteuersätze gibt es in Österreich gemäß § 10 UStG?",
+      "correct_answer": "In Österreich gelten folgende Umsatzsteuersätze gemäß § 10 UStG: (1) Normalsteuersatz 20% für alle nicht begünstigten Umsätze, (2) ermäßigter Steuersatz 10% für: Lebensmittel, Bücher/Zeitungen (Printmedien), Personenbeförderung (öffentliche Verkehrsmittel), Wohnungsvermietung, Medikamente, (3) ermäßigter Steuersatz 13% für: Kunstgegenstände, Beherbergung (Hotellerie), lebende Tiere, Saatgut, Pflanzen, Eintritt für Sportveranstaltungen.",
+      "sources": [
+        "§ 10 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-10-002",
+      "prompt": "Welcher USt-Satz gilt für ein österreichisches Hotel?",
+      "correct_answer": "Für Beherbergungsleistungen in der Hotellerie gilt in Österreich der ermäßigte Steuersatz von 13% gemäß § 10 Abs. 3 Z 1 UStG 1994. Frühstück und Halbpension können separat abgerechnet werden und unterliegen dem Steuersatz für Lebensmittel (10%). Sonstige Leistungen des Hotels wie Minibar, Parkplatz oder Wellnessleistungen unterliegen je nach Leistungsart dem Normal- (20%) oder ermäßigten Steuersatz.",
+      "sources": [
+        "§ 10 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-10-003",
+      "prompt": "Welcher USt-Satz gilt für die Lieferung von Büchern in Österreich?",
+      "correct_answer": "Die Lieferung von Büchern (Printmedien) unterliegt in Österreich dem ermäßigten Umsatzsteuersatz von 10% gemäß § 10 Abs. 2 UStG 1994. Dies gilt für physische Bücher. E-Books und digitale Publikationen unterliegen ebenfalls dem ermäßigten Satz von 10% (seit der Harmonisierung in der EU). Zeitungen und Zeitschriften unterliegen bei Direktlieferung ebenfalls 10%.",
+      "sources": [
+        "§ 10 Abs. 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-12-001",
+      "prompt": "Was ist der Vorsteuerabzug im UStG und unter welchen Voraussetzungen kann er geltend gemacht werden?",
+      "correct_answer": "Der Vorsteuerabzug gemäß § 12 UStG erlaubt es Unternehmern, die an sie für Lieferungen und sonstige Leistungen in Rechnung gestellte Umsatzsteuer von ihrer eigenen Steuerschuld abzuziehen. Voraussetzungen: (1) Der Leistungsempfänger ist Unternehmer, (2) die Leistung wird für das Unternehmen bezogen, (3) eine ordnungsgemäße Rechnung gemäß § 11 UStG liegt vor, (4) die Leistung dient nicht ausschließlich Zwecken gemäß § 12 Abs. 2 (z.B. Repräsentation) oder steuerbefreiten Umsätzen.",
+      "sources": [
+        "§ 12 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-12-002",
+      "prompt": "Kann ein Unternehmer Vorsteuer für ein Fahrzeug (PKW) geltend machen?",
+      "correct_answer": "Grundsätzlich nein. Für PKW, Kombinationskraftwagen und Krafträder ist der Vorsteuerabzug gemäß § 12 Abs. 2 Z 2 lit. b UStG 1994 ausgeschlossen ('Vorsteuerausschluss'), sofern das Fahrzeug nicht ausschließlich für unternehmerische Zwecke genutzt wird (z.B. Taxi, Fahrschule, Mietwagen) oder es sich um ein zu mindestens 80% betrieblich genutztes Fahrzeug handelt. LKW, Kleintransporter und Fiskal-LKW sind dagegen vorsteuerabzugsberechtigt.",
+      "sources": [
+        "§ 12 Abs. 2 Z 2 lit. b UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-12-003",
+      "prompt": "Was versteht man unter dem Aufteilungsgebot bei gemischt genutzten Gegenständen?",
+      "correct_answer": "Wird ein Gegenstand oder eine Leistung sowohl für unternehmerische als auch für nicht unternehmerische Zwecke verwendet, so ist die Vorsteuer gemäß § 12 Abs. 4 und 5 UStG aufzuteilen. Der Anteil, der auf die unternehmerische Verwendung entfällt, ist als Vorsteuer abzugsfähig. Eine angemessene Aufteilungsmethode muss verwendet werden (z.B. nach tatsächlichem Nutzungsanteil). Bei Grundstücken, die sowohl unternehmerisch als auch privat genutzt werden, gilt eine Sonderregelung.",
+      "sources": [
+        "§ 12 Abs. 4 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-7-001",
+      "prompt": "Was ist das Einkommen einer Kapitalgesellschaft im Sinne des KStG?",
+      "correct_answer": "Das Einkommen einer Kapitalgesellschaft gemäß § 7 Abs. 1 KStG ist der Gesamtbetrag der Einkünfte, vermindert um Sonderausgaben und Verlustabzüge. Bei Kapitalgesellschaften (GmbH, AG) gelten alle Einkünfte als Einkünfte aus Gewerbebetrieb (§ 7 Abs. 3 KStG – 'Gewerblichkeitsfiktion'). Das KStG verweist auf das EStG, soweit im KStG keine abweichenden Regelungen getroffen werden. Der KöSt-Satz beträgt 24% (ab 2024, davor 25%).",
+      "sources": [
+        "§ 7 Abs. 1 KStG 1988",
+        "§ 7 Abs. 3 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-7-002",
+      "prompt": "Was bedeutet die 'Gewerblichkeitsfiktion' bei Kapitalgesellschaften gemäß § 7 Abs. 3 KStG?",
+      "correct_answer": "Gemäß § 7 Abs. 3 KStG gelten bei unbeschränkt steuerpflichtigen Kapitalgesellschaften (GmbH, AG, Genossenschaft etc.) alle Einkünfte als Einkünfte aus Gewerbebetrieb, unabhängig von der tatsächlichen Tätigkeit. Das bedeutet: Auch Zinserträge, Mieterträge oder Veräußerungsgewinne einer GmbH werden als gewerbliche Einkünfte behandelt und unterliegen nicht den Sondertarifen für Kapitalerträge (27,5% KESt). Diese Fiktion vereinfacht die steuerliche Erfassung erheblich.",
+      "sources": [
+        "§ 7 Abs. 3 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-7-003",
+      "prompt": "Welchem Steuersatz unterliegen Kapitalgesellschaften in Österreich?",
+      "correct_answer": "Kapitalgesellschaften unterliegen der Körperschaftsteuer mit einem Steuersatz von 24% (gültig ab 2024, davor 25% seit 1. Jänner 2005). Dieser Satz gilt für das gesamte steuerpflichtige Einkommen der Kapitalgesellschaft. Es gibt eine Mindest-Körperschaftsteuer (MindestKöSt), die auch bei Verlusten anfällt: für GmbH EUR 500 p.a., für AG EUR 1.750 p.a. Die MindestKöSt ist bei späteren Gewinnen anrechenbar.",
+      "sources": [
+        "§ 22 Abs. 1 KStG 1988",
+        "§ 24 Abs. 4 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-001",
+      "prompt": "Was sind verdeckte Ausschüttungen und wie werden sie im KStG behandelt?",
+      "correct_answer": "Verdeckte Ausschüttungen (vGA) gemäß § 8 Abs. 2 KStG sind Zuwendungen einer Körperschaft an ihre Gesellschafter oder diesen nahe stehende Personen, die nicht dem Fremdvergleich entsprechen und damit keine echten Betriebsausgaben darstellen. Steuerlich werden vGA dem Einkommen der Körperschaft wieder hinzugerechnet. Beim Gesellschafter werden vGA als Einkünfte aus Kapitalvermögen (§ 27 EStG) behandelt, sofern er Privatperson ist. Beispiele: überhöhte Geschäftsführerbezüge, zinslose Darlehen, Übernahme privater Kosten.",
+      "sources": [
+        "§ 8 Abs. 2 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-002",
+      "prompt": "Darf eine GmbH an ihre Gesellschafter Gewinne ausschütten? Wie wird das steuerlich behandelt?",
+      "correct_answer": "Ja. Offene Gewinnausschüttungen einer GmbH an Gesellschafter sind steuerlich möglich. Die GmbH selbst hat auf die Ausschüttung Kapitalertragsteuer (KESt) von 27,5% einzubehalten und abzuführen. Beim Gesellschafter unterliegt die Dividende grundsätzlich der Endbesteuerung mit 27,5% KESt. Eine Körperschaft als Gesellschafterin kann die Dividende jedoch unter den Voraussetzungen des § 10 KStG (Beteiligungsertragsbefreiung) steuerfrei vereinnahmen.",
+      "sources": [
+        "§ 8 Abs. 1 KStG 1988",
+        "§ 10 KStG 1988",
+        "§ 93 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-9-001",
+      "prompt": "Was ist eine Unternehmensgruppe gemäß § 9 KStG?",
+      "correct_answer": "Die Gruppenbesteuerung gemäß § 9 KStG ermöglicht es verbundenen Kapitalgesellschaften (Gruppenträger und Gruppenmitglieder), ihre steuerlichen Ergebnisse zu konsolidieren und gemeinsam zu versteuern. Voraussetzungen: (1) Der Gruppenträger hält mindestens 50%+1 Stimme am Gruppenmitglied, (2) beide sind unbeschränkt steuerpflichtig (gilt auch für ausländische Tochtergesellschaften mit eingeschränktem Verlustabzug), (3) schriftlicher Gruppenantrag. Verluste von Gruppenmitgliedern können auf Ebene des Gruppenträgers verrechnet werden.",
+      "sources": [
+        "§ 9 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-9-002",
+      "prompt": "Was sind die Voraussetzungen für die Bildung einer Unternehmensgruppe nach § 9 KStG?",
+      "correct_answer": "Gemäß § 9 Abs. 2-5 KStG sind folgende Voraussetzungen erforderlich: (1) Mindestbeteiligung von mehr als 50% am Kapital und an den Stimmrechten des Gruppenmitglieds (direkt oder indirekt), (2) sowohl Gruppenträger als auch Gruppenmitglied müssen unbeschränkt körperschaftsteuerpflichtig sein (Kapitalgesellschaften, Versicherungsvereine auf Gegenseitigkeit etc.), (3) schriftlicher Gruppenantrag, der vor dem Ende des ersten Wirtschaftsjahres der Gruppe beim Finanzamt einzureichen ist, (4) mindestens 3 Jahre Zugehörigkeit zur Gruppe.",
+      "sources": [
+        "§ 9 Abs. 2 KStG 1988",
+        "§ 9 Abs. 4 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-10-001",
+      "prompt": "Was ist die Beteiligungsertragsbefreiung gemäß § 10 KStG?",
+      "correct_answer": "Gemäß § 10 Abs. 1 KStG sind Beteiligungserträge (Gewinnanteile und Ausschüttungen aus in- und ausländischen Kapitalgesellschaften) bei der empfangenden Kapitalgesellschaft von der Körperschaftsteuer befreit (Beteiligungsertragsbefreiung/Schachtelprivileg). Dies dient der Vermeidung von Mehrfachbesteuerung bei Ausschüttungen innerhalb eines Konzerns. Die Befreiung gilt unabhängig von der Beteiligungshöhe für inländische Beteiligungen und bei bestimmten Mindestbeteiligungen für ausländische.",
+      "sources": [
+        "§ 10 Abs. 1 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-10-002",
+      "prompt": "Unter welchen Bedingungen gilt die internationale Schachtelprivilegbefreiung für ausländische Dividenden (§ 10 KStG)?",
+      "correct_answer": "Die internationale Schachtelbeteiligung gemäß § 10 Abs. 2 KStG gilt für Beteiligungen an ausländischen Körperschaften, wenn: (1) die Beteiligung mindestens 10% beträgt, (2) die Beteiligung für mindestens ein Jahr ununterbrochen gehalten wurde, (3) die ausländische Körperschaft einer mit der österreichischen Körperschaftsteuer vergleichbaren Steuer unterliegt. Sind diese Voraussetzungen erfüllt, sind sowohl Dividenden als auch Veräußerungsgewinne aus dieser Beteiligung von der KöSt befreit.",
+      "sources": [
+        "§ 10 Abs. 2 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-11-001",
+      "prompt": "Welche Aufwendungen sind gemäß § 11 KStG bei der Körperschaftsteuer nicht abzugsfähig?",
+      "correct_answer": "Gemäß § 12 KStG (nicht § 11) sind folgende Aufwendungen bei der Körperschaftsteuer nicht abzugsfähig: (1) Aufwendungen, die zur Erzielung steuerfreier Einnahmen dienen, (2) 50% der Aufsichtsratsvergütungen, (3) Strafen und Geldbußen, (4) Aufwendungen für freiwillige Abfertigungen, soweit bestimmte Obergrenzen überschritten werden, (5) Aufwendungen, die mit verdeckten Ausschüttungen zusammenhängen, (6) Zinsen und Lizenzgebühren bei Niedrigbesteuerung im Ausland (Zins-/Lizenzschranke).",
+      "sources": [
+        "§ 12 KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-12-001",
+      "prompt": "Was versteht man unter der Zinsschranke im KStG?",
+      "correct_answer": "Die Zinsschranke gemäß § 12a KStG (Umsetzung der Anti-BEPS-Richtlinie) begrenzt den steuerlichen Abzug von Zinsaufwendungen auf 30% des steuerlichen EBITDA (Gewinn vor Steuern, Zinsen und Abschreibungen). Zinsaufwendungen, die diese Grenze übersteigen, können in Folgejahre vorgetragen werden. Ausnahmen bestehen für: Zinsaufwendungen bis EUR 3 Mio. p.a. (Escape-Klausel), bestimmte Finanzierungen für öffentliche Infrastruktur, eigenständige Einzelunternehmen ohne verbundene Unternehmen.",
+      "sources": [
+        "§ 12a KStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-12-002",
+      "prompt": "Wie werden Verluste einer GmbH im österreichischen Steuerrecht behandelt?",
+      "correct_answer": "Verluste einer GmbH können gemäß § 8 Abs. 4 Z 2 KStG iVm § 18 Abs. 6 EStG grundsätzlich unbegrenzt vorgetragen werden. Jedoch ist der Verlustabzug pro Jahr auf 75% des Gesamtbetrags der Einkünfte begrenzt (Mindestbesteuerung). Verluste können nicht in Vorjahre zurückgetragen werden (kein Verlustrücktrag im KStG, anders als im EStG, wo er begrenzt gilt). Bei Unternehmensgruppen können Verluste von Gruppenmitgliedern beim Gruppenträger ausgeglichen werden.",
+      "sources": [
+        "§ 8 Abs. 4 Z 2 KStG 1988",
+        "§ 18 Abs. 6 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-GEN-001",
+      "prompt": "Was ist der Unterschied zwischen Körperschaftsteuer und Einkommensteuer?",
+      "correct_answer": "Die Einkommensteuer (EStG) besteuert das Einkommen natürlicher Personen (Einzelunternehmer, Personengesellschafter, Arbeitnehmer) nach einem progressiven Tarif (0–55%). Die Körperschaftsteuer (KStG) besteuert das Einkommen juristischer Personen des Privatrechts (GmbH, AG, Genossenschaft etc.) mit einem einheitlichen Steuersatz von 24% (ab 2024). Gewinne aus Kapitalgesellschaften werden zunächst mit KöSt belastet; bei Ausschüttung an natürliche Personen erfolgt zusätzlich die KESt-Besteuerung von 27,5% (Doppelbelastung auf Gesellschaftsebene).",
+      "sources": [
+        "§ 1 EStG 1988",
+        "§ 22 KStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-001",
+      "prompt": "Was ist der Gegenstand der Grunderwerbsteuer (GrEStG)?",
+      "correct_answer": "Die Grunderwerbsteuer (GrEStG) besteuert den Erwerb von inländischen Grundstücken im Sinne des bürgerlichen Rechts. Steuerpflichtige Erwerbsvorgänge sind gemäß § 1 GrEStG insbesondere: Kaufverträge über Grundstücke, Tauschverträge, Schenkungen von Grundstücken, Erbschafts- und Schenkungsübertragungen im Weg der Einantwortung (Erbanfall), Übergabeverträge, Zwangsversteigerung und andere Rechtsgeschäfte, die den Anspruch auf Übereignung eines Grundstücks begründen.",
+      "sources": [
+        "§ 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-002",
+      "prompt": "Wie hoch ist die Grunderwerbsteuer in Österreich beim Kauf einer Immobilie?",
+      "correct_answer": "Beim entgeltlichen Erwerb (z.B. Kauf) richtet sich die GrESt gemäß § 7 GrEStG nach dem Grundstückswert bzw. dem vereinbarten Kaufpreis (je nachdem, was höher ist). Der Steuersatz beträgt 3,5% des Kaufpreises (bzw. Grundstückswerts). Bei begünstigten Übertragungen im Familienverband (unentgeltliche oder teilentgeltliche Übertragungen) gilt ein Stufentarif: 0,5% bis EUR 250.000, 2% von EUR 250.001 bis EUR 400.000, 3,5% über EUR 400.000 des Grundstückswerts.",
+      "sources": [
+        "§ 7 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-003",
+      "prompt": "Was versteht man unter dem Grundstückswert für die Berechnung der Grunderwerbsteuer?",
+      "correct_answer": "Der Grundstückswert für Zwecke der GrESt entspricht gemäß § 4 Abs. 1 GrEStG i.V.m. § 2 Grundstückswertverordnung dem gemeinen Wert (Verkehrswert) des Grundstücks. Dieser kann vereinfacht durch einen pauschalen Sachwert oder durch den dreifachen Einheitswert (multipliziert mit einem Hochrechnungsfaktor) ermittelt werden. Bei Vorliegen eines Gutachtens eines befugten Sachverständigen kann der darin ausgewiesene Wert herangezogen werden.",
+      "sources": [
+        "§ 4 GrEStG 1987",
+        "Grundstückswertverordnung"
+      ]
+    },
+    {
+      "id": "GREST-004",
+      "prompt": "Was gilt als Grundstück im Sinne des Grunderwerbsteuergesetzes?",
+      "correct_answer": "Gemäß § 2 GrEStG sind Grundstücke im Sinne des bürgerlichen Rechts (ABGB) Gegenstand der GrESt. Dazu zählen: Liegenschaften (bebaute und unbebaute Grundflächen), Gebäude und Bauwerke auf fremdem Boden (Superädifikat), das Erbbaurecht sowie in der Regel auch Zubehör (wenn es Gegenstand des gleichen Rechtsgeschäfts ist). Maschinen und Betriebsvorrichtungen, die wesentliche Bestandteile des Gebäudes sind, können ebenfalls der GrESt unterliegen.",
+      "sources": [
+        "§ 2 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-005",
+      "prompt": "Unterliegt die Schenkung einer Immobilie unter Angehörigen der Grunderwerbsteuer?",
+      "correct_answer": "Ja. Die Schenkung eines Grundstücks ist gemäß § 1 Abs. 1 Z 1 GrEStG ein steuerpflichtiger Erwerbsvorgang. Bei unentgeltlichen Übertragungen im engen Familienverband (Eltern, Kinder, Ehegatten, Geschwister etc.) gilt jedoch der begünstigte Stufentarif nach § 7 Abs. 1 Z 2 GrEStG: 0,5% bis EUR 250.000, 2% für EUR 250.001–400.000, 3,5% über EUR 400.000 des Grundstückswerts. Erbschaftssteuer gibt es in Österreich seit 2008 nicht mehr.",
+      "sources": [
+        "§ 1 Abs. 1 GrEStG 1987",
+        "§ 7 Abs. 1 Z 2 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-006",
+      "prompt": "Gibt es Befreiungen von der Grunderwerbsteuer?",
+      "correct_answer": "Ja, § 3 GrEStG enthält verschiedene Befreiungen: (1) Erwerbe durch öffentlich-rechtliche Körperschaften für öffentliche Zwecke, (2) Erwerbe von Grundstücken zur Errichtung gemeinnütziger Wohnungen, (3) die Vereinigung aller Anteile an einer Personengesellschaft in einer Hand, (4) Erwerbe durch eine Körperschaft öffentlichen Rechts infolge Gesamtrechtsnachfolge. Außerdem gilt die Kleinbetragsfreigrenze: wenn der nach § 7 GrEStG anfallende Steuerbetrag EUR 110 nicht überschreitet, wird keine Steuer erhoben.",
+      "sources": [
+        "§ 3 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-007",
+      "prompt": "Was ist die Eintragungsgebühr beim Grundbuch und steht sie im Zusammenhang mit der GrESt?",
+      "correct_answer": "Die Eintragungsgebühr (früher: Grundbucheintragungsgebühr) ist eine eigenständige Abgabe nach dem Gerichtsgebührengesetz (GGG) und ist von der Grunderwerbsteuer zu unterscheiden. Sie beträgt 1,1% des Kaufpreises (Wert des Rechtstitels) und wird für die Eintragung des Eigentumsrechts ins Grundbuch erhoben. Damit betragen die Gesamtkosten einer Immobilientransaktion an Steuern und Gebühren in der Regel 3,5% (GrESt) + 1,1% (Eintragungsgebühr) = 4,6% des Kaufpreises.",
+      "sources": [
+        "§ 26 GGG",
+        "§ 7 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-008",
+      "prompt": "Wann entsteht die Grunderwerbsteuerpflicht?",
+      "correct_answer": "Die Steuerpflicht entsteht gemäß § 8 GrEStG mit dem Zeitpunkt, in dem der Erwerbsvorgang verwirklicht wird. Das ist grundsätzlich der Zeitpunkt des Abschlusses des Kaufvertrags (Verpflichtungsgeschäft), nicht erst der Zeitpunkt der grundbücherlichen Einverleibung. Bei auflösend bedingten Geschäften entsteht die Steuerschuld mit dem Wegfall der Bedingung nicht erneut; die Rückübertragung ist jedoch ein neuer Erwerbsvorgang.",
+      "sources": [
+        "§ 8 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-009",
+      "prompt": "Wer ist Schuldner der Grunderwerbsteuer?",
+      "correct_answer": "Gemäß § 9 GrEStG sind Steuerschuldner die am Erwerbsvorgang beteiligten Personen, also sowohl Käufer als auch Verkäufer (als Gesamtschuldner). Im allgemeinen Verkehr trägt jedoch der Käufer die GrESt laut Vereinbarung. Die Anzeigepflicht obliegt den beteiligten Parteien; in der Praxis wird die Selbstberechnung und Abfuhr der GrESt durch den beurkundenden Notar oder Rechtsanwalt vorgenommen.",
+      "sources": [
+        "§ 9 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-010",
+      "prompt": "Was ist die Anteilsvereinigung (share deal) und warum ist sie grunderwerbsteuerpflichtig?",
+      "correct_answer": "Gemäß § 1 Abs. 3 GrEStG sind auch bestimmte Erwerbe von Gesellschaftsanteilen, die der Übertragung eines Grundstücks wirtschaftlich gleichkommen, grunderwerbsteuerpflichtig. Dies ist insbesondere der Fall, wenn mindestens 95% der Anteile an einer Gesellschaft, die inländische Grundstücke besitzt, auf einen Erwerber übergehen (Anteilsvereinigung) oder wenn sich diese Menge von Anteilen innerhalb von 5 Jahren auf einen Erwerber vereinigt. Damit soll die Umgehung der GrESt durch den Kauf von Gesellschaftsanteilen statt der Immobilie selbst verhindert werden.",
+      "sources": [
+        "§ 1 Abs. 3 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "GREST-011",
+      "prompt": "Ein Unternehmen überträgt eine Immobilie im Rahmen einer Umgründung auf eine Nachfolgegesellschaft. Ist GrESt zu bezahlen?",
+      "correct_answer": "Grundsätzlich ja, da die Übertragung eines Grundstücks auch im Rahmen von Umgründungen einen Erwerbsvorgang darstellt. Das Umgründungssteuergesetz (UmgrStG) enthält jedoch für bestimmte Umgründungsformen (Verschmelzung, Spaltung, Einbringung, Zusammenschluss, Realteilung, Umwandlung) Steuerbefreiungen oder begünstigte Besteuerungen nach § 7 Abs. 1 Z 2 GrEStG (Stufentarif). Die genaue Behandlung hängt vom Umgründungstyp und den Voraussetzungen des UmgrStG ab.",
+      "sources": [
+        "§ 3 GrEStG 1987",
+        "UmgrStG"
+      ]
+    },
+    {
+      "id": "GREST-012",
+      "prompt": "Was gilt als Bemessungsgrundlage für die GrESt beim Kauf eines Grundstücks zu einem offensichtlich überhöhten Preis?",
+      "correct_answer": "Gemäß § 4 Abs. 1 GrEStG ist die Steuer grundsätzlich vom Grundstückswert zu berechnen. Wenn jedoch der vereinbarte Kaufpreis höher ist als der Grundstückswert, gilt der Kaufpreis als Bemessungsgrundlage (Meistbetragsprinzip). Ist der Kaufpreis hingegen niedriger als der Grundstückswert, ist der Grundstückswert heranzuziehen. Diese Regelung soll sicherstellen, dass die GrESt immer vom Marktwert oder dem vereinbarten Preis (je nachdem was höher ist) berechnet wird.",
+      "sources": [
+        "§ 4 Abs. 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "CROSS-001",
+      "prompt": "Ein Steuerberater betreibt eine Einzelkanzlei. Für welche Steuerarten ist er im Rahmen seiner Tätigkeit relevant?",
+      "correct_answer": "Als Steuerberater mit Einzelkanzlei ist folgendes zu beachten: (1) EStG: Einkünfte aus selbständiger Arbeit (§ 22 Z 1 lit. b EStG) – freiberufliche Tätigkeit; Gewinnermittlung durch Einnahmen-Ausgaben-Rechnung (§ 4 Abs. 3 EStG) oder Bilanzierung (§ 5 EStG); (2) UStG: Unternehmereigenschaft (§ 2 UStG), 20% USt auf Honorare, Vorsteuerabzug für Betriebsausgaben; (3) GrEStG: nur relevant bei Erwerb eines Bürogebäudes oder Praxisübergabe.",
+      "sources": [
+        "§ 22 Z 1 lit. b EStG 1988",
+        "§ 2 UStG 1994",
+        "§ 10 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-002",
+      "prompt": "Eine österreichische GmbH vermietet eine Gewerbeimmobilie an einen Mieter. Welche steuerlichen Konsequenzen ergeben sich auf Ebene der GmbH?",
+      "correct_answer": "Auf Ebene der GmbH: (1) KStG: Die Mieteinnahmen sind Einkünfte aus Gewerbebetrieb (§ 7 Abs. 3 KStG) und unterliegen dem KöSt-Satz von 24%. Werbungskosten (AfA, Zinsen, Reparaturen) sind abzugsfähig. (2) UStG: Die Vermietung von Gewerbeimmobilien ist USt-pflichtig mit 20% (§ 6 Abs. 1 Z 16 UStG: Steuerbefreiung gilt nur für Wohnzwecke). Die GmbH kann Vorsteuer aus dem Kauf bzw. der Errichtung der Immobilie geltend machen. (3) GrEStG: nur beim Erwerb der Immobilie relevant.",
+      "sources": [
+        "§ 7 Abs. 3 KStG 1988",
+        "§ 6 Abs. 1 Z 16 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-003",
+      "prompt": "Mag. Maria Müller ist Rechtsanwältin und gleichzeitig Aufsichtsratsmitglied einer AG. Wie werden ihre Einkünfte klassifiziert?",
+      "correct_answer": "Einkünfte aus der Rechtsanwaltstätigkeit: Einkünfte aus selbständiger Arbeit (§ 22 Z 1 lit. b EStG), freiberufliche Tätigkeit. Einkünfte aus der Aufsichtsratstätigkeit: Einkünfte aus sonstiger selbständiger Arbeit (§ 22 Z 2 EStG), vermögensverwaltende Tätigkeit. Beide Einkunftsarten sind zu trennen und separat in der Einkommensteuererklärung anzugeben. USt: Die Aufsichtsratsvergütung ist USt-pflichtig (20%); die Rechtsanwaltsleistungen ebenfalls.",
+      "sources": [
+        "§ 22 Z 1 lit. b EStG 1988",
+        "§ 22 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-004",
+      "prompt": "Ein Mitarbeiter erhält ein zinsloses Darlehen von seinem Arbeitgeber. Welche steuerlichen Folgen hat das?",
+      "correct_answer": "Ein zinsloses Arbeitgeberdarlehen führt zu einem geldwerten Vorteil in Höhe des Unterschieds zwischen dem fremdüblichen Zinssatz und dem tatsächlich verrechneten Zinssatz. Übersteigt der geldwerte Vorteil EUR 7.300 pro Jahr nicht, ist er gemäß § 3 Abs. 1 Z 19 EStG steuerfrei. Übersteigt er EUR 7.300, ist der übersteigende Betrag steuerpflichtiger Arbeitslohn gemäß § 25 Abs. 1 Z 1 EStG. Beim Arbeitgeber: Das Darlehen führt ggf. zu einer verdeckten Ausschüttung, wenn der Gesellschafter-Arbeitnehmer wesentlich beteiligt ist.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 EStG 1988",
+        "§ 3 Abs. 1 Z 19 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-005",
+      "prompt": "Ein österreichischer Unternehmer erbringt Werbeberatungsleistungen für eine Schweizer Privatperson. Ist österreichische USt zu verrechnen?",
+      "correct_answer": "Bei sonstigen Leistungen (Beratung) an Nichtunternehmer gilt gemäß § 3a Abs. 7 UStG das Unternehmerortprinzip: Der Leistungsort liegt in Österreich (Sitz des leistenden Unternehmers). Damit ist österreichische USt (20%) geschuldet. Hätte die Schweizerische Person dagegen eine Unternehmerstellung (§ 3a Abs. 5 UStG), würde das Empfängerortprinzip (§ 3a Abs. 6) greifen und der Leistungsort läge in der Schweiz – keine österreichische USt.",
+      "sources": [
+        "§ 3a Abs. 7 UStG 1994",
+        "§ 3a Abs. 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-006",
+      "prompt": "Herr Huber kauft eine Eigentumswohnung in Wien um EUR 500.000. Welche Steuern und Abgaben fallen beim Erwerb an?",
+      "correct_answer": "Beim Erwerb der Eigentumswohnung fallen folgende Abgaben an: (1) Grunderwerbsteuer (GrESt): 3,5% von EUR 500.000 = EUR 17.500 (§ 7 Abs. 1 Z 3 GrEStG bei entgeltlichem Erwerb von Nichtangehörigen). (2) Grundbucheintragungsgebühr: 1,1% von EUR 500.000 = EUR 5.500 (§ 26 GGG). (3) Ggf. Vertragserrichtungskosten (Notar/Anwalt). Die Erwerbs-USt ist in der Regel beim Privatverkauf nicht relevant (unecht steuerbefreit nach § 6 Abs. 1 Z 16 UStG für Wohnzwecke oder Privatverkauf). Gesamtbelastung an Steuern: ca. EUR 23.000.",
+      "sources": [
+        "§ 7 Abs. 1 GrEStG 1987",
+        "§ 26 GGG",
+        "§ 6 Abs. 1 Z 16 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-007",
+      "prompt": "Ein Kapitalanleger erhält Dividenden von einer österreichischen AG und Zinsen von einem deutschen Sparkonto. Welche Steuerpflichten bestehen in Österreich?",
+      "correct_answer": "Dividenden der österreichischen AG: Die AG behält 27,5% KESt ein (§ 93 EStG). Die Endbesteuerungswirkung (§ 97 EStG) ist erfüllt – keine weitere Einkommensteuerpflicht. Zinsen vom deutschen Sparkonto: Diese müssen in der österreichischen Einkommensteuererklärung angegeben werden (§ 1 Abs. 2 EStG – Welteinkommensprinzip). In Deutschland einbehaltene Quellensteuer kann gem. DBA Österreich-Deutschland angerechnet werden. In Österreich werden die Zinsen mit 25% KESt (Sparbuchzinsen) besteuert.",
+      "sources": [
+        "§ 27 EStG 1988",
+        "§ 27a Abs. 1 EStG 1988",
+        "§ 97 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-008",
+      "prompt": "Darf ein GmbH-Gesellschafter-Geschäftsführer (25% Beteiligung) einen Vorsteuerabzug für sein Homeoffice geltend machen?",
+      "correct_answer": "Als GmbH-Gesellschafter-Geschäftsführer mit genau 25% Beteiligung liegt der Grenzfall der wesentlichen Beteiligung vor (mehr als 25% = wesentlich beteiligt). Bei genau 25% wäre der GF typischerweise nicht wesentlich beteiligt und erzielt Einkünfte nach § 25 EStG. Der GF als Arbeitnehmer hat keinen eigenen Unternehmerstatus für seine Arbeitnehmerleistung und daher grundsätzlich kein Recht auf Vorsteuerabzug. Die GmbH könnte Homeoffice-Kosten als Betriebsausgabe und Vorsteuer geltend machen, sofern die Räumlichkeiten der GmbH zuzurechnen sind.",
+      "sources": [
+        "§ 22 Z 2 EStG 1988",
+        "§ 12 UStG 1994",
+        "§ 25 Abs. 1 Z 1 lit. b EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-009",
+      "prompt": "Frau Bauer vermietet ein Apartment auf Airbnb. Welche steuerlichen Pflichten hat sie?",
+      "correct_answer": "Frau Bauer muss folgendes beachten: (1) EStG: Die Mieteinnahmen sind Einkünfte aus Vermietung und Verpachtung (§ 28 EStG), sofern keine erheblichen hoteltypischen Nebenleistungen erbracht werden (dann ggf. Gewerbebetrieb §23 EStG). (2) UStG: Überschreitet der Jahresumsatz EUR 55.000, unterliegt die Kurzzeitvermietung der USt von 10% (Beherbergung) oder 20%; als Kleinunternehmer bis EUR 55.000 besteht Steuerbefreiung. (3) GrEStG: Nicht relevant (kein Grundstückserwerb). (4) Registrierkassenpflicht je nach Umsatz. (5) Eventuell kommunale Tourismustaxen.",
+      "sources": [
+        "§ 28 EStG 1988",
+        "§ 23 EStG 1988",
+        "§ 6 Abs. 1 Z 27 UStG 1994",
+        "§ 10 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-010",
+      "prompt": "Was passiert steuerlich, wenn eine österreichische GmbH eine ausländische Tochtergesellschaft mit Sitz in einem Niedrigsteuerland gründet?",
+      "correct_answer": "Grundsätzlich unterliegen die Gewinne der ausländischen Tochtergesellschaft der lokalen Besteuerung. Bei Ausschüttung an die österreichische Mutter-GmbH: Die Beteiligungsertragsbefreiung (§ 10 KStG) könnte gelten (internationale Schachtelbeteiligung: ≥10%, ≥1 Jahr gehalten). Jedoch gibt es eine Rückausnahme: Wenn die Tochter in einem Niedrigsteuerland (Steuersatz < 12,5%) ansässig ist, gilt die Befreiung nicht automatisch (Switch-over-Klausel § 10 Abs. 4 KStG). Zusätzlich greifen Hinzurechnungsbesteuerungsregeln (§ 10a KStG, CFC-Rules) für passive Einkünfte.",
+      "sources": [
+        "§ 10 KStG 1988",
+        "§ 10a KStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-008",
+      "prompt": "Was ist der Pensionistenabsetzbetrag und wer hat Anspruch darauf?",
+      "correct_answer": "Der Pensionistenabsetzbetrag (PENSAB) gemäß § 33 Abs. 6 EStG steht Pensionistinnen und Pensionisten zu, die Pensionseinkünfte gemäß § 25 Abs. 1 Z 3 EStG beziehen und keinen Anspruch auf den Allgemeinen Absetzbetrag haben. Er beträgt bis zu EUR 1.035 pro Jahr (Stand 2024). Der Absetzbetrag vermindert sich bei Pensionseinkünften über EUR 25.700 gleichmäßig und beträgt null ab EUR 42.000. Ein erhöhter Pensionistenabsetzbetrag von EUR 1.505 steht Alleinverdienern mit kleinem Pensionseinkommen zu.",
+      "sources": [
+        "§ 33 Abs. 6 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-011",
+      "prompt": "Welche Sonderregel gilt für den Leistungsort bei Beförderungsleistungen (§ 3a Abs. 10 UStG)?",
+      "correct_answer": "Bei Personenbeförderungsleistungen an Nichtunternehmer gilt als Leistungsort der Ort der Beförderungsstrecke (§ 3a Abs. 10 lit. a UStG). Eine Beförderung durch mehrere Länder muss aufgeteilt werden. Bei Güterbeförderungen an Nichtunternehmer gilt ebenfalls der Ausführungsort entlang der Beförderungsstrecke. Bei B2B-Güterbeförderungen greift hingegen die allgemeine Grundregel (Empfängerort, § 3a Abs. 6 UStG).",
+      "sources": [
+        "§ 3a Abs. 10 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-9-001",
+      "prompt": "Was ist die Einfuhrumsatzsteuer (EUSt) und wie wird sie berechnet?",
+      "correct_answer": "Die Einfuhrumsatzsteuer (EUSt) entsteht gemäß § 1 Abs. 1 Z 3 UStG bei der Einfuhr von Gegenständen aus dem Drittlandsgebiet nach Österreich. Sie wird vom Zollwert zuzüglich Einfuhrabgaben (Zölle, sonstige Abgaben) berechnet. Der Steuersatz richtet sich nach dem auf den eingeführten Gegenstand anwendbaren USt-Satz (20%, 10% oder 13%). Unternehmer können die bezahlte EUSt als Vorsteuer abziehen (§ 12 Abs. 1 Z 2 UStG), sofern sie die eingeführten Waren für ihr Unternehmen verwenden.",
+      "sources": [
+        "§ 1 Abs. 1 Z 3 UStG 1994",
+        "§ 5 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-7-004",
+      "prompt": "Wie wird das Einkommen einer Privatstiftung nach dem KStG besteuert?",
+      "correct_answer": "Privatstiftungen (PSt) unterliegen gemäß § 1 Abs. 1 Z 3 KStG der Körperschaftsteuer mit einem Zwischensteuersatz von 25% auf bestimmte Kapitalerträge (§ 13 Abs. 3 KStG, sog. Zwischensteuer). Diese Zwischensteuer wird angerechnet, wenn Zuwendungen an die Begünstigten erfolgen (da Zuwendungen mit 27,5% KESt belastet sind). Einkünfte, die nicht der Zwischensteuer unterliegen, werden mit dem regulären KöSt-Satz von 24% besteuert.",
+      "sources": [
+        "§ 13 KStG 1988",
+        "§ 22 KStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-1-006",
+      "prompt": "Eine österreichische Staatsbürgerin lebt das ganze Jahr in den USA und hat keinen Wohnsitz in Österreich. Bezieht sie österreichische Dividenden. Welche Steuerpflicht besteht in Österreich?",
+      "correct_answer": "Da die Person weder Wohnsitz noch gewöhnlichen Aufenthalt in Österreich hat, unterliegt sie nur der beschränkten Steuerpflicht gemäß § 1 Abs. 3 EStG. Österreichische Dividenden (inländische Kapitalerträge) zählen zu den Einkünften gemäß § 98 Abs. 1 Z 5 EStG, die der beschränkten Steuerpflicht unterliegen. Die österreichische Kapitalertragsteuer (27,5%) wird an der Quelle einbehalten. Das DBA Österreich-USA kann den österreichischen Steuersatz (Quellensteuer) begrenzen.",
+      "sources": [
+        "§ 1 Abs. 3 EStG 1988",
+        "§ 98 Abs. 1 Z 5 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-007",
+      "prompt": "Was ist der Unterschied zwischen Instandhaltung und Instandsetzung bei Vermietungseinkünften steuerlich?",
+      "correct_answer": "Bei Vermietungseinkünften (§ 28 EStG) gilt: (1) Instandhaltungsaufwendungen (laufende Erhaltungsarbeiten) können grundsätzlich sofort als Werbungskosten abgezogen werden (§ 28 Abs. 2 EStG). Auf Antrag können sie gleichmäßig auf 10 Jahre verteilt werden. (2) Instandsetzungsaufwendungen (Maßnahmen, die die Nutzungsdauer verlängern oder den Standard wesentlich heben) müssen grundsätzlich auf 15 Jahre verteilt werden (§ 28 Abs. 2 EStG). Dieser Unterschied ist für die Liquiditätsplanung des Vermieters von Bedeutung.",
+      "sources": [
+        "§ 28 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-6-004",
+      "prompt": "Kann ein Vermieter von Wohnungen zur Umsatzsteuer optieren?",
+      "correct_answer": "Grundsätzlich ist die Vermietung für Wohnzwecke gemäß § 6 Abs. 1 Z 16 UStG unecht steuerbefreit (kein Vorsteuerabzug). Für die Vermietung an Unternehmer für deren Unternehmen (Büroräume etc.) kann gemäß § 6 Abs. 2 UStG zur Steuerpflicht optiert werden – mit der Konsequenz, dass 20% USt in Rechnung gestellt wird, dafür aber Vorsteuerabzug geltend gemacht werden kann. Für Wohnraumvermietung an Privatpersonen ist die Option zur Steuerpflicht nicht möglich.",
+      "sources": [
+        "§ 6 Abs. 1 Z 16 UStG 1994",
+        "§ 6 Abs. 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-22-009",
+      "prompt": "Wo ist die Grenze zwischen freiberuflicher Tätigkeit (§ 22 EStG) und gewerblicher Tätigkeit (§ 23 EStG) bei einem IT-Berater?",
+      "correct_answer": "IT-Berater können je nach Tätigkeit als freiberuflich (§ 22 Z 1 lit. a EStG – wissenschaftliche/unterrichtende Tätigkeit) oder als Gewerbebetrieb (§ 23 EStG) eingestuft werden. Entscheidend ist, ob die Tätigkeit überwiegend auf persönlichen Fachkenntnissen basiert (freiberuflich) oder ob Mitarbeiter die Leistung wesentlich erbringen (gewerblich). Softwareentwicklung, die auf eigenem Wissen basiert und direkt vom IT-Berater erbracht wird, kann freiberuflich sein. IT-Dienstleistungsunternehmen mit Mitarbeitern sind typischerweise Gewerbebetrieb.",
+      "sources": [
+        "§ 22 Z 1 EStG 1988",
+        "§ 23 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-003",
+      "prompt": "Was ist eine 'gesellschaftsrechtliche Veranlassung' und warum ist sie für das KStG relevant?",
+      "correct_answer": "Eine gesellschaftsrechtliche Veranlassung liegt vor, wenn eine Vermögensminderung oder verhinderte Vermögensmehrung bei einer Kapitalgesellschaft ihre Ursache im Gesellschaftsverhältnis hat und nicht im betrieblichen Bereich. Derartige Aufwendungen sind nicht betrieblich veranlasst und stellen verdeckte Ausschüttungen (§ 8 Abs. 2 KStG) dar. Sie dürfen das körperschaftsteuerpflichtige Einkommen nicht mindern und werden dem Gesellschafter als Einkünfte aus Kapitalvermögen (§ 27 EStG) zugerechnet. Maßstab ist der Fremdvergleich.",
+      "sources": [
+        "§ 8 Abs. 2 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-11-001",
+      "prompt": "Welche Pflichtangaben muss eine ordnungsgemäße Rechnung gemäß § 11 UStG enthalten?",
+      "correct_answer": "Gemäß § 11 Abs. 1 UStG muss eine zum Vorsteuerabzug berechtigende Rechnung folgende Angaben enthalten: (1) Name und Anschrift des liefernden/leistenden Unternehmers, (2) Name und Anschrift des Empfängers (ab EUR 10.000), (3) Menge und handelsübliche Bezeichnung der Lieferung oder Art und Umfang der Leistung, (4) Liefer-/Leistungsdatum oder Leistungszeitraum, (5) Entgelt (netto, aufgeteilt nach Steuersätzen), (6) Steuersatz und Steuerbetrag oder Hinweis auf Steuerbefreiung, (7) Ausstellungsdatum, (8) fortlaufende Nummer (Rechnungsnummer), (9) UID-Nummer des Ausstellers.",
+      "sources": [
+        "§ 11 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-013",
+      "prompt": "Welcher GrESt-Satz gilt für die Übertragung eines Grundstücks an Kinder im Wege der vorweggenommenen Erbfolge?",
+      "correct_answer": "Bei unentgeltlichen und teilentgeltlichen Übertragungen im Familienverband (Übertragungen zwischen Eltern und Kindern gelten als begünstigt) gilt gemäß § 7 Abs. 1 Z 2 GrEStG ein Stufentarif: 0,5% für den ersten EUR 250.000 des Grundstückswerts, 2% für EUR 250.001–400.000, 3,5% für den darüber hinausgehenden Betrag. Als Bemessungsgrundlage gilt der Grundstückswert (nicht der Verkehrswert wenn höher, im Gegensatz zum entgeltlichen Erwerb). Ehegatte, Kinder, Enkel, Eltern und Geschwister sowie Nichten/Neffen gelten als begünstigte Personen.",
+      "sources": [
+        "§ 7 Abs. 1 Z 2 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-27-008",
+      "prompt": "Was ist ein Investmentfonds steuerlich und wie werden die Erträge daraus in Österreich besteuert?",
+      "correct_answer": "Erträge aus Investmentfonds unterliegen als Einkünfte aus Kapitalvermögen (§ 27 Abs. 2 Z 2 EStG) dem Sondersteuersatz von 27,5%. Bei österreichischen Fonds werden Ausschüttungen und der sog. ausschüttungsgleiche Ertrag von der Depotbank automatisch mit KESt (27,5%) belastet. Bei Veräußerung von Fondsanteilen werden Kursgewinne mit 27,5% besteuert. Ausländische Fonds, die keine österreichischen Depotbanken verwenden, müssen in der Steuererklärung angegeben werden.",
+      "sources": [
+        "§ 27 Abs. 2 Z 2 EStG 1988",
+        "§ 27a EStG 1988",
+        "InvFG 2011"
+      ]
+    },
+    {
+      "id": "ESTG-25-010",
+      "prompt": "Wie wird der 13. und 14. Monatsbezug (Urlaubs- und Weihnachtsgeld) steuerlich behandelt?",
+      "correct_answer": "Sonderzahlungen (13. und 14. Bezug) bis zu einer Grenze von EUR 620 p.a. sind gemäß § 67 Abs. 1 EStG steuerfrei. Der darüber hinausgehende Teil bis zur Grenze von 1/6 der laufenden Bezüge unterliegt dem begünstigten Steuersatz von 6% (ohne Sozialversicherung). Teile der Sonderzahlungen, die die 1/6-Grenze überschreiten, werden nach dem normalen Lohntarif besteuert. Diese Begünstigung gilt nur für 'echte' Sonderzahlungen aus dem Dienstverhältnis.",
+      "sources": [
+        "§ 67 Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-12-004",
+      "prompt": "Was ist der Unterschied zwischen Voranmeldung (UVA) und Jahressteuererklärung in der Umsatzsteuer?",
+      "correct_answer": "Die Umsatzsteuervoranmeldung (UVA) gemäß § 21 Abs. 1 UStG ist eine monatliche oder vierteljährliche Vorauszahlung auf die Jahressteuer. Unternehmer mit Umsätzen über EUR 100.000 p.a. müssen monatlich einreichen (bis zum 15. des übernächsten Monats), darunter quartalsweise. Die Jahresumsatzsteuererklärung (U1) gemäß § 21 Abs. 4 UStG fasst das gesamte Jahr zusammen. Eventuelle Differenzen werden ausgeglichen. Kleinunternehmer (bis EUR 55.000 Umsatz) sind von der UVA-Pflicht befreit.",
+      "sources": [
+        "§ 21 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-22-010",
+      "prompt": "Einkünfte eines Schriftstellers: Welcher Einkunftsart unterliegen diese?",
+      "correct_answer": "Einkünfte aus schriftstellerischer Tätigkeit sind Einkünfte aus selbständiger Arbeit (§ 22 Z 1 lit. a EStG 1988), sofern die Tätigkeit selbständig ausgeübt wird. Schriftsteller zählen explizit zu den freien Berufen nach § 22 Z 1. Das gilt für Honorare aus Verlagen, Lizenzeinnahmen für literarische Werke etc. Ein wichtiges Abgrenzungsmerkmal: Wenn der Schriftsteller als Verlagsangestellter tätig ist, liegen Einkünfte aus nichtselbständiger Arbeit (§ 25 EStG) vor.",
+      "sources": [
+        "§ 22 Z 1 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-9-003",
+      "prompt": "Kann eine österreichische GmbH eine ausländische Verlustgesellschaft in die Unternehmensgruppe einbeziehen?",
+      "correct_answer": "Ja, gemäß § 9 Abs. 2 KStG können auch ausländische (EU/EWR) Körperschaften als Gruppenmitglieder einbezogen werden. Verluste ausländischer Gruppenmitglieder können jedoch nur im Ausmaß des Anteils des Gruppenträgers am ausländischen Gruppenmitglied berücksichtigt werden (§ 9 Abs. 6 Z 6 KStG). Zudem sind nur Verluste nach österreichischen Gewinnermittlungsregeln abzugsfähig (Nachversteuerungspflicht bei späteren Gewinnen des ausländischen Mitglieds). Ab dem VwGH-Erkenntnis Felixstowe (EuGH) wurde die Regelung unionsrechtlichen Anforderungen angepasst.",
+      "sources": [
+        "§ 9 Abs. 2 KStG 1988",
+        "§ 9 Abs. 6 Z 6 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-012",
+      "prompt": "Österreichischer Unternehmensberater erbringt Leistungen an eine deutsche GmbH. Muss er österreichische USt verrechnen?",
+      "correct_answer": "Nein. Da die deutsche GmbH Unternehmerin ist (B2B-Leistung), gilt gemäß § 3a Abs. 6 UStG das Empfängerortprinzip: Der Leistungsort liegt am Sitz der deutschen GmbH, also in Deutschland. Der österreichische Berater stellt eine Rechnung ohne österreichische USt aus, mit dem Hinweis 'Steuerschuldnerschaft des Leistungsempfängers' (Reverse Charge). Die deutsche GmbH versteuert die Leistung nach deutschen USt-Regelungen (§ 13b dUStG). Der österreichische Berater muss den Umsatz in seiner Zusammenfassenden Meldung (ZM) angeben.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994",
+        "§ 21 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-28-008",
+      "prompt": "Was versteht man unter dem 'Spekulationsgeschäft' bei Grundstücken und wie ist es steuerlich zu behandeln?",
+      "correct_answer": "Gewinne aus der Veräußerung von Grundstücken sind gemäß § 30 EStG Einkünfte aus privaten Grundstücksveräußerungen (Immobilienertragsteuer – ImmoESt). Der Steuersatz beträgt 30% und wird im Wege der Selbstberechnung durch den Notar/Treuhänder einbehalten. Ausnahmen (§ 30 Abs. 2 EStG): Hauptwohnsitzbefreiung (mind. 2 Jahre/5 von 10 Jahren als Hauptwohnsitz genutzt), Herstellerbefreiung (selbst errichtetes Gebäude). Altbestand (vor 2002) hat besondere Besteuerungsregeln. Verluste aus Grundstücksveräußerungen können nur mit anderen Grundstücksgewinnen verrechnet werden.",
+      "sources": [
+        "§ 30 EStG 1988",
+        "§ 30b EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-011",
+      "prompt": "Was gilt steuerlich für Trinkgelder, die ein Kellner von Gästen erhält?",
+      "correct_answer": "Trinkgelder, die an Arbeitnehmer von dritter Seite (Kunden) ohne Zutun des Arbeitgebers gegeben werden, sind gemäß § 3 Abs. 1 Z 16a EStG 1988 steuerfrei, sofern sie (1) freiwillig von Kunden gegeben werden, (2) dem Arbeitnehmer direkt und nicht über den Arbeitgeber zufließen, und (3) der Arbeitgeber nicht im Mindestlohn darauf Rücksicht nimmt. Trinkgelder, auf die ein Rechtsanspruch besteht oder die poolartig gesammelt und verteilt werden, können dagegen steuerpflichtig sein.",
+      "sources": [
+        "§ 3 Abs. 1 Z 16a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-012",
+      "prompt": "Wie werden Abfertigungen bei Kündigung des Arbeitsverhältnisses steuerlich behandelt?",
+      "correct_answer": "Für das alte Abfertigungsrecht (vor Einführung der Mitarbeitervorsorgekasse): Abfertigungen bis zur 3-fachen Monatsbezugsgrundlage sind gemäß § 67 Abs. 3 EStG mit dem begünstigten Steuersatz von 6% zu besteuern. Darüber hinausgehende Teile bis zur 6-fachen Monatsbezugsgrundlage können ebenfalls begünstigt sein. Für das neue Abfertigungsrecht (BMSVG/Mitarbeitervorsorgekasse): Die Auszahlung aus der BV-Kasse ist gemäß § 67 Abs. 3 EStG iVm § 25 Abs. 1 Z 2 lit. d EStG steuerfrei bei Pensionsantritt oder nach mindestens 3 Jahren Einzahlung.",
+      "sources": [
+        "§ 67 Abs. 3 EStG 1988",
+        "§ 25 Abs. 1 Z 2 lit. d EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-006",
+      "prompt": "Was ist ein Gewerbebetrieb kraft Rechtsform und welche Bedeutung hat er?",
+      "correct_answer": "Ein Gewerbebetrieb kraft Rechtsform liegt gemäß § 7 Abs. 3 KStG vor, wenn eine Kapitalgesellschaft tätig wird – alle ihre Einkünfte gelten als Einkünfte aus Gewerbebetrieb (Gewerblichkeitsfiktion). Im EStG gibt es keine entsprechende allgemeine Fiktion für Einzelunternehmer oder Personengesellschaften; hier kommt es auf die tatsächliche Tätigkeit an. Eine Besonderheit: Umsätze, die von einer GmbH ausgeführt werden, qualifizieren immer als gewerblich, auch wenn dieselbe Tätigkeit bei einem Freiberufler als selbständige Arbeit gelten würde.",
+      "sources": [
+        "§ 7 Abs. 3 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-1-004",
+      "prompt": "Was ist der Unterschied zwischen steuerbaren und steuerpflichtigen Umsätzen im UStG?",
+      "correct_answer": "Steuerbare Umsätze sind gemäß § 1 Abs. 1 UStG alle Umsätze, die dem Anwendungsbereich des UStG unterliegen (Inlandsumsätze von Unternehmern, Eigenverbrauch, Einfuhr). Steuerpflichtige Umsätze sind steuerbare Umsätze, für die keine Steuerbefreiung greift. Die Differenz bilden steuerbefreite Umsätze (§ 6 UStG). Beispiel: Die Vermietung einer Wohnung ist steuerbar (Unternehmerin vermietet im Rahmen ihres Unternehmens), aber unecht steuerbefreit (§ 6 Abs. 1 Z 16 UStG) – damit nicht steuerpflichtig und kein Vorsteuerabzug.",
+      "sources": [
+        "§ 1 Abs. 1 UStG 1994",
+        "§ 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-013",
+      "prompt": "Was versteht man unter tauschähnlichen Umsätzen im UStG?",
+      "correct_answer": "Ein tauschähnlicher Umsatz liegt gemäß § 3a Abs. 2 UStG vor, wenn das Entgelt für eine sonstige Leistung in einer anderen Lieferung oder sonstigen Leistung besteht. Beispiel: Zwei Unternehmer tauschen gegenseitig Dienstleistungen aus. Beide Umsätze sind jeweils steuerbar; als Bemessungsgrundlage gilt der gemeine Wert der empfangenen Gegenleistung (§ 4 Abs. 1 UStG). Typische Praxisfälle: Barterdeal-Werbung, Gegengeschäfte.",
+      "sources": [
+        "§ 3a Abs. 2 UStG 1994",
+        "§ 4 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-10-003",
+      "prompt": "Unterliegen Dividenden einer österreichischen Holding-GmbH von einer österreichischen Tochter-GmbH der Körperschaftsteuer?",
+      "correct_answer": "Nein. Dividenden und andere Gewinnausschüttungen einer inländischen Tochtergesellschaft an eine inländische Muttergesellschaft sind gemäß § 10 Abs. 1 Z 1 KStG vollständig von der Körperschaftsteuer befreit (Beteiligungsertragsbefreiung). Dies gilt unabhängig von der Beteiligungshöhe und Haltedauer. Die Steuerbefreiung dient der Vermeidung von Mehrfachbesteuerung innerhalb österreichischer Unternehmensgruppen. Die Tochter hat zwar KESt einzubehalten, diese wird aber der Muttergesellschaft (inl. Körperschaft) rückerstattet.",
+      "sources": [
+        "§ 10 Abs. 1 Z 1 KStG 1988",
+        "§ 94 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-011",
+      "prompt": "Wie wird ein Home-Office-Pauschale beim Arbeitnehmer steuerlich behandelt?",
+      "correct_answer": "Arbeitnehmer, die regelmäßig Homeoffice-Arbeit leisten (mindestens 26 Tage im Jahr), können das Homeoffice-Pauschale gemäß § 26 Z 9 EStG als steuerfreien Arbeitgeberzuschuss von bis zu EUR 3 pro Tag, maximal EUR 300 pro Jahr, steuerfrei empfangen. Außerdem können Werbungskosten für ergonomisches Büromobiliar (Schreibtisch, Bürostuhl) bis zu EUR 300 pro Jahr geltend gemacht werden (§ 16 Abs. 1 Z 7a EStG), sofern die Tätigkeit überwiegend im Homeoffice erfolgt und keine der anderen Arbeitsstättenregelungen anwendbar sind.",
+      "sources": [
+        "§ 26 Z 9 EStG 1988",
+        "§ 16 Abs. 1 Z 7a EStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-014",
+      "prompt": "Wann ist ein Erwerb von Grundstücken im Erbfall grunderwerbsteuerpflichtig?",
+      "correct_answer": "Auch Grundstückserwerbe im Erbfall (Erbschaft) sind grunderwerbsteuerpflichtig gemäß § 1 Abs. 1 Z 1 GrEStG (Erwerb durch Einantwortung). Es gilt der Stufentarif für Erwerbe im Familienverband (§ 7 Abs. 1 Z 2 GrEStG): 0,5% bis EUR 250.000, 2% für EUR 250.001–400.000, 3,5% über EUR 400.000 des Grundstückswerts. Damit ist die GrESt in Österreich auch eine Art 'Erbschaftsersatzsteuer' für Grundstücke (seit Abschaffung der Erbschaftssteuer 2008). Außerdem fällt 1,1% Grundbucheintragungsgebühr an.",
+      "sources": [
+        "§ 1 Abs. 1 GrEStG 1987",
+        "§ 7 Abs. 1 Z 2 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "USTG-6-005",
+      "prompt": "Sind Umsätze von Ärzten aus Heilbehandlungen umsatzsteuerpflichtig?",
+      "correct_answer": "Umsätze von Ärzten aus ärztlichen Heilbehandlungen sind gemäß § 6 Abs. 1 Z 19 UStG 1994 von der Umsatzsteuer befreit (unechte Steuerbefreiung). Das bedeutet: keine USt auf Honorare, aber auch kein Vorsteuerabzug für mit der ärztlichen Tätigkeit zusammenhängende Ausgaben (z.B. Ordination, medizinisches Equipment). Nicht befreit sind: rein ästhetische Eingriffe ohne medizinische Notwendigkeit, Gutachten für nicht-therapeutische Zwecke, zahntechnische Labors (soweit keine ärztliche Tätigkeit).",
+      "sources": [
+        "§ 6 Abs. 1 Z 19 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-27-009",
+      "prompt": "Kann ein Steuerpflichtiger Kapitalverluste mit anderen Einkunftsarten ausgleichen?",
+      "correct_answer": "Nein. Verluste aus Kapitalvermögen (§ 27 EStG) dürfen gemäß § 27 Abs. 8 EStG nicht mit anderen Einkunftsarten ausgeglichen werden. Innerhalb der Einkünfte aus Kapitalvermögen können jedoch bestimmte Verluste mit Gewinnen ausgeglichen werden: Verluste aus realisierten Wertsteigerungen und Derivaten können mit positiven Einkünften aus realisierten Wertsteigerungen, Derivaten und Dividenden ausgeglichen werden. Zinserträge aus Bankeinlagen sind jedoch vom Verlustausgleich ausgeschlossen.",
+      "sources": [
+        "§ 27 Abs. 8 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-7-005",
+      "prompt": "Was ist die Mindest-Körperschaftsteuer (MindestKöSt) und für wen gilt sie?",
+      "correct_answer": "Die Mindest-Körperschaftsteuer gemäß § 24 Abs. 4 KStG verpflichtet unbeschränkt steuerpflichtige Körperschaften (GmbH, AG) zur jährlichen Zahlung einer Mindestkörperschaftsteuer, auch wenn kein Gewinn erzielt wird oder Verluste bestehen. Für GmbH beträgt die MindestKöSt EUR 500 pro Jahr (ab 2014), für AG EUR 1.750 pro Jahr. In den ersten vier Jahren nach Gründung gelten reduzierte Sätze. Die MindestKöSt ist auf zukünftige tatsächliche KöSt-Zahlungen anrechenbar. Ab 2024 gilt die globale Mindestbesteuerung (GloBE) für große Konzerne (Pillar 2).",
+      "sources": [
+        "§ 24 Abs. 4 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-014",
+      "prompt": "Was ist das OSS-Verfahren (One-Stop-Shop) im österreichischen Umsatzsteuerrecht?",
+      "correct_answer": "Das OSS-Verfahren gemäß § 25a UStG 1994 ermöglicht österreichischen Unternehmern, die elektronische Dienstleistungen oder andere B2C-Leistungen in anderen EU-Mitgliedstaaten erbringen, die ausländische Umsatzsteuer zentral über das österreichische Finanzamt (BMF-Portal) zu erklären und zu bezahlen. Ohne OSS müssten sich diese Unternehmer in jedem EU-Mitgliedstaat, in dem sie Kunden haben, für USt registrieren. Das OSS-Verfahren gilt für Umsätze über der EU-weiten Lieferschwelle von EUR 10.000 pro Jahr.",
+      "sources": [
+        "§ 25a UStG 1994",
+        "§ 3a Abs. 13 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-33-009",
+      "prompt": "Was ist der Unterhaltsabsetzbetrag (UAB) und für wen gilt er?",
+      "correct_answer": "Der Unterhaltsabsetzbetrag gemäß § 33 Abs. 4 Z 3 EStG steht Steuerpflichtigen zu, die für Kinder, die nicht im gemeinsamen Haushalt leben, gesetzlichen Unterhalt zahlen, wenn für dieses Kind kein Anspruch auf Familienbeihilfe besteht. Der UAB beträgt EUR 350 für das erste Kind, EUR 525 für das zweite Kind und EUR 700 für jedes weitere Kind (valorisiert ab 2024). Er kann nicht mit dem Familienbonus Plus kombiniert werden.",
+      "sources": [
+        "§ 33 Abs. 4 Z 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-004",
+      "prompt": "Was ist ein 'nichtabzugsfähiger Aufwand' nach § 12 KStG und welche praktischen Beispiele gibt es?",
+      "correct_answer": "Gemäß § 12 KStG sind folgende Aufwendungen bei der Körperschaftsteuer nicht abzugsfähig: (1) 50% der Aufsichtsratsvergütungen (§ 12 Abs. 1 Z 7 KStG), (2) Aufwendungen für private Zwecke oder Repräsentation (§ 12 Abs. 1 Z 3 KStG), (3) Strafen und Geldbußen (§ 12 Abs. 1 Z 4 KStG), (4) Aufwendungen, die zur Erzielung steuerfreier Einnahmen dienen (§ 12 Abs. 1 Z 2 KStG), (5) Zinsen und Lizenzgebühren, die beim Empfänger niedrig besteuert sind (§ 12 Abs. 1 Z 10 und 11 KStG – Zins-/Lizenzschranke). Die Rechtsfolge: Diese Beträge dürfen das KöSt-pflichtige Einkommen nicht mindern.",
+      "sources": [
+        "§ 12 KStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-011",
+      "prompt": "Können Sozialversicherungsbeiträge eines Freiberuflers (§ 22 EStG) als Betriebsausgabe abgezogen werden?",
+      "correct_answer": "Ja. Pflichtversicherungsbeiträge von Freiberuflern (Gewerbliche Sozialversicherung/GSVG oder FSVG) sind gemäß § 4 Abs. 4 Z 1 lit. a EStG 1988 Betriebsausgaben und mindern damit den steuerpflichtigen Gewinn. Dies gilt für Beiträge zur Kranken-, Unfall- und Pensionsversicherung, sofern sie aus betrieblichen Einkünften (§ 22 oder § 23 EStG) resultieren. Freiwillige Beiträge können dagegen als Sonderausgaben (§ 18 EStG) abzugsfähig sein.",
+      "sources": [
+        "§ 4 Abs. 4 Z 1 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-015",
+      "prompt": "Welche Regelung gilt für Werkleistungen an körperlichen Gegenständen (z.B. Reparatur) im UStG hinsichtlich des Leistungsortes?",
+      "correct_answer": "Bei Werkleistungen (Reparaturen, Be- und Verarbeitung) an körperlichen Gegenständen (§ 3a Abs. 3 UStG) gelten die allgemeinen Grundregeln des § 3a Abs. 6 (B2B: Empfängerort) und § 3a Abs. 7 (B2C: Unternehmerort). Sonderregelungen für Werkleistungen an Gegenständen für Nichtunternehmer: Diese werden an dem Ort ausgeführt, an dem die Arbeiten tatsächlich durchgeführt werden (§ 3a Abs. 11 lit. b UStG), wenn die Gegenstände nicht ins Ausland befördert werden. Dies ist eine wichtige Ausnahme vom Unternehmerortprinzip.",
+      "sources": [
+        "§ 3a Abs. 11 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-015",
+      "prompt": "Was ist der Unterschied zwischen Grunderwerbsteuer und Grundsteuer?",
+      "correct_answer": "Die Grunderwerbsteuer (GrEStG) ist eine einmalige Steuer, die beim Erwerb (Kauf, Schenkung, Erbschaft) von Grundstücken anfällt. Die Grundsteuer hingegen ist eine laufende Jahressteuer, die von Gemeinden auf den Besitz von Grundstücken (Grund und Gebäude) erhoben wird. Die Grundsteuer basiert auf dem Einheitswert und berechnet sich: Einheitswert × Grundsteuermesszahl × Hebesatz der Gemeinde. Sie ist eine Gemeindesteuer und damit eine der wichtigsten Einnahmequellen der Kommunen. Beide Steuern bestehen nebeneinander und sind nicht zu verwechseln.",
+      "sources": [
+        "§ 1 GrEStG 1987",
+        "Grundsteuergesetz (GrStG)"
+      ]
+    },
+    {
+      "id": "ESTG-28-009",
+      "prompt": "Was ist ein Wohnungseigentumsvertrag und welche Steuern fallen beim Abschluss an?",
+      "correct_answer": "Beim Erwerb von Eigentumswohnungen (Wohnungseigentum) handelt es sich um einen Grundstückserwerb, der folgende Steuern und Abgaben auslöst: (1) Grunderwerbsteuer (GrEStG): 3,5% des Kaufpreises (entgeltlicher Erwerb) oder Stufentarif im Familienverband; (2) Grundbucheintragungsgebühr: 1,1% des Kaufpreises (Gerichtsgebührengesetz); (3) Ggf. Notargebühren und Rechtsberatungskosten. Beim späteren Verkauf mit Gewinn fällt die Immobilienertragsteuer (ImmoESt) von 30% des Gewinns nach § 30 EStG an (sofern keine Ausnahme wie Hauptwohnsitzbefreiung gilt).",
+      "sources": [
+        "§ 7 GrEStG 1987",
+        "§ 30 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3-002",
+      "prompt": "Was versteht man unter einer Werklieferung im Unterschied zu einer Werkleistung?",
+      "correct_answer": "Eine Werklieferung (§ 3 Abs. 4 UStG) liegt vor, wenn ein Unternehmer einen körperlichen Gegenstand be- oder verarbeitet und dabei das verwendete Material selbst beschafft – er übergibt dem Auftraggeber einen neuen Gegenstand und verwendet dabei überwiegend eigenes Material. Beispiel: Tischler fertigt eine Tür aus eigenem Holz. Eine Werkleistung (sonstige Leistung, § 3a UStG) liegt vor, wenn der Auftraggeber das Material stellt und der Unternehmer nur die Arbeitsleistung erbringt. Die Unterscheidung ist für die Bestimmung des Leistungsorts relevant.",
+      "sources": [
+        "§ 3 Abs. 4 UStG 1994",
+        "§ 3a Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-25-013",
+      "prompt": "Wie werden Pensionsbeiträge des Arbeitnehmers zur gesetzlichen Pensionsversicherung steuerlich behandelt?",
+      "correct_answer": "Pflichtbeiträge des Arbeitnehmers zur gesetzlichen Sozialversicherung (Kranken-, Unfall-, Pensions- und Arbeitslosenversicherung) können gemäß § 16 Abs. 1 Z 4 lit. a EStG 1988 als Werbungskosten von den Einkünften aus nichtselbständiger Arbeit abgezogen werden. Da sie jedoch vom Arbeitgeber direkt vom Bruttolohn einbehalten werden, werden sie im Lohnzettel bereits berücksichtigt. Sie mindern automatisch die Bemessungsgrundlage für die Lohnsteuer.",
+      "sources": [
+        "§ 16 Abs. 1 Z 4 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-12-003",
+      "prompt": "Was ist die Zinsschranke (§ 12a KStG) und für welche Unternehmen gilt sie?",
+      "correct_answer": "Die Zinsschranke gemäß § 12a KStG (Umsetzung der EU Anti-Tax Avoidance Directive) begrenzt den steuerlichen Abzug von Zinsaufwendungen auf 30% des steuerlichen EBITDA (Ergebnis vor Zinsen, Steuern und Abschreibungen). Übersteigende Zinsen werden in Folgejahre vorgetragen. Die Zinsschranke gilt für alle unbeschränkt steuerpflichtigen Körperschaften. Ausnahmen: (1) Escape-Klausel: Wenn der Netto-Zinsaufwand EUR 3 Mio. nicht übersteigt, (2) Eigenkapital-Escape: Wenn die körpereigene Eigenkapitalquote nicht unter der des Konzerns liegt.",
+      "sources": [
+        "§ 12a KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-12-005",
+      "prompt": "Kann ein Arzt (Heilbehandlung, unecht steuerbefreit) Vorsteuer für neue medizinische Geräte geltend machen?",
+      "correct_answer": "Nein. Da Heilbehandlungsleistungen von Ärzten gemäß § 6 Abs. 1 Z 19 UStG unecht steuerbefreit sind, besteht für damit zusammenhängende Eingangsumsätze kein Vorsteuerabzugsrecht (§ 12 Abs. 3 Z 1 UStG). Das bedeutet: Ärzte zahlen beim Kauf medizinischer Geräte 20% USt, können diese aber nicht als Vorsteuer zurückfordern. Die USt wird zum Kostenfaktor. Wenn ein Arzt neben der steuerbefreiten Heilbehandlung auch steuerpflichtige Leistungen erbringt (z.B. rein ästhetische Eingriffe), ist eine Aufteilung der Vorsteuern erforderlich.",
+      "sources": [
+        "§ 6 Abs. 1 Z 19 UStG 1994",
+        "§ 12 Abs. 3 Z 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-28-010",
+      "prompt": "Was sind die Besonderheiten der Vermietung von Betriebsgebäuden gegenüber Wohngebäuden?",
+      "correct_answer": "Unterschiede zwischen Wohn- und Betriebsgebäudevermietung: (1) UStG: Wohnraumvermietung ist unecht steuerbefreit (kein Vorsteuerabzug), Gewerbevermietung ist USt-pflichtig (20%, Vorsteuerabzug möglich) oder kann zur USt optiert werden; (2) EStG: Beiden Varianten sind Einkünfte aus V&V (§ 28 EStG), ähnliche Werbungskosten; (3) GrESt: Beim Erwerb gleich (3,5%); (4) AfA: Für Betriebsgebäude 3% p.a. (§ 8 Abs. 1 EStG), für Wohngebäude in Vermietung 1,5% p.a. (§ 16 Abs. 1 Z 8 EStG). Die AfA-Differenz ist wirtschaftlich bedeutsam.",
+      "sources": [
+        "§ 28 EStG 1988",
+        "§ 16 Abs. 1 Z 8 EStG 1988",
+        "§ 6 Abs. 1 Z 16 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-33-010",
+      "prompt": "Was ist das Pendlerpauschale und welche Typen gibt es?",
+      "correct_answer": "Das Pendlerpauschale gemäß § 16 Abs. 1 Z 6 EStG 1988 ist ein Werbungskostenabzug für regelmäßige Fahrten zwischen Wohnung und Arbeitsstätte. Es gibt zwei Arten: (1) Kleines Pendlerpauschale: wenn ein Massenbeförderungsmittel zumutbar ist; Beträge: EUR 744–3.672 p.a. je nach einfacher Wegstrecke (20–60+ km); (2) Großes Pendlerpauschale: wenn kein Massenbeförderungsmittel zumutbar ist; Beträge: EUR 372–3.240 p.a. Zusätzlich steht ein Pendlereuro von EUR 2 pro km einfacher Wegstrecke als Absetzbetrag zu (§ 33 Abs. 5 Z 4 EStG). Die Zumutbarkeit wird durch den Pendlerrechner des BMF ermittelt.",
+      "sources": [
+        "§ 16 Abs. 1 Z 6 EStG 1988",
+        "§ 33 Abs. 5 Z 4 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-9-004",
+      "prompt": "Was passiert steuerlich mit dem Verlust einer Tochtergesellschaft, wenn sie die Unternehmensgruppe verlässt?",
+      "correct_answer": "Wenn ein Gruppenmitglied die Unternehmensgruppe verlässt (Mindestdauer 3 Jahre, sonst rückwirkende Versagung), müssen gemäß § 9 Abs. 10 KStG Verluste, die beim Gruppenträger verrechnet wurden und beim Ausscheidenden noch nicht ausgeglichen sind, nachversteuert werden (Nachversteuerungspflicht). Außerdem werden firmenwertmäßige Abschreibungen (§ 9 Abs. 7 KStG), die beim Erwerb von Gruppenmitgliedern geltend gemacht wurden, beim Ausscheiden rückgängig gemacht (Zuschreibungspflicht).",
+      "sources": [
+        "§ 9 Abs. 10 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-6-006",
+      "prompt": "Was sind 'echte' versus 'unechte' Steuerbefreiungen – Beispiele aus § 6 UStG?",
+      "correct_answer": "Echte Steuerbefreiungen (kein Vorsteuerausschluss): Ausfuhrlieferungen (§ 6 Abs. 1 Z 1 UStG), innergemeinschaftliche Lieferungen (Art. 6 Abs. 1 UStG), Lohnveredlung für Auftraggeber aus Drittländern (§ 6 Abs. 1 Z 2 UStG). Unechte Steuerbefreiungen (mit Vorsteuerausschluss): Grundstücksvermietung für Wohnzwecke (§ 6 Abs. 1 Z 16 UStG), Kleinunternehmerregelung (§ 6 Abs. 1 Z 27 UStG), Bankdienstleistungen (Kreditgewährung, Wertpapierhandel – § 6 Abs. 1 Z 8 UStG), Heilbehandlungen (§ 6 Abs. 1 Z 19 UStG), Versicherungsumsätze (§ 6 Abs. 1 Z 10 UStG).",
+      "sources": [
+        "§ 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-016",
+      "prompt": "Welche Anzeigepflichten bestehen bei grunderwerbsteuerpflichtigen Vorgängen?",
+      "correct_answer": "Gemäß § 10 GrEStG besteht eine Anzeigepflicht für alle GrESt-pflichtigen Erwerbsvorgänge. Bei notariell oder anwaltlich beglaubigten Verträgen übernehmen Notare oder Rechtsanwälte die Selbstberechnung und Abfuhr der GrESt (§ 11 GrEStG). Diese Parteienvertreter sind verpflichtet, die GrESt innerhalb von 3 Monaten ab Entstehen der Steuerschuld zu berechnen, abzuführen und beim Finanzamt anzumelden. Bei nicht gerichtlichen oder notariellen Erwerbsvorgängen besteht eine direkte Anzeigepflicht der Beteiligten beim Finanzamt.",
+      "sources": [
+        "§ 10 GrEStG 1987",
+        "§ 11 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-22-012",
+      "prompt": "Was sind 'Neue Selbständige' und wie werden sie steuerlich eingeordnet?",
+      "correct_answer": "Als 'Neue Selbständige' werden Personengruppen bezeichnet, die selbständig tätig sind, aber kein Gewerbe anmelden, weil ihre Tätigkeit gewerbebefreit ist oder kein Gewerbe erfordert. Im EStG fallen sie je nach Tätigkeit unter § 22 (selbständige Arbeit, wenn freiberuflich oder wissenschaftlich) oder § 23 (Gewerbebetrieb bei gewerblicher Tätigkeit). Sozialversicherungsrechtlich unterliegen sie der GSVG-Pflichtversicherung ab einem Jahreseinkommen über EUR 6.221 (2024). Typische Neue Selbständige: Vortragende, Trainer, Coaches, Künstler, Journalisten.",
+      "sources": [
+        "§ 22 EStG 1988",
+        "§ 23 EStG 1988",
+        "§ 2 GSVG"
+      ]
+    },
+    {
+      "id": "USTG-10-004",
+      "prompt": "Welcher USt-Satz gilt für Lebensmittel in Österreich?",
+      "correct_answer": "Lebensmittel unterliegen in Österreich dem ermäßigten Umsatzsteuersatz von 10% gemäß § 10 Abs. 2 UStG 1994 (Anlage 1 zum UStG). Ausnahmen: Alkoholische Getränke und Tabakwaren unterliegen dem Normalsatz von 20%. Getränke im Restaurant/Gastgewerbe: Mineralwasser und nichtalkoholische Getränke 10%, alkoholische Getränke 20%. Lieferung von Mahlzeiten durch Restaurants/Caterer (Take-away und Delivery): 10%. Im Restaurant servierte Speisen und Getränke: Speisen 10%, alkoholische Getränke 20%.",
+      "sources": [
+        "§ 10 Abs. 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-25-014",
+      "prompt": "Wie wird das Dienstverhältnis steuerlich abgegrenzt (§ 47 Abs. 2 EStG)?",
+      "correct_answer": "Ein Dienstverhältnis gemäß § 47 Abs. 2 EStG liegt vor, wenn (1) der Arbeitnehmer dem Arbeitgeber gegenüber weisungsgebunden ist (persönliche Abhängigkeit) und (2) in den Betrieb des Arbeitgebers organisatorisch eingegliedert ist. Maßgeblich ist eine Gesamtbetrachtung. Merkmale für ein Dienstverhältnis: persönliche Leistungspflicht, Bindung an Arbeitszeiten und -ort, kein eigenes Unternehmerrisiko, kein eigenes Betriebsmittel. Bei Vorliegen eines Dienstverhältnisses muss der Arbeitgeber die Lohnsteuer einbehalten und abführen (§ 82 EStG).",
+      "sources": [
+        "§ 47 Abs. 2 EStG 1988",
+        "§ 25 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-011",
+      "prompt": "Ein österreichischer Fußballprofi wechselt ins Ausland. Wo ist er einkommensteuerpflichtig?",
+      "correct_answer": "Ab dem Wechsel ins Ausland mit Verlegung des Wohnsitzes gibt es in Österreich grundsätzlich keine unbeschränkte Steuerpflicht mehr (§ 1 Abs. 2 EStG). Österreichische Einkünfte (z.B. frühere Vertragsstrafen, Ablösezahlungen von österreichischen Vereinen) könnten der beschränkten Steuerpflicht unterliegen (§ 1 Abs. 3, § 98 EStG). Das anzuwendende Doppelbesteuerungsabkommen zwischen Österreich und dem neuen Ansässigkeitsstaat ist maßgeblich. Gemäß dem OECD-Musterabkommen hat der Tätigkeitsstaat das Besteuerungsrecht für Einkünfte aus dem Sportlereinsatz (Art. 17 OECD-MA).",
+      "sources": [
+        "§ 1 EStG 1988",
+        "§ 98 EStG 1988",
+        "Art. 17 OECD-Musterabkommen"
+      ]
+    },
+    {
+      "id": "CROSS-012",
+      "prompt": "Was sind Sonderausgaben (§ 18 EStG) und wie unterscheiden sie sich von Werbungskosten?",
+      "correct_answer": "Sonderausgaben (§ 18 EStG) sind bestimmte, im Gesetz taxativ aufgezählte private Ausgaben, die das Einkommen mindern (z.B. Kirchensteuer bis EUR 600, Spenden an begünstigte Einrichtungen bis 10% des Einkommens, Steuerberatungskosten). Werbungskosten (§ 16 EStG) sind beruflich veranlasste Aufwendungen, die direkt mit der Erzielungs- einer Einkunftsart zusammenhängen. Der wesentliche Unterschied: Werbungskosten mindern die Einkunftsart direkt; Sonderausgaben mindern das Gesamteinkommen (nach Zusammenzählung der Einkunftsarten). Für Werbungskosten steht ein automatischer Pauschbetrag (EUR 132 für Arbeitnehmer) zu.",
+      "sources": [
+        "§ 16 EStG 1988",
+        "§ 18 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-012",
+      "prompt": "Ein Arbeitgeber zahlt seinem Arbeitnehmer EUR 500 Tagegeld für eine 10-tägige Auslandsdienstreise nach Deutschland. Wie viel davon ist steuerfrei?",
+      "correct_answer": "Für Auslandsdienstreisen gilt gemäß § 26 Z 4 lit. d EStG das Tagegeld bis zum täglichen Höchstsatz der Auslandsreisesätze der Bundesbediensteten als steuerfrei. Für Deutschland beträgt dieser Satz EUR 35,80 pro Tag (laut Bundesreisekostenverordnung). Für 10 Tage wären EUR 358 steuerfrei. Die bezahlten EUR 500 übersteigen das um EUR 142 – dieser Betrag ist steuerpflichtiger Arbeitslohn. Zahlt der Arbeitgeber genau die EUR 358 oder weniger, ist alles steuerfrei.",
+      "sources": [
+        "§ 26 Z 4 lit. d EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-013",
+      "prompt": "Was gilt steuerlich für die unentgeltliche Überlassung von Arbeitskleidung (Uniform) durch den Arbeitgeber?",
+      "correct_answer": "Der Wert der unentgeltlich überlassenen typischen Berufskleidung und deren Reinigung zählt gemäß § 26 Z 1 EStG 1988 nicht zu den Einkünften aus nichtselbständiger Arbeit. Voraussetzung: Es muss sich um typische Berufskleidung handeln (z.B. Uniformen, Schutzkleidung, Arbeitskittel). Allgemein tragbare Zivilkleidung – auch wenn der Arbeitgeber sie bezahlt – gilt nicht als typische Berufskleidung und ist daher steuerpflichtiger Arbeitslohn.",
+      "sources": [
+        "§ 26 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-26-014",
+      "prompt": "Darf ein Einsatzort dauerhaft zum 'Dienstort' werden mit der Folge, dass Tagesgelder wegfallen?",
+      "correct_answer": "Ja. Werden Fahrten zu einem Einsatzort in einem Kalendermonat überwiegend unmittelbar vom Wohnort aus angetreten, liegen gemäß § 26 Z 4 EStG hinsichtlich dieses Einsatzortes ab dem Folgemonat Fahrten zwischen Wohnung und Arbeitsstätte vor. Das bedeutet: Ab diesem Zeitpunkt können keine steuerfreien Tagesgelder mehr gezahlt werden; allenfalls kann Pendlerpauschale geltend gemacht werden. Diese Regelung soll die steuerfreie Tagesgeldgewährung bei tatsächlich gleichförmiger Pendlersituation verhindern.",
+      "sources": [
+        "§ 26 Z 4 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-015",
+      "prompt": "Bezüge aus ausländischen gesetzlichen Pensionsversicherungen – sind diese in Österreich steuerpflichtig?",
+      "correct_answer": "Ja. Pensionen aus ausländischen gesetzlichen Sozialversicherungen, die einer inländischen entsprechen, zählen gemäß § 25 Abs. 1 Z 3 lit. c EStG 1988 ebenfalls zu den Einkünften aus nichtselbständiger Arbeit. Die Besteuerung richtet sich nach dem einschlägigen Doppelbesteuerungsabkommen. In vielen DBA hat der Wohnsitzstaat (Österreich) das Besteuerungsrecht für Pensionen aus ausländischen Sozialversicherungen. Im Ausland einbehaltene Quellensteuern können angerechnet werden.",
+      "sources": [
+        "§ 25 Abs. 1 Z 3 lit. c EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-007",
+      "prompt": "Was sind Sonderbetriebseinnahmen und Sonderbetriebsausgaben bei einer OG/KG?",
+      "correct_answer": "Sonderbetriebseinnahmen sind Vergütungen, die ein Gesellschafter einer OG oder KG von der Gesellschaft für seine Tätigkeit im Dienste der Gesellschaft, für die Hingabe von Darlehen oder für die Überlassung von Wirtschaftsgütern erhält (§ 23 Z 2 EStG). Diese stellen Einkünfte aus Gewerbebetrieb des Gesellschafters dar. Korrespondierend dazu sind Sonderbetriebsausgaben jene Aufwendungen des Gesellschafters, die mit seiner mitunternehmerischen Beteiligung zusammenhängen (z.B. Finanzierungszinsen für den Gesellschaftsanteilserwerb).",
+      "sources": [
+        "§ 23 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-27-010",
+      "prompt": "Was ist ein 'ausschüttungsgleicher Ertrag' bei Investmentfonds und wie wird er besteuert?",
+      "correct_answer": "Ausschüttungsgleiche Erträge (AGE) sind thesaurierte (einbehaltene) Erträge eines Investmentfonds, die zwar nicht ausgeschüttet, aber dem Anleger steuerlich zugerechnet werden (§ 186 InvFG 2011). Sie unterliegen beim Anleger mit 27,5% KESt (§ 27 Abs. 2 Z 2 EStG). Bei österreichischen Fonds werden AGE jährlich automatisch über die Depotbank abgerechnet. Bei ausländischen Fonds ohne österreichische Meldestelle muss der Anleger die AGE selbst ermitteln und in der Steuererklärung angeben.",
+      "sources": [
+        "§ 27 Abs. 2 Z 2 EStG 1988",
+        "§ 186 InvFG 2011"
+      ]
+    },
+    {
+      "id": "ESTG-27-011",
+      "prompt": "Was ist der Unterschied zwischen Kapitalertragsteuer (KESt) und Einkommensteuer auf Kapitalerträge?",
+      "correct_answer": "Die Kapitalertragsteuer (KESt) ist eine Quellensteuer, die bei Auszahlung von Kapitalerträgen (Dividenden, Zinsen, realisierte Kursgewinne) von der auszahlenden Stelle einbehalten und ans Finanzamt abgeführt wird (§ 93 EStG). Sie beträgt 27,5% (bzw. 25% für Bankzinsen) und hat gemäß § 97 Abs. 1 EStG Abgeltungswirkung – d.h. der Anleger ist mit der KESt-Zahlung von der Einkommensteuer auf diese Erträge befreit und muss sie nicht in der Steuererklärung angeben. Die Option zur Regelbesteuerung (§ 27a Abs. 5 EStG) erlaubt freiwillig die Einbeziehung in die Veranlagung.",
+      "sources": [
+        "§ 93 EStG 1988",
+        "§ 97 Abs. 1 EStG 1988",
+        "§ 27a Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-011",
+      "prompt": "Was ist ein 'Voluptuarbetrieb' und warum ist er steuerlich problematisch?",
+      "correct_answer": "Ein Voluptuarbetrieb (auch Liebhabereibetrieb) ist eine Betätigung, die typischerweise der Lebensführung dient und bei der die Erzielung von Gewinnen oder Überschüssen objektiv nicht möglich oder nicht beabsichtigt ist. Gemäß der Liebhabereiverordnung (LVO) ist bei solchen Tätigkeiten steuerlich keine Liebhaberei anzunehmen, sondern die Tätigkeit gilt als Privatvergnügen: Verluste können nicht steuerlich geltend gemacht werden, Einnahmen sind nicht steuerpflichtig. Klassische Beispiele: Pferdehaltung für Privatrennsport, Hobbylandwirtschaft, Modelleisenbahnbetrieb.",
+      "sources": [
+        "§ 1 Abs. 2 Z 2 LVO",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-33-011",
+      "prompt": "Was ist der Kinderfreibetrag und wie unterscheidet er sich vom Familienbonus Plus?",
+      "correct_answer": "Seit Einführung des Familienbonus Plus (FBP) mit 2019 gibt es in Österreich keinen eigenen Kinderfreibetrag mehr im EStG. Der frühere Kinderfreibetrag wurde durch den FBP ersetzt, der eine direktere Steuererleichterung bietet (Absetzbetrag statt Freibetrag). Der Familienbonus Plus gemäß § 33 Abs. 3a EStG mindert unmittelbar die Einkommensteuerschuld (EUR 2.000 p.a. bis zum 18. Lebensjahr, EUR 650 p.a. danach). Der FBP ist nicht übertragbar und nicht rückerstattbar – er kann die Steuer maximal auf null reduzieren.",
+      "sources": [
+        "§ 33 Abs. 3a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-1-007",
+      "prompt": "Was versteht man unter dem 'Zuflussprinzip' im Einkommensteuerrecht?",
+      "correct_answer": "Das Zuflussprinzip (§ 19 Abs. 1 EStG) gilt für außerbetriebliche Einkunftsarten (Nichtselbständige Arbeit, Kapitalvermögen, Vermietung, Sonstige Einkünfte): Einnahmen sind in jenem Jahr zu erfassen, in dem sie dem Steuerpflichtigen zufließen (tatsächliche Verfügungsmacht). Ausgaben (Werbungskosten) sind im Jahr des Abflusses abzugsfähig. Das Gegenprinzip – Periodenabgrenzung – gilt für betriebliche Einkunftsarten (Bilanzierung). Ausnahme: Regelmäßig wiederkehrende Einnahmen/Ausgaben, die kurz vor oder nach dem Jahreswechsel fällig werden (15-Tage-Regel, § 19 Abs. 3 EStG).",
+      "sources": [
+        "§ 19 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-013",
+      "prompt": "Kann ein niedergelassener Arzt, der auch ein medizinisches Labor betreibt, sein gesamtes Einkommen als freiberuflich deklarieren?",
+      "correct_answer": "Nicht unbedingt. Wenn der Arzt das Labor selbst leitend und eigenverantwortlich betreibt und seine ärztliche Fachkenntnisse dabei zentral sind, kann das Labor zur freiberuflichen Tätigkeit (§ 22 Z 1 EStG) zählen. Wenn das Labor jedoch hauptsächlich von Angestellten betrieben wird und der Arzt nur noch organisatorisch tätig ist (ohne persönliche fachliche Leistungserbringung), liegt ein Gewerbebetrieb (§ 23 EStG) vor. Im Zweifelsfall entscheidet das Überwiegen der freiberuflichen oder gewerblichen Merkmale.",
+      "sources": [
+        "§ 22 Z 1 EStG 1988",
+        "§ 23 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-4-002",
+      "prompt": "Was sind 'durchlaufende Posten' im UStG und werden sie in die Bemessungsgrundlage einbezogen?",
+      "correct_answer": "Durchlaufende Posten gemäß § 4 Abs. 3 UStG sind Beträge, die ein Unternehmer im Namen und für Rechnung eines anderen vereinnahmt und verausgabt. Sie erhöhen die umsatzsteuerliche Bemessungsgrundlage nicht, weil der Unternehmer dabei nur als Zahlstelle (Treuhänder) auftritt und keinen eigenen Leistungsaustausch bewirkt. Typisches Beispiel: Ein Rechtsanwalt legt Gerichtsgebühren für seinen Mandanten aus – diese sind kein Honorar und daher nicht USt-pflichtig. Voraussetzung: gesonderte Abrechnung im Namen des Dritten.",
+      "sources": [
+        "§ 4 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-6-007",
+      "prompt": "Was sind innergemeinschaftliche Lieferungen und warum sind sie steuerfrei?",
+      "correct_answer": "Innergemeinschaftliche Lieferungen (Art. 6 Abs. 1 UStG i.V.m. Art. 7 UStG) sind Lieferungen von Gegenständen an einen Unternehmer in einem anderen EU-Mitgliedstaat, bei denen die Waren von Österreich in den anderen Mitgliedstaat transportiert werden. Sie sind echt steuerfrei (Vorsteuerabzug bleibt erhalten), weil die Besteuerung im Bestimmungsland erfolgt (innergemeinschaftlicher Erwerb beim Empfänger). Voraussetzungen: gültige UID-Nummer des Empfängers, Gelangensnachweis (Nachweis des Transports), Meldung in der Zusammenfassenden Meldung (ZM).",
+      "sources": [
+        "Art. 6 Abs. 1 UStG 1994",
+        "Art. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-016",
+      "prompt": "Was gilt für den Leistungsort bei kulturellen, künstlerischen und sportlichen Veranstaltungen?",
+      "correct_answer": "Leistungen im Zusammenhang mit kulturellen, künstlerischen, wissenschaftlichen, unterrichtenden, sportlichen und unterhaltenden Tätigkeiten einschließlich der Leistungen der Veranstalter werden gemäß § 3a Abs. 11 lit. a UStG (für Eintrittsberechtigung) und § 3a Abs. 10 UStG an dem Ort erbracht, an dem die Tätigkeit tatsächlich ausgeführt wird (Tätigkeitsortprinzip). Bei B2B-Leistungen für Eintrittsberechtigungen gilt ebenfalls der Tätigkeitsort (Art. 53 MwStSystRL). Ein Konzert in Wien ist daher in Österreich umsatzsteuerbar, unabhängig vom Sitz des Veranstalters.",
+      "sources": [
+        "§ 3a Abs. 11 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-3a-017",
+      "prompt": "Ein Schweizer Unternehmer erbringt eine Beratungsleistung für eine österreichische Privatperson. Welche USt gilt?",
+      "correct_answer": "Da die österreichische Privatperson kein Unternehmer ist (B2C), gilt grundsätzlich das Unternehmerortprinzip (§ 3a Abs. 7 UStG): Leistungsort ist der Sitz des Schweizer Unternehmers, also in der Schweiz. Damit fällt keine österreichische Umsatzsteuer an, sondern allenfalls Schweizer Mehrwertsteuer. Eine Ausnahme würde gelten, wenn es sich um elektronisch erbrachte Dienstleistungen handelt (§ 3a Abs. 13 UStG) – dann wäre der Empfängerort (Österreich) maßgeblich.",
+      "sources": [
+        "§ 3a Abs. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-7-006",
+      "prompt": "Was ist das steuerliche Einlageprinzip im KStG?",
+      "correct_answer": "Das Einlageprinzip besagt, dass Einlagen der Gesellschafter in eine Kapitalgesellschaft (z.B. Kapitalerhöhungen, verdeckte Einlagen) auf Ebene der Gesellschaft keine steuerpflichtigen Einnahmen darstellen und nicht das Einkommen der Körperschaft erhöhen (§ 8 Abs. 1 KStG). Spiegelbildlich dazu mindert der Zugang von Einlagen das steuerliche Einlageevidenzkonto (§ 4 Abs. 12 EStG), das relevant ist für die spätere steuerliche Behandlung von Einlagenrückzahlungen (keine Ausschüttungsbesteuerung bei Rückzahlung aus dem Einlagenevidenzkonto).",
+      "sources": [
+        "§ 8 Abs. 1 KStG 1988",
+        "§ 4 Abs. 12 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-005",
+      "prompt": "Was ist eine verdeckte Einlage und wie wird sie behandelt?",
+      "correct_answer": "Eine verdeckte Einlage liegt vor, wenn ein Gesellschafter seiner Kapitalgesellschaft ohne angemessenes Entgelt Wirtschaftsgüter oder geldwerte Vorteile zuwendet, die bei einem fremden Dritten nicht gewährt würden. Auf Ebene der Gesellschaft stellt die verdeckte Einlage keine steuerpflichtige Einnahme dar (§ 8 Abs. 1 KStG). Auf Ebene des Gesellschafters kann die Einlage zu Anschaffungskosten der Beteiligung führen (Werterhöhung der Beteiligung). Im Gegensatz zur verdeckten Ausschüttung (von der Gesellschaft an den Gesellschafter) fließt bei der verdeckten Einlage der Vorteil von Gesellschafter zur Gesellschaft.",
+      "sources": [
+        "§ 8 Abs. 1 KStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-017",
+      "prompt": "Welche Befreiung gilt für Grundstücksübertragungen im Rahmen einer Umgründung nach dem UmgrStG?",
+      "correct_answer": "Bei bestimmten Umgründungen (Verschmelzung, Spaltung, Einbringung, Zusammenschluss, Realteilung, Umwandlung) sieht das Umgründungssteuergesetz (UmgrStG) für die mitübertragenen Grundstücke in der Regel die Anwendung des begünstigten Stufentarifs nach § 7 Abs. 1 Z 2 GrEStG vor (nicht den Normaltarif von 3,5%). Bei bestimmten Umgründungsformen (z.B. Verschmelzung von Schwestergesellschaften) kann sogar vollständige Steuerbefreiung eingreifen. Die genaue Befreiung hängt vom Umgründungstyp und den gesetzlichen Voraussetzungen des UmgrStG ab.",
+      "sources": [
+        "§ 3 Abs. 1 Z 2 GrEStG 1987",
+        "UmgrStG"
+      ]
+    },
+    {
+      "id": "USTG-2-003",
+      "prompt": "Ist ein Arzt als Unternehmer im Sinne des UStG anzusehen?",
+      "correct_answer": "Ja. Ein niedergelassener Arzt übt eine nachhaltige Tätigkeit zur Erzielung von Einnahmen selbständig aus und ist damit gemäß § 2 Abs. 1 UStG Unternehmer. Seine Heilbehandlungsleistungen sind steuerbare Umsätze (§ 1 Abs. 1 Z 1 UStG). Sie sind jedoch gemäß § 6 Abs. 1 Z 19 UStG von der Steuer befreit (unechte Steuerbefreiung). Die Unternehmereigenschaft des Arztes bleibt davon unberührt – relevant ist dies z.B. für den Bezug von Eingangsleistungen (kein Vorsteuerabzug wegen unechter Befreiung) und für die Beurteilung von Beraterhonoraren.",
+      "sources": [
+        "§ 2 Abs. 1 UStG 1994",
+        "§ 6 Abs. 1 Z 19 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-28-012",
+      "prompt": "Wie ist der Verlust aus Vermietung und Verpachtung steuerlich zu behandeln?",
+      "correct_answer": "Verluste aus Vermietung und Verpachtung (§ 28 EStG) können grundsätzlich mit anderen positiven Einkünften des Steuerpflichtigen ausgeglichen werden (horizontaler und vertikaler Verlustausgleich). Ein Verlustvortrag in Folgejahre ist für außerbetriebliche Einkunftsarten nicht möglich (nur bei betrieblichen Einkunftsarten möglich). Ausnahme: Anlaufverluste bei Vermietungsbeginn können innerhalb des Planungszeitraums berücksichtigt werden, sofern keine Liebhaberei vorliegt. Bei Liebhaberei (LVO) ist ein Verlustausgleich vollständig ausgeschlossen.",
+      "sources": [
+        "§ 28 EStG 1988",
+        "§ 2 Abs. 2 EStG 1988",
+        "LVO"
+      ]
+    },
+    {
+      "id": "ESTG-22-014",
+      "prompt": "Was sind Gewinnanteile von Gesellschaftern einer Anwaltssozietät (GesbR) steuerlich?",
+      "correct_answer": "Eine Anwaltssozietät in Form einer GesbR (Gesellschaft bürgerlichen Rechts) oder OG ist eine Mitunternehmerschaft. Die Gewinnanteile der Gesellschafter zählen gemäß § 22 Z 3 EStG zu den Einkünften aus selbständiger Arbeit, wenn (1) die Gesellschaft ausschließlich als selbständige Arbeit (freiberufliche Tätigkeit) anzusehen ist und (2) jeder einzelne Gesellschafter selbst als Rechtsanwalt freiberuflich tätig ist. Vergütungen der Sozietät an einzelne Gesellschafter für deren Tätigkeit, Darlehen oder Nutzungsüberlassung sind ebenfalls als selbständige Arbeit zu erfassen.",
+      "sources": [
+        "§ 22 Z 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-12-006",
+      "prompt": "Was sind Vorsteuern und welche formalen Voraussetzungen gelten für den Vorsteuerabzug?",
+      "correct_answer": "Vorsteuern sind die in Eingangsrechnungen ausgewiesenen Umsatzsteuerbeträge, die ein Unternehmer von seiner Umsatzsteuerschuld abziehen kann (§ 12 UStG). Formale Voraussetzungen: (1) Eine ordnungsgemäße Rechnung gemäß § 11 UStG mit allen Pflichtangaben, (2) Der Unternehmer muss die Leistung für sein Unternehmen bezogen haben, (3) Die Lieferung oder Leistung muss tatsächlich erbracht worden sein, (4) Die Rechnung muss auf den richtigen Empfänger ausgestellt sein. Bei Rechnungen über EUR 10.000 ist die UID-Nummer des Empfängers Pflicht.",
+      "sources": [
+        "§ 12 UStG 1994",
+        "§ 11 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-10-004",
+      "prompt": "Was ist die 'Switch-over-Klausel' bei der internationalen Schachtelbeteiligung?",
+      "correct_answer": "Die Switch-over-Klausel gemäß § 10 Abs. 4 KStG versagt die Steuerfreiheit der internationalen Schachtelbeteiligung, wenn die ausländische Körperschaft keiner der österreichischen Körperschaftsteuer vergleichbaren Steuer unterliegt (Mindeststeuerbelastung). Als nicht vergleichbar gilt eine effektive Steuerbelastung von weniger als 12,5%. In diesem Fall werden die ausländischen Beteiligungserträge in Österreich vollständig mit KöSt (24%) besteuert, auf die ausländische Quellensteuer wird jedoch angerechnet. Ziel ist die Vermeidung der Nutzung von Steueroasen.",
+      "sources": [
+        "§ 10 Abs. 4 KStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-018",
+      "prompt": "Was ist eine treuhändige Grundstücksübertragung und welche GrESt-Folgen hat das Rückfallen des Treuguts?",
+      "correct_answer": "Bei treuhändigen Übertragungen (Treuhandschaft) überträgt der Treugeber das Grundstück an den Treuhänder. Diese Übertragung ist ein steuerpflichtiger Erwerbsvorgang gemäß § 1 GrEStG. Beim Rückfall des Grundstücks vom Treuhänder an den Treugeber liegt ebenfalls ein steuerpflichtiger Erwerbsvorgang vor (zweiter Vorgang). Eine Befreiung greift nur in eng definierten Ausnahmefällen. Treuhandkonstruktionen sind daher umsatzsteuerlich und grunderwerbsteuerlich stets zu prüfen.",
+      "sources": [
+        "§ 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-33-012",
+      "prompt": "Was ist der Absetzbetrags für außergewöhnliche Belastungen und wie funktioniert er?",
+      "correct_answer": "Außergewöhnliche Belastungen (§ 34 EStG) sind außergewöhnliche, zwangsläufige Aufwendungen, die die wirtschaftliche Leistungsfähigkeit wesentlich beeinträchtigen (z.B. Krankheitskosten, Katastrophenschäden, Pflegekosten). Sie sind bis zu einem Selbstbehalt (6% des Einkommens bei bestimmten Einkommensgrenzen, § 34 Abs. 4 EStG) als Sonderausgaben abziehbar. Ohne Selbstbehalt sind z.B. Kinder-Krankheitskosten, Kosten für Behinderung (Behinderungsfreibetrag § 35 EStG) und Kfz-Kosten für Menschen mit eingeschränkter Mobilität abziehbar.",
+      "sources": [
+        "§ 34 EStG 1988",
+        "§ 35 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-013",
+      "prompt": "Ein Freelancer erhält eine Zahlung von einem US-Kunden für Software-Entwicklung. Muss er in Österreich Umsatzsteuer abführen?",
+      "correct_answer": "Wenn der US-Kunde ein Unternehmer ist (B2B), gilt das Empfängerortprinzip (§ 3a Abs. 6 UStG): Leistungsort ist in den USA – keine österreichische USt. Wenn der US-Kunde ein Privatkunde ist (B2C) und es sich um eine elektronisch erbrachte Dienstleistung handelt (§ 3a Abs. 13 UStG), liegt der Leistungsort beim Empfänger (USA). Da die USA kein EU-Mitgliedstaat ist und keine EU-USt anfällt, muss der österreichische Freelancer keine österreichische USt abführen. Er sollte jedoch prüfen, ob US-amerikanische Steuerpflichten (US Sales Tax) bestehen.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994",
+        "§ 3a Abs. 13 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-014",
+      "prompt": "Was ist der steuerliche Unterschied zwischen einer GmbH und einer GmbH & Co KG?",
+      "correct_answer": "GmbH: Kapitalgesellschaft, Körperschaftsteuerpflichtig (24% KöSt), Gewinne werden auf Gesellschaftsebene besteuert, Ausschüttungen an Gesellschafter mit 27,5% KESt belastet. GmbH & Co KG: Personengesellschaft (KG) mit einer GmbH als Komplementärin. Die KG selbst zahlt keine Körperschaftsteuer – die Gewinne werden transparent auf die Gesellschafter verteilt und bei diesen (natürliche Personen: progressiver ESt-Tarif; Körperschaften: KöSt 24%) besteuert. Die GmbH & Co KG ist eine Durchlaufstruktur für ESt-Zwecke. USt: Beide Strukturen sind prinzipiell gleich als Unternehmer zu behandeln.",
+      "sources": [
+        "§ 7 KStG 1988",
+        "§ 23 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-015",
+      "prompt": "Ein Vermieter möchte sein privates Zinshaus in eine GmbH einbringen. Welche Steuern fallen an?",
+      "correct_answer": "(1) Einkommensteuer/KöSt: Einbringung eines Zinshausesbetriebs in eine GmbH kann nach UmgrStG (§ 12 ff. UmgrStG – Einbringung) steuerneutral erfolgen, wenn die Voraussetzungen erfüllt sind. (2) Grunderwerbsteuer: Bei der Einbringung eines Grundstücks gilt der begünstigte Stufentarif (§ 7 Abs. 1 Z 2 GrEStG), nicht der Normaltarif (Umgründungsprivileg). (3) Grundbucheintragungsgebühr: 1,1% des Grundstückswerts. (4) UStG: Einbringung als Geschäftsveräußerung im Ganzen kann umsatzsteuerfrei sein (§ 4 Abs. 7 UStG). Fachkundige Beratung ist unerlässlich.",
+      "sources": [
+        "§ 12 UmgrStG",
+        "§ 7 Abs. 1 Z 2 GrEStG 1987",
+        "§ 4 Abs. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "USTG-6-008",
+      "prompt": "Welche Umsätze von Banken und Kreditinstituten sind von der Umsatzsteuer befreit?",
+      "correct_answer": "Gemäß § 6 Abs. 1 Z 8 UStG sind folgende Bankumsätze unecht steuerbefreit: (a) Kreditgewährungen und Kreditvermittlung, (b) Verwaltung von Krediten durch Kreditgeber, (c) Umsätze im Einlagengeschäft, (d) Umsätze im Geld- und Devisenhandel, (e) Umsätze im Wertpapierhandel und der Wertpapiervermittlung, (f) Verwaltung von Sondervermögen (Investmentfonds). Unecht steuerbefreit bedeutet: keine USt auf diese Umsätze, aber auch kein Vorsteuerabzug für damit zusammenhängende Aufwendungen (Banken sind dadurch von der Vorsteuervergütung weitgehend ausgeschlossen).",
+      "sources": [
+        "§ 6 Abs. 1 Z 8 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-25-016",
+      "prompt": "Wie wird ein Sachbezug für ein Dienstwohnrecht des Arbeitnehmers berechnet?",
+      "correct_answer": "Wenn ein Arbeitgeber seinem Arbeitnehmer eine Dienstwohnung unentgeltlich oder verbilligt zur Verfügung stellt, liegt ein steuerpflichtiger Sachbezug (§ 25 Abs. 1 Z 1 EStG) vor. Der Wert des Sachbezugs wird nach der Sachbezugswerteverordnung berechnet: Als Sachbezugswert gilt die orts- und marktübliche Miete (inkl. Betriebskosten). Zahlt der Arbeitnehmer einen Teil der Miete selbst, vermindert sich der steuerpflichtige Sachbezug entsprechend. Bei verbilligter Überlassung ist nur der Unterschiedsbetrag zwischen marktüblicher Miete und tatsächlichem Mietzins als Sachbezug anzusetzen.",
+      "sources": [
+        "§ 25 Abs. 1 Z 1 EStG 1988",
+        "Sachbezugswerteverordnung"
+      ]
+    },
+    {
+      "id": "KSTG-9-005",
+      "prompt": "Wie lange muss ein Unternehmen mindestens der Unternehmensgruppe angehören?",
+      "correct_answer": "Gemäß § 9 Abs. 10 KStG muss die Zugehörigkeit zur Unternehmensgruppe mindestens drei Jahre (drei Wirtschaftsjahre) dauern. Scheidet ein Gruppenmitglied vor Ablauf dieser Mindestfrist aus oder wird die Gruppe aufgelöst, werden die bisher berücksichtigten Verluste und sonstigen Ergebnisse nachversteuert – die Gruppenbesteuerung wird rückwirkend versagt. Dies sichert, dass die Gruppenbesteuerung nicht kurzfristig für einmalige Steueroptimierungen missbraucht wird.",
+      "sources": [
+        "§ 9 Abs. 10 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-018",
+      "prompt": "Was ist der Unterschied zwischen dem Ursprungslandprinzip und dem Bestimmungslandprinzip in der Umsatzsteuer?",
+      "correct_answer": "Das Ursprungslandprinzip (Herkunftslandprinzip) besagt, dass die Umsatzsteuer im Land erhoben wird, in dem der leistende Unternehmer ansässig ist. Das Bestimmungslandprinzip (Verbrauchslandprinzip) hingegen sieht vor, dass die USt dort erhoben wird, wo der Konsum stattfindet (Empfängerland). Im modernen EU-Umsatzsteuerrecht gilt grundsätzlich das Bestimmungslandprinzip – erkennbar am B2B-Empfängerortprinzip (§ 3a Abs. 6 UStG) und der Steuerfreiheit von Ausfuhrlieferungen (§ 7 UStG). Das Ursprungslandprinzip gilt noch rudimentär bei manchen B2C-Leistungen (§ 3a Abs. 7 UStG).",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994",
+        "§ 3a Abs. 7 UStG 1994",
+        "§ 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-019",
+      "prompt": "Was ist der Unterschied zwischen Kaufpreis und Grundstückswert als GrESt-Bemessungsgrundlage?",
+      "correct_answer": "Beim entgeltlichen Erwerb (Kauf) ist die Bemessungsgrundlage für die GrESt gemäß § 4 Abs. 1 GrEStG der Grundstückswert (ermittelt nach der Grundstückswertverordnung), mindestens jedoch der vereinbarte Kaufpreis. Es gilt das Meistbetragsprinzip: Kaufpreis und Grundstückswert werden verglichen – der höhere Betrag ist die Bemessungsgrundlage. Liegt der Kaufpreis über dem Grundstückswert (Marktpreis), so gilt der Kaufpreis. Liegt er darunter (Freundschaftspreis), gilt der Grundstückswert. Bei unentgeltlichen Erwerben im Familienverband ist grundsätzlich der Grundstückswert maßgeblich.",
+      "sources": [
+        "§ 4 Abs. 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-23-008",
+      "prompt": "Wann liegt eine 'nachhaltige' Tätigkeit im Sinne des § 23 Z 1 EStG vor?",
+      "correct_answer": "Nachhaltigkeit im steuerrechtlichen Sinne bedeutet, dass eine Tätigkeit auf Wiederholung angelegt ist oder tatsächlich wiederholt ausgeübt wird. Eine einmalige Handlung kann ausreichen, wenn sie mit Wiederholungsabsicht vorgenommen wird oder wenn sie aus einer Vielzahl von Einzelakten besteht (z.B. mehrfacher An- und Verkauf von Wertgegenständen). Der VwGH versteht Nachhaltigkeit als Gegenbegriff zur gelegentlichen oder einmaligen Tätigkeit ohne Wiederholungsabsicht. Auch wenn tatsächlich nur einmal gehandelt wurde, kann bei Wiederholungsabsicht eine nachhaltige Tätigkeit vorliegen.",
+      "sources": [
+        "§ 23 Z 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-016",
+      "prompt": "Was versteht man unter dem 'Trennungsprinzip' im österreichischen Körperschaftsteuerrecht?",
+      "correct_answer": "Das Trennungsprinzip besagt, dass eine Kapitalgesellschaft (GmbH, AG) als eigenständiges Steuersubjekt von ihren Gesellschaftern getrennt zu betrachten ist. Steuerlich bedeutet das: (1) Die Gesellschaft zahlt auf ihre Gewinne Körperschaftsteuer (24%), (2) Die Gesellschafter zahlen erst bei Ausschüttung (Dividende) nochmals Steuer (27,5% KESt). Diese Doppelbelastung unterscheidet das Trennungsprinzip vom Transparenzprinzip bei Personengesellschaften (OG, KG), wo Gewinne direkt beim Gesellschafter besteuert werden. Das Trennungsprinzip ist fundamental für die Steuerplanung bei der Wahl der Rechtsform.",
+      "sources": [
+        "§ 1 KStG 1988",
+        "§ 7 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-10-005",
+      "prompt": "Welcher USt-Satz gilt für Eintrittskarten für Kunstausstellungen, Museen und Kinos?",
+      "correct_answer": "Gemäß § 10 Abs. 3 Z 3 UStG gilt für Eintrittsberechtigungen zu Theatervorstellungen, Musikaufführungen, Museumsbesuchen, Lichtspieltheatern (Kinos) und anderen Kulturveranstaltungen der ermäßigte Steuersatz von 13%. Für Eintrittskarten zu Sportveranstaltungen gilt ebenfalls 13% (§ 10 Abs. 3 Z 1 UStG). Für Konzertveranstaltungen ohne kulturelle Einrichtung kann der Normalsatz (20%) gelten. Die genaue Abgrenzung der 10%-, 13%- und 20%-Leistungen ist im Einzelfall anhand der Anlage zum UStG zu prüfen.",
+      "sources": [
+        "§ 10 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-1-008",
+      "prompt": "Was ist das 'Welteinkommensprinzip' vs. das 'Quellenprinzip' im internationalen Steuerrecht?",
+      "correct_answer": "Nach dem Welteinkommensprinzip (§ 1 Abs. 2 EStG) besteuert der Ansässigkeitsstaat das gesamte Welteinkommen einer Person (alle in- und ausländischen Einkünfte). Österreich wendet dieses Prinzip auf unbeschränkt Steuerpflichtige an. Das Quellenprinzip besagt, dass ein Staat nur jene Einkünfte besteuert, die aus Quellen in seinem Staatsgebiet stammen. Österreich wendet das Quellenprinzip auf beschränkt Steuerpflichtige an (§ 1 Abs. 3 EStG, § 98 EStG). Doppelbesteuerungsabkommen (DBA) koordinieren die Besteuerungsrechte der Staaten und vermeiden Doppelbesteuerung.",
+      "sources": [
+        "§ 1 Abs. 2 EStG 1988",
+        "§ 1 Abs. 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-7-007",
+      "prompt": "Welche Körperschaften unterliegen der unbeschränkten Körperschaftsteuerpflicht in Österreich?",
+      "correct_answer": "Gemäß § 1 Abs. 2 KStG unterliegen der unbeschränkten Körperschaftsteuerpflicht Körperschaften, die ihre Geschäftsleitung oder ihren Sitz im Inland haben. Dazu gehören insbesondere: Kapitalgesellschaften (GmbH, AG), Erwerbs- und Wirtschaftsgenossenschaften, Versicherungsvereine auf Gegenseitigkeit, Privatstiftungen, Sparkassen, sonstige juristische Personen des privaten Rechts (z.B. Vereine, Stiftungen). Nicht körperschaftsteuerpflichtig sind: Personengesellschaften (OG, KG, GesbR) und die Gebietskörperschaften (Bund, Länder, Gemeinden).",
+      "sources": [
+        "§ 1 KStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-020",
+      "prompt": "Was ist eine 'Schenkung auf den Todesfall' und welche GrESt fällt bei Grundstücken an?",
+      "correct_answer": "Eine Schenkung auf den Todesfall (§ 956 ABGB) ist zivilrechtlich kein Erbvertrag, sondern ein Schenkungsvertrag mit aufgeschobener Erfüllung. Grunderwerbsteuerlich liegt beim Vollzug der Schenkung nach dem Tod des Schenkers ein steuerpflichtiger Erwerbsvorgang vor (§ 1 Abs. 1 Z 1 GrEStG). Falls der Empfänger zum begünstigten Personenkreis (Familie) gehört, gilt der Stufentarif nach § 7 Abs. 1 Z 2 GrEStG (0,5%–3,5%). Handelt es sich um Dritte, gilt der Normaltarif von 3,5%.",
+      "sources": [
+        "§ 1 GrEStG 1987",
+        "§ 7 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "USTG-3a-019",
+      "prompt": "Was sind 'katalogartige sonstige Leistungen' und welche Besonderheit gilt für sie gegenüber Nichtunternehmern?",
+      "correct_answer": "Bestimmte sonstige Leistungen (sog. Katalogleistungen), die an Nichtunternehmer außerhalb der EU erbracht werden, werden abweichend von der Grundregel des § 3a Abs. 7 UStG am Empfängerort besteuert. Die Liste umfasst u.a.: Beratungsleistungen, Werbeleistungen, Datenverarbeitung, Bankleistungen, Personalbeistellung, Lizenzgewährungen (§ 3a Abs. 14 UStG). Damit soll eine Verlagerung des Leistungsorts ins EU-Ausland bei bestimmten Dienstleistungen an Drittlandsempfänger vermieden werden.",
+      "sources": [
+        "§ 3a Abs. 14 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-27-012",
+      "prompt": "Wie werden Zinsen aus einem privaten Sparkonto in Österreich besteuert?",
+      "correct_answer": "Zinsen aus österreichischen Sparkonten und Bankguthaben unterliegen gemäß § 27 Abs. 2 Z 2 EStG 1988 den Einkünften aus Kapitalvermögen. Der anzuwendende Sondersteuersatz beträgt gemäß § 27a Abs. 1 Z 1 EStG 25% (nicht 27,5% wie für andere Kapitalerträge). Die inländische Bank behält die KESt von 25% direkt ein und führt sie ans Finanzamt ab. Durch die Endbesteuerungswirkung (§ 97 EStG) sind diese Zinsen damit abgegolten und müssen nicht in der Steuererklärung angegeben werden.",
+      "sources": [
+        "§ 27 Abs. 2 Z 2 EStG 1988",
+        "§ 27a Abs. 1 Z 1 EStG 1988",
+        "§ 97 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-017",
+      "prompt": "Was ist der steuerliche Unterschied zwischen Betriebsaufgabe und Betriebsveräußerung?",
+      "correct_answer": "Betriebsveräußerung (§ 24 EStG): Der Betrieb wird als Einheit an einen Dritten verkauft. Ein allfälliger Veräußerungsgewinn (Unterschiedsbetrag zwischen Verkaufserlös und Buchwert des Betriebsvermögens) ist steuerpflichtig. Begünstigungen: Hälftesteuersatz (§ 37 EStG) bei Vollendung des 60. Lebensjahres und Einstellung der Erwerbstätigkeit, oder Freibetrag von EUR 7.300. Betriebsaufgabe: Der Betrieb wird nicht als Einheit verkauft, sondern aufgegeben (Wirtschaftsgüter werden entnommen, verschenkt oder einzeln verkauft). Dabei entstehen Aufgabegewinne, die ebenfalls nach § 24 EStG zu ermitteln und zu versteuern sind (gleiche Begünstigungen möglich).",
+      "sources": [
+        "§ 24 EStG 1988",
+        "§ 37 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-018",
+      "prompt": "Was ist eine 'Betriebsstätte' im österreichischen Steuerrecht und warum ist der Begriff wichtig?",
+      "correct_answer": "Eine Betriebsstätte gemäß § 29 BAO ist jede feste örtliche Anlage oder Einrichtung, die der Ausübung eines Betriebes oder wirtschaftlichen Geschäftsbetriebes dient. Im internationalen Steuerrecht ist die Betriebsstätte entscheidend dafür, ob ein ausländisches Unternehmen in Österreich steuerpflichtig ist und ob Österreich das Besteuerungsrecht nach DBA hat. Im UStG ist die Betriebsstätte relevant für die Bestimmung des Leistungsorts (§ 3a UStG). Im EStG/KStG begründet eine Betriebsstätte im Ausland die beschränkte Steuerpflicht des Staates, wo die BS liegt.",
+      "sources": [
+        "§ 29 BAO",
+        "§ 98 EStG 1988",
+        "§ 3a UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-28-013",
+      "prompt": "Was ist die 'große Vermieterpauschale' und für wen gilt sie?",
+      "correct_answer": "Es gibt keine offizielle 'große Vermieterpauschale'. Vermieter können jedoch bei Einkünften aus Vermietung und Verpachtung (§ 28 EStG) wählen zwischen dem tatsächlichen Ausgabenabzug (nachgewiesene Werbungskosten) oder der Pauschalierung. Die Werbungskostenpauschale für Einnahmen-Ausgaben-Rechner bei Vermietung beträgt gemäß § 17 Abs. 1 EStG iVm Pauschalierungsverordnung maximal 12% der Betriebseinnahmen (für bestimmte Gruppen von Vermietern). Bei Wohnungseigentumsgemeinschaften kann eine eigene Betriebskostenpauschale angewendet werden. Im Zweifel empfiehlt sich der tatsächliche Ausgabenabzug.",
+      "sources": [
+        "§ 28 EStG 1988",
+        "§ 17 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-020",
+      "prompt": "Was ist das Reverse-Charge-Verfahren bei Bauleistungen (§ 19 Abs. 1a UStG)?",
+      "correct_answer": "Gemäß § 19 Abs. 1a UStG 1994 schuldet bei Werklieferungen und sonstigen Leistungen im Zusammenhang mit Grundstücken (Bauleistungen) nicht der leistende Unternehmer, sondern der Leistungsempfänger die Umsatzsteuer, wenn der Empfänger selbst mit der Erbringung derartiger Leistungen beauftragt ist (Bauleistungs-Reverse-Charge). Der leistende Unternehmer stellt die Rechnung ohne USt aus. Dies gilt nicht, wenn der Empfänger ein Endverbraucher oder ein nicht im Baugewerbe tätiger Auftraggeber ist. Ziel: Bekämpfung von USt-Betrug im Bausektor.",
+      "sources": [
+        "§ 19 Abs. 1a UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-33-013",
+      "prompt": "Was ist die 'kalte Progression' und wie bekämpft Österreich sie?",
+      "correct_answer": "Kalte Progression entsteht, wenn Lohnerhöhungen, die nur die Inflation ausgleichen, durch den progressiven Steuertarif zu einer höheren Steuerbelastung führen (die reale Kaufkraft sinkt trotz nominaler Gehaltserhöhung). Österreich bekämpft die kalte Progression seit 2023 durch eine automatische jährliche Anpassung der Einkommensteuertarifgrenzen und der Absetzbeträge an die Inflation (2/3 automatisch, 1/3 durch Regierungsentscheidung). Die Tarifgrenzen und Absetzbeträge des § 33 EStG werden jährlich valorisiert.",
+      "sources": [
+        "§ 33 EStG 1988",
+        "§ 33a EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-12-004",
+      "prompt": "Was versteht man unter der 'Mantelkauf'-Problematik im KStG?",
+      "correct_answer": "Ein Mantelkauf liegt vor, wenn Anteile an einer Verlustgesellschaft (Verlustmantel) erworben werden, um deren steuerliche Verluste für die neue Geschäftstätigkeit zu nutzen. Gemäß § 8 Abs. 4 Z 2 KStG (i.V.m. der Mantelkaufregelung) ist das Vortragen von Verlusten bei Vorliegen eines Mantelkaufs versagt, wenn sich sowohl die wirtschaftliche Identität (wesentliche Änderung der Unternehmensstruktur) als auch die organisatorische Identität (Wechsel in der Geschäftsführung) oder die gesellschaftsrechtliche Identität (Änderung im Gesellschafterbestand) der Körperschaft ändert.",
+      "sources": [
+        "§ 8 Abs. 4 Z 2 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-6-009",
+      "prompt": "Welche Leistungen von Versicherungen sind von der Umsatzsteuer befreit?",
+      "correct_answer": "Umsätze aus der Tätigkeit als Versicherungsvertreter und Versicherungsmakler sowie die Umsätze der Versicherungsunternehmen selbst (Versicherungs- und Rückversicherungsleistungen) sind gemäß § 6 Abs. 1 Z 10 UStG 1994 von der Umsatzsteuer befreit (unechte Steuerbefreiung). Das bedeutet: Versicherungsprämien sind USt-frei, die Versicherung darf dafür keine Vorsteuer aus ihren Eingangsumsätzen abziehen. Die Versicherungsteuer (Prämiensteuer) ist von der USt-Befreiung unabhängig und separat zu beurteilen.",
+      "sources": [
+        "§ 6 Abs. 1 Z 10 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-22-015",
+      "prompt": "Was sind Einkünfte aus einer 'unterrichtenden Tätigkeit' im Sinne des § 22 Z 1 lit. a EStG?",
+      "correct_answer": "Unterrichtende Tätigkeiten im Sinne des § 22 Z 1 lit. a EStG umfassen das selbständige Erteilen von Unterricht, Lehrveranstaltungen, Kursen und Seminaren auf Basis eigener Fachkenntnisse. Beispiele: selbständige Sprachlehrer, Musiklehrer, Yogalehrer, Nachhilfelehrer, Universitätsprofessoren (in Nebentätigkeit). Nicht dazu zählen: reines Organisieren von Kursen ohne persönliche Lehrleistung (dann möglicherweise Gewerbebetrieb, § 23 EStG) oder Angestellte Lehrer an Schulen (dann § 25 EStG).",
+      "sources": [
+        "§ 22 Z 1 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-021",
+      "prompt": "Wie wird die GrESt beim Erwerb eines Grundstücks durch Zwangsversteigerung berechnet?",
+      "correct_answer": "Auch der Erwerb eines Grundstücks im Rahmen einer Zwangsversteigerung ist ein steuerpflichtiger Erwerbsvorgang gemäß § 1 Abs. 1 Z 4 GrEStG. Die Bemessungsgrundlage ist gemäß § 4 GrEStG der Grundstückswert oder das höchste Gebot (Meistbot), je nachdem was höher ist. Der Steuersatz beträgt 3,5% (entgeltlicher Erwerb, § 7 Abs. 1 Z 3 GrEStG). Die GrESt ist vom Ersteher (Käufer bei der Versteigerung) zu entrichten. Die Anzeigepflicht übernimmt in der Regel das Vollstreckungsgericht.",
+      "sources": [
+        "§ 1 Abs. 1 Z 4 GrEStG 1987",
+        "§ 7 Abs. 1 Z 3 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "CROSS-019",
+      "prompt": "Wie unterscheidet sich ein 'Dienstvertrag' von einem 'freien Dienstvertrag' und einem 'Werkvertrag' steuerlich?",
+      "correct_answer": "Dienstvertrag (Arbeitnehmer): Persönliche Abhängigkeit, Weisungsgebundenheit, organisatorische Eingliederung → Einkünfte aus nichtselbständiger Arbeit (§ 25 EStG), Lohnsteuer. Freier Dienstvertrag: Weniger Weisungsbindung, aber Einbindung in den Betrieb ohne eigenes Unternehmerrisiko → je nach Ausgestaltung Einkünfte aus selbständiger (§ 22 EStG) oder gewerblicher Arbeit (§ 23 EStG). Werkvertrag: Schuldner eines bestimmten Werkerfolgs, eigenes Unternehmerrisiko, eigene Betriebsmittel → idR Einkünfte aus Gewerbebetrieb (§ 23 EStG) oder selbständiger Arbeit (§ 22 EStG). Die korrekte Einordnung hat erhebliche Auswirkungen auf SVA-Pflicht, USt und ESt.",
+      "sources": [
+        "§ 25 EStG 1988",
+        "§ 22 EStG 1988",
+        "§ 23 EStG 1988",
+        "§ 47 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-020",
+      "prompt": "Was ist das 'Abzugsverbot' für nichtabzugsfähige Aufwendungen im EStG?",
+      "correct_answer": "Gemäß § 20 EStG dürfen folgende Aufwendungen bei der Einkommensermittlung nicht abgezogen werden: (1) Aufwendungen für den Haushalt und den Unterhalt der Familie, (2) Aufwendungen für die Lebensführung (private Kosten), auch wenn sie der Förderung des Berufs dienen könnten (Abzugsverbot für gemischte Aufwendungen – 'Aufteilungsverbot'), (3) Repräsentationsaufwendungen (außer Bewirtungskosten, wenn der Werbecharakter nachgewiesen wird), (4) Strafen und Geldbußen, (5) Abgaben wegen strafbarer Handlungen. Das Aufteilungsverbot ist im Einzelfall streng anzuwenden.",
+      "sources": [
+        "§ 20 EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-28-014",
+      "prompt": "Kann ein Gesellschafter-Geschäftsführer einer GmbH (wesentlich beteiligt) ein von der GmbH gemietetes Gebäude als Werbungskosten abziehen?",
+      "correct_answer": "Nicht direkt. Bei wesentlich beteiligten Gesellschafter-Geschäftsführern (§ 22 Z 2 EStG) sind die Einkünfte Einkünfte aus sonstiger selbständiger Arbeit. Betriebsausgaben (nicht Werbungskosten) können geltend gemacht werden. Wenn die GmbH das Gebäude mietet und dem GF zur Nutzung überlässt, ist dies primär auf GmbH-Ebene zu beurteilen. Nutzt der GF ein Gebäude, das er selbst der GmbH vermietet, liegt auf GF-Ebene Vermietung und Verpachtung (§ 28 EStG) vor – die Mieteinnahmen sind zu versteuern, die damit zusammenhängenden Ausgaben sind Werbungskosten.",
+      "sources": [
+        "§ 22 Z 2 EStG 1988",
+        "§ 28 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-1-005",
+      "prompt": "Was ist ein 'nicht steuerbarer Umsatz' und welches Beispiel gibt es dafür?",
+      "correct_answer": "Nicht steuerbare Umsätze fallen nicht in den Anwendungsbereich des UStG. Das ist der Fall wenn: (1) der Leistungserbringer kein Unternehmer ist (z.B. Privatperson verkauft gebrauchte Möbel), (2) die Leistung nicht im Rahmen des Unternehmens erbracht wird, (3) die Leistung nicht gegen Entgelt erbracht wird (außer Eigenverbrauch), (4) der Leistungsort nicht im Inland liegt (mangels inländischem Tatbestand). Beispiele: Privatverkauf eines Autos durch eine Privatperson ist nicht steuerbar; eine GmbH, die ihrem GF privat etwas zahlt ohne Gegenleistung, ist ebenfalls nicht steuerbar.",
+      "sources": [
+        "§ 1 Abs. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-25-017",
+      "prompt": "Was versteht man unter 'Werbungskosten' bei den Einkünften aus nichtselbständiger Arbeit?",
+      "correct_answer": "Werbungskosten sind Aufwendungen zur Erwerbung, Sicherung und Erhaltung der Einnahmen aus nichtselbständiger Arbeit (§ 16 Abs. 1 EStG). Abzugsfähig sind z.B.: Gewerkschaftsbeiträge, Fortbildungskosten, Arbeitsmittel (Computer, Werkzeug), Fachliteratur, Berufskleidung (wenn keine typische Berufskleidung vom Arbeitgeber gestellt), Pendlerpauschale, Homeoffice-Pauschale. Ohne Einzelnachweis steht der Werbungskostenpauschbetrag von EUR 132 jährlich zu (§ 16 Abs. 3 EStG). Private Aufwendungen sind nicht abzugsfähig (§ 20 EStG).",
+      "sources": [
+        "§ 16 Abs. 1 EStG 1988",
+        "§ 16 Abs. 3 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-8-006",
+      "prompt": "Was ist die Rücklagenbildung im KStG und welche steuerliche Wirkung hat sie?",
+      "correct_answer": "Körperschaften können handelsrechtlich Gewinnrücklagen bilden (thesaurierte Gewinne). Diese sind steuerlich zunächst mit KöSt (24%) zu versteuern. Die Bildung einer Rücklage selbst ist keine abzugsfähige Ausgabe. Steuerfreie Rücklagen gibt es im KStG nur in eng definierten Fällen, z.B. der Investitionsfreibetrag (IFB, § 11 EStG i.V.m. § 7 Abs. 2 KStG). Der IFB ermöglicht, zusätzlich 10% (15% für ökologische Investitionen) der Anschaffungs-/Herstellungskosten bestimmter Wirtschaftsgüter als steuerfreien Abzug geltend zu machen.",
+      "sources": [
+        "§ 7 KStG 1988",
+        "§ 11 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-021",
+      "prompt": "Was gilt für den USt-Leistungsort bei Grundstücks-Gutachten eines österreichischen Sachverständigen für ein deutsches Grundstück?",
+      "correct_answer": "Gutachten über ein bestimmtes Grundstück gelten als grundstücksbezogene sonstige Leistungen im Sinne des § 3a Abs. 9 UStG. Maßgebend ist der Belegenheitsort des Grundstücks, also Deutschland. Damit liegt der Leistungsort in Deutschland – es fällt keine österreichische USt an. Der österreichische Sachverständige stellt die Rechnung ohne österreichische USt aus. In Deutschland fällt ggf. deutsche Mehrwertsteuer an, wobei das Reverse-Charge-Verfahren greifen kann, wenn der Auftraggeber in Deutschland Unternehmer ist.",
+      "sources": [
+        "§ 3a Abs. 9 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-022",
+      "prompt": "Fällt GrESt an, wenn jemand ein Erbbaurecht (Baurecht) an einem Grundstück erwirbt?",
+      "correct_answer": "Ja. Das Erbbaurecht (Baurecht) gilt gemäß § 2 Abs. 2 Z 1 GrEStG als Grundstück im Sinne des GrEStG. Dessen Begründung, Übertragung, Aufhebung und Verlängerung ist damit ein steuerpflichtiger Erwerbsvorgang. Bemessungsgrundlage ist der Wert des Erbbaurechts (Kapitalwert der Baurechtszinsen oder Grundstückswert). Der Steuersatz beträgt grundsätzlich 3,5%. Beim Heimfall (Rückfall an den Grundeigentümer nach Ablauf des Erbbaurechts) kann eine Steuerbefreiung oder -begünstigung greifen.",
+      "sources": [
+        "§ 2 Abs. 2 GrEStG 1987",
+        "§ 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "CROSS-021",
+      "prompt": "Ein österreichischer Start-up-Gründer erhält Anteile von einem Investor gegen eine Geldeinlage. Welche Steuerfolgen hat das?",
+      "correct_answer": "Die Ausgabe neuer GmbH-Anteile gegen Einlage (Kapitalerhöhung): Auf Ebene der GmbH ist die Einlage eine steuerlich neutrale Vermögenszuführung (§ 8 Abs. 1 KStG, kein steuerpflichtiges Einkommen). Für den Investor: Die Anschaffungskosten der Beteiligung entsprechen dem eingezahlten Betrag. Später anfallende Gewinne aus der Veräußerung dieser Anteile unterliegen beim Investor (Privatperson) mit 27,5% KESt (§ 27 Abs. 3 EStG). GrESt: Nur relevant, wenn die GmbH Grundstücke hat und eine Anteilsvereinigung stattfindet (§ 1 Abs. 3 GrEStG). USt: Die Ausgabe von Gesellschaftsanteilen ist nicht umsatzsteuerbar.",
+      "sources": [
+        "§ 8 Abs. 1 KStG 1988",
+        "§ 27 Abs. 3 EStG 1988",
+        "§ 1 Abs. 3 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-23-009",
+      "prompt": "Was ist ein 'Spekulationsgeschäft' für bewegliche Wirtschaftsgüter und wie wird es besteuert?",
+      "correct_answer": "Spekulationsgeschäfte bei beweglichen Wirtschaftsgütern im Privatvermögen unterliegen gemäß § 30 EStG (für Grundstücke) bzw. § 29 Z 2 EStG (für sonstige Wirtschaftsgüter) als sonstige Einkünfte der Einkommensteuer, wenn zwischen Anschaffung und Veräußerung weniger als ein Jahr liegt. Ausnahmen: Wirtschaftsgüter, die für den Eigenverbrauch bestimmt waren. Gewinne aus dem Verkauf von Antiquitäten, Kunstgegenständen, Schmuck und anderen Sammlerstücken innerhalb der Spekulationsfrist sind nach dem allgemeinen Tarif (§ 33 EStG) steuerpflichtig.",
+      "sources": [
+        "§ 29 Z 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-12-007",
+      "prompt": "Was ist der Berichtigungszeitraum für den Vorsteuerabzug bei Grundstücken?",
+      "correct_answer": "Gemäß § 12 Abs. 10 UStG 1994 ist bei Grundstücken (einschließlich Gebäuden) ein Berichtigungszeitraum von 20 Jahren vorgesehen. Ändert sich die Verwendung eines Grundstücks innerhalb dieser 20 Jahre (z.B. von steuerpflichtiger Vermietung zu steuerbefreiter Vermietung oder umgekehrt), muss der ursprünglich geltend gemachte Vorsteuerabzug anteilsmäßig berichtigt werden. Bei anderen Wirtschaftsgütern (bewegliche Anlagegüter) beträgt der Berichtigungszeitraum 5 Jahre.",
+      "sources": [
+        "§ 12 Abs. 10 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-26-015",
+      "prompt": "Welche Voraussetzungen müssen erfüllt sein, damit Arbeitgeberbeiträge zu einer betrieblichen Kollektivversicherung steuerfrei sind?",
+      "correct_answer": "Beiträge des Arbeitgebers zu einer betrieblichen Kollektivversicherung im Sinne des § 93 VAG 2016 sind gemäß § 26 Z 7 lit. a EStG steuerfrei, sofern sie (1) nicht anstelle des bisher gezahlten Arbeitslohns oder bestehender Lohnerhöhungsansprüche geleistet werden (kein Gehaltsumwandlungsverbot, außer lohngestaltende Vorschriften erlauben es), (2) im betrieblichen Interesse des Arbeitgebers liegen. Die spätere Auszahlung aus der betrieblichen Kollektivversicherung unterliegt dann anteilig den Regeln des § 25 Abs. 1 Z 2 lit. a EStG.",
+      "sources": [
+        "§ 26 Z 7 lit. a EStG 1988",
+        "§ 25 Abs. 1 Z 2 lit. a EStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-23-010",
+      "prompt": "Was ist Gewinnabsicht im Sinne des § 23 Z 1 EStG und wie wird sie nachgewiesen?",
+      "correct_answer": "Gewinnabsicht ist die subjektive Absicht des Unternehmers, durch die Tätigkeit einen Gewinn zu erzielen. Sie muss nicht tatsächlich realisiert werden, muss aber nach objektiven Gesichtspunkten zumindest angestrebt werden. Fehlt Gewinnabsicht dauerhaft (z.B. weil die Tätigkeit auf Dauer verlustbringend ist und dennoch aus privaten Gründen weitergeführt wird), liegt Liebhaberei vor (LVO). Der Nachweis der Gewinnabsicht erfolgt durch Unternehmensplanung, Businessplan und tatsächliches unternehmerisches Handeln.",
+      "sources": [
+        "§ 23 Z 1 EStG 1988",
+        "§ 1 LVO"
+      ]
+    },
+    {
+      "id": "USTG-3a-022",
+      "prompt": "Österreichischer Unternehmensberater erbringt Leistungen für eine österreichische GmbH, die selbst nur im Ausland tätig ist. Wo liegt der Leistungsort?",
+      "correct_answer": "Für B2B-Leistungen gilt gemäß § 3a Abs. 6 UStG das Empfängerortprinzip: Leistungsort ist der Ort, von dem aus der Empfänger sein Unternehmen betreibt. Da die österreichische GmbH ihren Sitz in Österreich hat (auch wenn sie nur im Ausland tätig ist), liegt der Leistungsort in Österreich. Der Berater muss österreichische Umsatzsteuer verrechnen. Dies gilt auch dann, wenn die erbrachten Leistungen letztlich im Ausland genutzt werden – maßgebend ist der Sitz des Leistungsempfängers.",
+      "sources": [
+        "§ 3a Abs. 6 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-9-006",
+      "prompt": "Kann eine GmbH & Co KG Gruppenträgerin einer Unternehmensgruppe nach § 9 KStG sein?",
+      "correct_answer": "Nein. Gruppenträger kann gemäß § 9 Abs. 3 KStG nur eine unbeschränkt steuerpflichtige Kapitalgesellschaft oder Genossenschaft sein, nicht jedoch eine Personengesellschaft wie eine GmbH & Co KG. Die GmbH & Co KG ist selbst nicht körperschaftsteuerpflichtig (sie ist transparent für ESt-Zwecke). Allerdings kann die Komplementär-GmbH einer GmbH & Co KG selbst Gruppenträgerin sein, wenn sie eine eigene Beteiligung an einer anderen Kapitalgesellschaft hält.",
+      "sources": [
+        "§ 9 Abs. 3 KStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-023",
+      "prompt": "Unterliegt ein Erbteilungsübereinkommen zwischen Erben der Grunderwerbsteuer?",
+      "correct_answer": "Ja, wenn im Rahmen eines Erbteilungsübereinkommens Grundstücke zwischen Miterben aufgeteilt werden und dabei ein Miterbe mehr erhält als seinem Erbanteil entspricht (Entgelt für den Mehrerhalt), liegt ein teilentgeltlicher Erwerb vor, der GrESt auslöst. Erhält ein Miterbe genau jenen Grundstücksteil, der seinem Erbanteil entspricht (quotenmäßige Aufteilung), ist dieser Vorgang grunderwerbsteuerbefreit (Aufteilung nach Maßgabe der Erbquoten, § 3 Abs. 1 Z 7 GrEStG). Eine genaue Analyse des Einzelfalls ist erforderlich.",
+      "sources": [
+        "§ 3 Abs. 1 Z 7 GrEStG 1987",
+        "§ 1 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-27-013",
+      "prompt": "Was sind GmbH-Anteile im Sinne des § 27 EStG und wie werden Veräußerungsgewinne besteuert?",
+      "correct_answer": "GmbH-Anteile gehören zum Kapitalvermögen im Sinne des § 27 Abs. 1 EStG. Gewinne aus der Veräußerung von GmbH-Anteilen im Privatvermögen zählen zu den realisierten Wertsteigerungen (§ 27 Abs. 3 EStG) und unterliegen dem Sondersteuersatz von 27,5%. Es gibt keinen Haltefristrabatt. Verluste aus GmbH-Anteilsverkäufen können mit entsprechenden Gewinnen innerhalb derselben Kategorie ausgeglichen werden, nicht aber mit anderen Einkunftsarten. Bei wesentlicher Beteiligung (≥25%) im Betriebsvermögen gelten § 24 und § 37 EStG.",
+      "sources": [
+        "§ 27 Abs. 3 EStG 1988",
+        "§ 27a Abs. 1 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-6-010",
+      "prompt": "Was ist der Vorsteuerabzug und warum ist die Rechnungsprüfung so wichtig?",
+      "correct_answer": "Der Vorsteuerabzug (§ 12 UStG) ermöglicht Unternehmern, die in Eingangsrechnungen ausgewiesene USt von ihrer eigenen Steuerschuld abzuziehen. Voraussetzung ist eine ordnungsgemäße Rechnung nach § 11 UStG. Fehlen Pflichtangaben (z.B. UID-Nummer bei Rechnungen über EUR 10.000, fortlaufende Rechnungsnummer, Leistungsbeschreibung), kann der Vorsteuerabzug versagt werden. Die Finanzbehörde prüft im Zuge von Betriebsprüfungen intensiv die Rechnungsqualität. Nachträgliche Korrekturen durch Rechnungsberichtigung sind möglich, können aber mit Verzugszinsen verbunden sein.",
+      "sources": [
+        "§ 12 Abs. 1 UStG 1994",
+        "§ 11 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-33-014",
+      "prompt": "Was ist der Sonderausgabenpauschbetrag und wann ist er relevant?",
+      "correct_answer": "Für Sonderausgaben (§ 18 EStG) steht ein Pauschbetrag von EUR 60 jährlich zu (§ 18 Abs. 2 EStG), wenn keine höheren tatsächlichen Sonderausgaben nachgewiesen werden. Dieser Pauschbetrag ist für die meisten Steuerpflichtigen irrelevant, da er sehr niedrig ist und durch tatsächliche Sonderausgaben wie Kirchensteuer (bis EUR 600), Spenden oder Versicherungsbeiträge leicht überschritten wird. Seit Abschaffung des Sonderausgabenabzugs für freiwillige Versicherungen und Steuerberatungskosten (ab 2020 schrittweise) hat der Pauschbetrag weiter an Bedeutung verloren.",
+      "sources": [
+        "§ 18 Abs. 2 EStG 1988"
+      ]
+    },
+    {
+      "id": "CROSS-022",
+      "prompt": "Was versteht man unter der 'Halbsatzbegünstigung' nach § 37 EStG und wann gilt sie?",
+      "correct_answer": "Die Halbsatzbegünstigung gemäß § 37 EStG erlaubt die Besteuerung bestimmter Einkünfte mit dem halben Durchschnittssteuersatz (nicht dem vollen Tarif). Sie gilt u.a. für: (1) Veräußerungsgewinne bei Betriebsaufgabe oder -verkauf (§ 24 EStG), wenn der Steuerpflichtige das 60. Lebensjahr vollendet hat und seine Erwerbstätigkeit aufgibt; (2) Übergangsgewinne bei Wechsel der Gewinnermittlungsart; (3) Nachzahlungen von Arbeitslohn für mehrere Jahre; (4) bestimmte außerordentliche Einkünfte. Der halbe Durchschnittssteuersatz berechnet sich auf Basis des Gesamteinkommens.",
+      "sources": [
+        "§ 37 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-023",
+      "prompt": "Was ist die 'Zusammenfassende Meldung' (ZM) und wann ist sie abzugeben?",
+      "correct_answer": "Die Zusammenfassende Meldung (ZM) gemäß § 21 Abs. 3 UStG ist eine EU-weit vorgeschriebene Erklärung, in der österreichische Unternehmer ihre steuerfreien innergemeinschaftlichen Lieferungen und B2B-Dienstleistungen (§ 3a Abs. 6 UStG) an EU-Unternehmer melden müssen. Die ZM ist monatlich elektronisch über FinanzOnline einzureichen (bis zum Ende des Folgemonats). Bei ausschließlich monatlich gemeldeten Umsätzen unter bestimmten Schwellenwerten kann quartalsweise gemeldet werden. Fehler bei der ZM können zu Steuernachzahlungen führen.",
+      "sources": [
+        "§ 21 Abs. 3 UStG 1994"
+      ]
+    },
+    {
+      "id": "KSTG-10-005",
+      "prompt": "Wie werden Verluste aus der Veräußerung einer internationalen Schachtelbeteiligung behandelt?",
+      "correct_answer": "Bei einer internationalen Schachtelbeteiligung (§ 10 Abs. 2 KStG) sind nicht nur Dividenden, sondern auch Veräußerungsgewinne steuerbefreit. Spiegelbildlich dazu sind Veräußerungsverluste aus internationalen Schachtelbeteiligungen gemäß § 10 Abs. 3 KStG grundsätzlich nicht abzugsfähig. Ausnahme: Wenn zur Schachtelbeteiligung optiert wurde (Option zur Steuerpflicht für Veräußerungsgewinne nach § 10 Abs. 3 Z 1 KStG), sind auch Verluste abzugsfähig, aber dann sind auch Gewinne steuerpflichtig.",
+      "sources": [
+        "§ 10 Abs. 3 KStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-22-016",
+      "prompt": "Können Architekten ihre Einkünfte als freiberuflich (§ 22 EStG) oder müssen sie als Gewerbebetrieb (§ 23 EStG) deklarieren?",
+      "correct_answer": "Architekten (Ziviltechniker) sind gemäß § 22 Z 1 lit. b EStG explizit als freier Beruf genannt. Ihre Einkünfte aus der typischen Architektenleistung (Planung, Bauaufsicht) sind Einkünfte aus selbständiger Arbeit, sofern sie die Leistungen selbst leitend und eigenverantwortlich erbringen. Wenn ein Architekturbüro jedoch große Bauprojekte übernimmt, bei denen die persönliche Leistung des Architekten in den Hintergrund tritt und das Projekt hauptsächlich durch Mitarbeiter durchgeführt wird, kann eine Umqualifikation zu gewerblichen Einkünften (§ 23 EStG) erfolgen.",
+      "sources": [
+        "§ 22 Z 1 lit. b EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-2-004",
+      "prompt": "Was sind 'Organschaften' im Umsatzsteuerrecht und wie wirken sie?",
+      "correct_answer": "Eine umsatzsteuerliche Organschaft (§ 2 Abs. 2 Z 2 UStG) liegt vor, wenn eine juristische Person nach dem Gesamtbild der Verhältnisse finanziell, wirtschaftlich und organisatorisch in ein Unternehmen eingegliedert ist. Die Organgesellschaft gilt dann als Teil des Unternehmens des Organträgers – Leistungen zwischen den Organschaften sind nicht steuerbar (Innenumsätze). Die gesamte Organschaft tritt nach außen hin als ein einziger Unternehmer auf. Voraussetzungen: finanzielle Eingliederung (Mehrheitsbeteiligung), wirtschaftliche Eingliederung (betriebliche Verflechtung), organisatorische Eingliederung (gemeinsame Leitung).",
+      "sources": [
+        "§ 2 Abs. 2 Z 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "GREST-024",
+      "prompt": "Was ist die Selbstberechnungspflicht bei der Grunderwerbsteuer und wer ist dafür zuständig?",
+      "correct_answer": "Gemäß § 11 GrEStG sind Notare und Rechtsanwälte, die an der Errichtung einer Urkunde über den Erwerbsvorgang mitwirken, zur Selbstberechnung der Grunderwerbsteuer verpflichtet. Sie haben die GrESt zu berechnen, einzubehalten, abzuführen und die Abgabe bei FinanzOnline zu erklären. Die Selbstberechnung hat innerhalb von 3 Monaten nach Entstehung der Steuerschuld zu erfolgen. Diese Parteienvertreter haften für die korrekte Berechnung und Abfuhr. Bei Eigenberechnung ohne Parteienvertreter besteht eine Anzeigepflicht direkt bei der Abgabenbehörde.",
+      "sources": [
+        "§ 11 GrEStG 1987"
+      ]
+    },
+    {
+      "id": "ESTG-28-015",
+      "prompt": "Was ist der Unterschied zwischen 'aktivierbaren' und 'sofort abzugsfähigen' Ausgaben bei Vermietungseinkünften?",
+      "correct_answer": "Bei Vermietungseinkünften sind Ausgaben, die dem Anlagevermögen zuzurechnen sind (Herstellungsaufwendungen, die die Nutzungsdauer verlängern oder den Standard wesentlich heben), zu aktivieren und nur über die Nutzungsdauer (AfA) oder verteilt auf 15 Jahre (§ 28 Abs. 2 EStG) abzusetzen. Sofort abzugsfähig sind laufende Betriebskosten, Reparaturen (die den Standard nicht wesentlich heben), Zinsen, Versicherungen, Verwaltungskosten und Instandhaltungsaufwendungen. Die Abgrenzung kann im Einzelfall schwierig sein und erfordert eine wirtschaftliche Betrachtungsweise.",
+      "sources": [
+        "§ 28 Abs. 2 EStG 1988",
+        "§ 16 EStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-10-006",
+      "prompt": "Welcher USt-Satz gilt für Reparaturleistungen an einem Privathaus?",
+      "correct_answer": "Reparaturleistungen an Gebäuden unterliegen grundsätzlich dem Normalsatz von 20% gemäß § 10 Abs. 1 UStG. Eine Ausnahme gilt für arbeitsintensive Reparaturleistungen (Renovierungs- und Reparaturarbeiten an privaten Wohngebäuden), die seit 2016 einem ermäßigten Satz von 10% unterliegen (§ 10 Abs. 2 Z 4 UStG), sofern es sich um arbeitsintensive Dienstleistungen handelt. Material- und Teilelieferungen bleiben jedoch mit 20% belastet. Die genaue Abgrenzung ist in der Praxis oft komplex.",
+      "sources": [
+        "§ 10 Abs. 2 UStG 1994"
+      ]
+    },
+    {
+      "id": "CROSS-023",
+      "prompt": "Was sind die steuerrechtlichen Folgen eines Gesellschafterdarlehens an die eigene GmbH?",
+      "correct_answer": "(1) EStG/KStG: Zinsen, die die GmbH an den Gesellschafter zahlt, sind bei der GmbH Betriebsausgaben (abzugsfähig, sofern fremdüblich) und beim Gesellschafter Einkünfte aus Kapitalvermögen (§ 27 Abs. 2 Z 2 EStG, 27,5% KESt). (2) Fremdvergleich: Zinshöhe und Konditionen müssen fremdüblich sein. Unverhältnismäßig hohe Zinsen können als verdeckte Ausschüttung (§ 8 Abs. 2 KStG) qualifiziert werden. (3) Zinsschranke: Bei hohem Fremdkapital greift ggf. die Zinsschranke (§ 12a KStG). (4) Unterkapitalisierung: Bei gesellschafterfremdfinanzierten Strukturen gelten ATAD-Regelungen.",
+      "sources": [
+        "§ 27 EStG 1988",
+        "§ 8 Abs. 2 KStG 1988",
+        "§ 12a KStG 1988"
+      ]
+    },
+    {
+      "id": "ESTG-25-018",
+      "prompt": "Was versteht man unter 'lohngestaltenden Vorschriften' im Sinne des § 68 Abs. 5 EStG?",
+      "correct_answer": "Lohngestaltende Vorschriften (§ 68 Abs. 5 Z 1-6 EStG) sind Regelungen in Kollektivverträgen oder vergleichbaren Vereinbarungen, die die Entlohnung verbindlich regeln. Sie sind relevant, weil bestimmte steuerliche Begünstigungen (z.B. begünstigte Sonderzahlungen nach § 67 EStG) oder steuerfreie Leistungen (z.B. § 26 Z 7 EStG – Arbeitgeberbeiträge zu Pensionskassen anstelle von Lohn) nur dann anerkannt werden, wenn sie in einer lohngestaltenden Vorschrift vorgesehen sind. Ohne lohngestaltende Vorschrift wäre z.B. die Lohnumwandlung für Pensionskassenbeiträge steuerpflichtig.",
+      "sources": [
+        "§ 68 Abs. 5 EStG 1988",
+        "§ 26 Z 7 EStG 1988"
+      ]
+    },
+    {
+      "id": "KSTG-7-008",
+      "prompt": "Was ist der Investitionsfreibetrag (IFB) nach § 11 EStG iVm § 7 Abs. 2 KStG?",
+      "correct_answer": "Der Investitionsfreibetrag (IFB) gemäß § 11 EStG 1988 (eingeführt ab 2023) ermöglicht Unternehmen, zusätzlich zur regulären AfA 10% der Anschaffungs- oder Herstellungskosten von abnutzbaren körperlichen Anlagegütern als steuerfreien Betriebsausgabenabzug zu beanspruchen. Bei ökologischen Investitionen (Öko-IFB) erhöht sich der Satz auf 15%. Der IFB gilt für Wirtschaftsgüter mit einer Nutzungsdauer von mindestens 4 Jahren. Ausgeschlossen sind PKW (außer Elektrofahrzeuge), Gebäude und gebrauchte Wirtschaftsgüter. Der IFB gilt auch für Körperschaften via § 7 Abs. 2 KStG.",
+      "sources": [
+        "§ 11 EStG 1988",
+        "§ 7 Abs. 2 KStG 1988"
+      ]
+    },
+    {
+      "id": "USTG-3a-024",
+      "prompt": "Was ist 'Steueraussetzung' im UStG und wann findet sie Anwendung?",
+      "correct_answer": "Der Begriff 'Steueraussetzung' ist primär im Verbrauchsteuerrecht (z.B. Mineralöl, Tabak) bekannt, im UStG gibt es eine vergleichbare Regelung beim Zollfreilager und in Nichterhebungsverfahren. Für die UStG-Prüfung relevanter ist das Konzept der aufgeschobenen Steuerpflicht (z.B. beim innergemeinschaftlichen Erwerb, wo die Steuerschuld beim Erwerber entsteht) oder die Steuerfreiheit für bestimmte Beförderungen in Freihandelszonen. Häufiger geprüft wird das verwandte Konzept der Fiskalvertretung und das MOSS/OSS-Verfahren für elektronische Leistungen.",
+      "sources": [
+        "§ 1 UStG 1994",
+        "Art. 1 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-23-011",
+      "prompt": "Was sind die steuerlichen Folgen einer Betriebsübertragung an Kinder im Wege der Schenkung?",
+      "correct_answer": "Bei der unentgeltlichen Betriebsübergabe (Schenkung) an Kinder: (1) EStG: Beim Übergeber keine Gewinnrealisierung, wenn Buchwertfortführung vereinbart wird (§ 6 Z 9 lit. a EStG). Der Übernehmer führt die Buchwerte fort (stille Reserven gehen auf ihn über). Bei unentgeltlicher Übergabe gilt kein Veräußerungsgewinn. (2) GrESt: Wenn Betriebsliegenschaften übertragen werden, fällt GrESt nach dem Stufentarif für Familienerwerbe (§ 7 Abs. 1 Z 2 GrEStG) an. (3) UStG: Die Übertragung eines Gesamtbetriebs kann als nicht steuerbare Geschäftsveräußerung im Ganzen (§ 4 Abs. 7 UStG) gelten. Schenkungssteuer gibt es in Österreich nicht.",
+      "sources": [
+        "§ 6 Z 9 lit. a EStG 1988",
+        "§ 7 Abs. 1 Z 2 GrEStG 1987",
+        "§ 4 Abs. 7 UStG 1994"
+      ]
+    },
+    {
+      "id": "ESTG-1-009",
+      "prompt": "Was ist die 'beschränkte Steuerpflicht' von Ausländern bei österreichischen Einkünften und welche Besonderheiten gelten?",
+      "correct_answer": "Beschränkt steuerpflichtige Personen (ohne Wohnsitz/gewöhnlichen Aufenthalt in Österreich) werden gemäß § 1 Abs. 3 und § 98 EStG nur mit ihren inländischen Einkünften besteuert. Dazu gehören: Einkünfte aus einer im Inland betriebenen Betriebsstätte, inländische Arbeitseinkünfte, inländische Kapitalerträge, österreichische Immobilieneinkünfte und -veräußerungsgewinne. Besonderheiten: kein Grundfreibetrag, kein Allgemeiner Absetzbetrag (bei Jahresverdienst aus Österreich), kein Veranlagungsrecht (für nur quellenbesteuerte Einkünfte), abkommensrechtliche Einschränkungen durch DBA.",
+      "sources": [
+        "§ 1 Abs. 3 EStG 1988",
+        "§ 98 EStG 1988"
+      ]
+    },
+    {
+      "id": "GREST-025",
+      "prompt": "Wie wird die GrESt berechnet, wenn ein Grundstück gegen Übernahme von Schulden übertragen wird?",
+      "correct_answer": "Wenn ein Grundstück gegen Übernahme von Schulden (z.B. Hypothek) übertragen wird, stellt die übernommene Schuld eine Gegenleistung dar. Die Bemessungsgrundlage für die GrESt setzt sich gemäß § 4 Abs. 1 GrEStG zusammen aus dem Wert der übernommenen Schulden plus eventueller Zuzahlung – in jedem Fall mindestens der Grundstückswert. Beispiel: Grundstückswert EUR 200.000, übernommene Hypothek EUR 80.000, Kaufpreis (Gegenleistung) = EUR 80.000. GrESt-Basis: max(EUR 80.000, EUR 200.000) = EUR 200.000. GrESt = EUR 200.000 × 3,5% = EUR 7.000.",
+      "sources": [
+        "§ 4 Abs. 1 GrEStG 1987",
+        "§ 5 GrEStG 1987"
+      ]
+    }
+  ]
+}

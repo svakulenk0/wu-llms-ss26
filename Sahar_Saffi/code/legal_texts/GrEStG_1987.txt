@@ -1,0 +1,51 @@
+Grunderwerbsteuergesetz 1987 (GrEStG) - Österreich
+
+§ 1 Erwerbsvorgänge
+Der Grunderwerbsteuer unterliegen folgende Rechtsvorgänge (inländische Grundstücke):
+1. Kaufvertrag oder anderes Rechtsgeschäft, das den Anspruch auf Übereignung begründet
+2. die Auflassung
+3. das Meistgebot im Zwangsversteigerungsverfahren
+4. die Abtretung des Übereignungsanspruches
+5. Einräumung und Abtretung eines Vorkaufsrechtes
+6. Abtretung von Rechten aus einem Kaufangebot
+7. Abtretung der Rechte aus einem Kaufvertrag
+8. Anteilsvereinigung (§ 1 Abs. 3): wenn eine Person ≥95% der Anteile einer grundstücksbesitzenden Gesellschaft auf sich vereinigt
+
+§ 2 Grundstücke
+Grundstücke im Sinne des bürgerlichen Rechtes; auch Gebäude auf fremdem Boden.
+
+§ 3 Ausnahmen von der Besteuerung
+- Erwerb unter EUR 1.100 Wert
+- Erwerb von Todes wegen (Erbschaft)
+- Erwerb in gerader Linie (Eltern/Kinder/Großeltern/Enkel), zwischen Ehegatten, eingetragenen Partnern, Geschwistern
+
+§ 4 Bemessungsgrundlage
+Steuer wird vom Grundstückswert berechnet. Der Grundstückswert ergibt sich aus dem Dreifachen des Einheitswerts oder dem gemeinen Wert (Verkehrswert).
+Bei entgeltlichem Erwerb: Gegenleistung (Kaufpreis), mindestens aber Grundstückswert.
+
+§ 7 Steuersätze
+- Erwerb zwischen nahen Angehörigen (Ehegatte, Kinder, Eltern, Geschwister etc.): 2% vom Grundstückswert
+- Alle anderen Erwerbsvorgänge: 3,5% der Bemessungsgrundlage
+- Anteilsvereinigung: 0,5% vom Grundstückswert
+
+§ 8 Entstehung der Steuerschuld
+Steuerschuld entsteht sobald ein steuerpflichtiger Erwerbsvorgang verwirklicht ist.
+
+§ 9 Steuerschuldner
+Die am Erwerbsvorgang beteiligten Personen (Käufer und Verkäufer solidarisch haftbar).
+
+§ 10 Selbstberechnung
+Parteienvertreter (Notare, Rechtsanwälte) können die Steuer selbst berechnen und direkt an das Finanzamt abführen.
+
+§ 16 Anteilsvereinigung
+Wenn eine Unternehmensgruppe ≥95% der Anteile einer Gesellschaft erwirbt, die ein inländisches Grundstück besitzt, entsteht Grunderwerbsteuerpflicht.
+
+§ 17 Rückgängigmachung
+Bei Rückgängigmachung des Erwerbsvorganges auf Verlangen eines Vertragsteils kann die entrichtete Steuer auf Antrag zurückgezahlt werden.
+
+Wichtige Begriffe:
+- Einheitswert: vom Finanzamt festgestellter Grundstückswert für Steuerberechnungen
+- Grundstückswert: dreifacher Einheitswert oder Verkehrswert (höherer gilt)
+- Gegenleistung: Kaufpreis inkl. übernommener Verbindlichkeiten
+- Anteilsvereinigung: Erwerb von ≥95% der Gesellschaftsanteile löst GrESt aus
+- Umgründungsbegünstigungen: Grundstücksübertragungen im Rahmen von Umgründungen sind unter bestimmten Voraussetzungen begünstigt (0,5% GrESt)

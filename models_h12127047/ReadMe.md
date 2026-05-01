@@ -1,71 +1,109 @@
-This README provides a comprehensive guide to your legal AI pipeline, specifically optimized for **Google Colab**. This pipeline allows you to fetch Austrian legal texts from the RIS (Rechtsinformationssystem) database and perform a two-stage training process (Pre-training and Fine-tuning) using a German GPT-2 base model.
+# ⚖️ Austrian Legal LLM: Project Report & Documentation
 
-Since Google Colab environment was chosen, file-paths may be different from local setups and it is strongly advised to double-check them.
-
----
-
-# Legal AI Training Pipeline: Austrian Law
-
-This repository contains a suite of Python scripts designed to automate the creation of a specialized German legal language model. It handles everything from data acquisition via web scraping to model refinement.
-
-## 📋 System Requirements
-* **Environment:** [Google Colab](https://colab.research.google.com/) (Recommended: T4 or L4 GPU Runtime).
-* **Base Model:** `dbmdz/german-gpt2`
-* **Language:** German (Input/Output).
+This project evaluates the effectiveness of fine-tuning and Retrieval-Augmented Generation (RAG) for answering questions about Austrian tax law using specialized domain knowledge (RIS database).
 
 ---
 
-## 🚀 Step-by-Step Guide
+## 🏗 Model Architecture & Design
 
-### Step 1: Data Acquisition (`fetchFromRIS.py`)
-This script takes a list of legal references (e.g., "§ 1 EStG") and fetches the corresponding full text from the official Austrian RIS database.
+### **1. Base Model Selection**
 
-1.  **Input:** Create an input CSV file containing legal references separated by semicolons.
-2.  **Execution:**
-    ```bash
-    python fetchFromRIS.py input_references.csv (Google csv sheet, with all paragraphs) training_data.csv
-    ```
-3.  **Functionality:** It expands abbreviations (e.g., "EStG" to "Einkommensteuergesetz"), constructs a search URL, finds the document on RIS, and extracts the relevant paragraph text.
+- **Model**: `dbmdz/german-gpt2`
+- **Architecture**: GPT-2 (German variant)
+- **Parameters**: ~117 Million
+- **Tokenizer**: Byte-level BPE optimized for German text.
+- **Why this model?**: It provides a strong foundation for German language understanding, though its small size necessitates careful domain adaptation for complex legal reasoning.
 
-### Step 2: Base Training / Domain Adaptation (`pre_train.py`)
-This stage teaches the `german-gpt2` model the specific language and structure of Austrian law.
+### **2. Pipeline Overview**
 
-1.  **Setup:** Ensure `training_data.csv` (from Step 1) is in your Colab file folder.
-2.  **Process:**
-    * Cleans non-standard characters to prevent tokenizer crashes.
-    * Masks the prompts so the model only learns to generate the legal content (`Inhalt`).
-    * Uses a hyper-stable configuration (Float32, low learning rate) to avoid "NaN" errors.
-3.  **Output:** Saves the adapted model to `./my_legal_model`.
-
-### Step 3: Instruction Fine-Tuning (`fine_tune.py`)
-This script refines the model to answer specific questions or follow instruction formats using your own Q&A data.
-
-1.  **Input:** Requires a file named `fine_tuning.csv` with a column containing your Q&A pairs (the script targets a column named `train` or similar).
-2.  **Process:** It loads the model created in Step 2 and performs 5 epochs of high-intensity learning.
-3.  **Output:** Saves the final production-ready model to `./legal_model_final`.
-
-### Step 4: Batch Inference (`inference_all.py`)
-Use this script to generate answers for a large set of questions using your final model.
-
-1.  **Functionality:** It loads the model from `./legal_model_final` and processes a CSV file to generate legal answers in bulk.
-2.  **Format:** It uses a "Question -> Answer" prompt template to ensure the model remains in "legal advisor" mode.
+- **Step 1: Data Acquisition (`fetchFromRIS.py`)**: Rule-based scraping of the Austrian RIS database.
+- **Step 2: Domain Adaptation (`pre_train.py`)**: Knowledge injection via causal language modeling on raw legal texts.
+- **Step 3: Instruction Fine-Tuning (`fine_tune.py`)**: Supervised fine-tuning (SFT) using "Question -> Answer" templates.
+- **Step 4: RAG Implementation**: Injecting retrieved legal context into the model prompt during inference.
 
 ---
 
-## 🛠 Script Overview
+## 🛠 Training Methodology & Hyper-parameters
 
-| File | Purpose | Key Feature |
-| :--- | :--- | :--- |
-| `fetchFromRIS.py` | Data Scraping | Automatic expansion of law abbreviations (EStG, BAO, etc.). |
-| `pre_train.py` | Knowledge Injection | Specialized sanitization for the German GPT-2 tokenizer. |
-| `fine_tune.py` | Instruction Tuning | Loss masking (the model isn't graded on the question, only the answer). |
-| `inference_all.py` | Batch Prediction | Optimized for CUDA (GPU) acceleration. |
+### **Domain Adaptation (Pre-training)**
+
+- **Data**: 685 legal paragraphs from Austrian EStG, UStG, KStG, and BAO.
+- **Preprocessing**: Removal of HTML artifacts, sanitization of non-printable characters.
+- **Hyper-parameters**:
+  - **Epochs**: 4
+  - **Learning Rate**: $5 \times 10^{-6}$
+  - **Training Batch Size**: 1 (with 4 Gradient Accumulation Steps)
+  - **Precision**: Float32 (for numerical stability in small models)
+  - **Weight Decay**: 0.05
+
+### **Instruction Fine-Tuning**
+
+- **Data Source**: `resources/fine_tuning.csv`
+- **Method**: Supervised Fine-Tuning with prompt-response masking (only computing loss on the answer).
+- **Hyper-parameters**:
+  - **Epochs**: 5
+  - **Learning Rate**: $2 \times 10^{-5}$
+  - **Batch Size**: 4 (with 4 Gradient Accumulation Steps)
+  - **Template**: `Frage: {question}\nAntwort: {answer}`
 
 ---
 
-## ⚠️ Important Notes for Google Colab
+## 📚 RAG Pipeline: Retrieval Strategy
 
-1.  **GPU Acceleration:** Before running `pre_train.py` or `fine_tune.py`, go to `Runtime -> Change runtime type` and select **T4 GPU**.
-2.  **Library Dependencies:** All scripts include a `pip install` command at the top. Ensure these run successfully to install `transformers`, `peft`, and `accelerate`.
-3.  **Character Encoding:** Legal texts often contain special characters (like `§` or non-breaking spaces). The scripts use `.encode("utf-8", errors="ignore")` to ensure the training doesn't crash on "Index out of range" errors.
-4.  **File Cleanup:** `pre_train.py` contains a "Nuclear Cleanup" section that deletes old results. Be sure to back up your models if you intend to keep multiple versions.
+### **1. Retrieval Model**
+
+The system uses a **Rule-Based RIS Retriever** implemented in `fetchFromRIS.py`.
+
+- **Logic**: It expands common legal abbreviations (e.g., "EStG" -> "Einkommensteuergesetz") and constructs direct search URLs for the RIS database.
+- **Indexing**: Live construction of queries rather than a pre-indexed vector store, ensuring access to the latest legal versions.
+
+### **2. Preprocessing & Context Injection**
+
+- **Chunking**: Legal documents are chunked by normative sections (Paragraphs/Articles).
+- **Passages Provided**: 1 high-relevance legal paragraph is provided as the "Prime Context" for the generation model.
+
+---
+
+## 📊 Evaluation & Results
+
+We evaluated three model variants against a ground truth of 685 legal QA pairs (`answers.csv`) using the **ROUGE-L** metric.
+
+| Model Variant      | ROUGE-L Score | Description                                           |
+| :----------------- | :------------ | :---------------------------------------------------- |
+| **Inference Only** | **0.1136**    | Base `german-gpt2` without specialized tuning.        |
+| **Fine-Tuned**     | 0.0900        | Model after domain adaptation and instruction tuning. |
+| **RAG-Based**      | 0.0849        | Fine-tuned model supplemented with RIS context.       |
+
+> [!NOTE]
+> Surprisingly, the **Inference Only** model performed best in automated metrics. Below we analyze why the "advanced" methods showed divergence.
+
+---
+
+## 🔍 Analysis & Error Interpretation
+
+### **The "Performance Paradox"**
+
+The observed drop in ROUGE-L scores after fine-tuning and RAG suggests several common failure modes in legal LLM training:
+
+1.  **"Law Hallucination"**:
+    - The model often mixed up specific legal codes. For example, during inference, it cited `§ 243a UrhG` (Copyright Law) for questions regarding Corporate Tax.
+2.  **Model Divergence (SFT)**:
+    - Fine-tuning on a small dataset (GPT-2) caused the model to over-learn the _structure_ of legal answers (starting with "§ ...") at the expense of factual grounding.
+3.  **Retrieval Noise**:
+    - The current RAG implementation occasionally retrieved sections that were structurally similar but legally irrelevant, which "distracted" the small base model during generation.
+4.  **Metric Bias (Sequence Length)**:
+    - **Observation**: The `inference_only` model generated much longer responses than the fine-tuned/RAG versions.
+    - **Impact**: Since ROUGE-L is based on the longest common subsequence, the verbosity of the base model increased the mathematical likelihood of overlapping with the ground truth, potentially inflating its score despite lower legal precision.
+
+---
+
+## 🚀 Future Improvements
+
+Based on the analysis, the following steps are recommended to improve accuracy and reasoning:
+
+- **Model Scaling**: Transitioning to a larger base model (e.g., **Llama-3-8B** or **Mistral-7B**) would significantly improve the internal knowledge base and reasoning capabilities.
+- **Semantic Vector Search**: Replacing keyword-based scraping with a vector database (**FAISS/ChromaDB**) using specialized **Legal-BERT embeddings** would drastically reduce retrieval noise.
+- **LoRA (Low-Rank Adaptation)**: Instead of full fine-tuning, using LoRA would allow the model to learn legal instructions without "erasing" its general-purpose language capabilities (catastrophic forgetting).
+- **Precise Chunking**: Implementing recursive character splitting and metadata filtering for the RIS scraper to ensure only normative text is fed to the RAG pipeline.
+
+---

@@ -1,0 +1,4 @@
+Modell,Avg_LLM_Score
+Model_1_Inference,3.5661
+Model_2_FineTune,1.9129
+Model_3_RAG,2.4821

@@ -1,0 +1,4 @@
+model,num_examples,bertscore_precision,bertscore_recall,bertscore_f1
+Inference_Qwen3,641,0.724733,0.673400,0.696812
+FineTune_Qwen3,641,0.699984,0.675905,0.686911
+RAG_Qwen3,641,0.689378,0.662398,0.674974

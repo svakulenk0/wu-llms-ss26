@@ -1,0 +1,4 @@
+model,n_answers,answers_with_any_citation,pct_answers_with_any_citation,total_citations_parsed,grounded,hallucinated,out_of_scope,grounded_rate_of_verifiable,answers_with_grounded_citation,answers_with_hallucinated_cite
+Model1_API_Llama70B,643,620,96.42301710730949,1900,1551,0,349,1.0,515,0
+Model2_Finetuned_Gemma2B,643,335,52.099533437013996,737,625,82,30,0.884016973125884,288,59
+Model3_RAG_Gemma2B,643,440,68.42923794712286,962,946,4,12,0.9957894736842106,432,4
